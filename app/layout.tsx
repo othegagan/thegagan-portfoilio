@@ -1,14 +1,8 @@
 "use client";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import type { Metadata } from "next";
+import Head from "./head";
 import { ThemeProvider } from "next-themes";
-
-export const metadata: Metadata = {
-    title: "thegagan's portfolio",
-    description:
-        "Explore my portfolio, where each pixel reveals my journey in web.",
-};
 
 export default function RootLayout({
     children,
@@ -17,6 +11,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <Head />
             <body className="dark:bg-background bg-foreground min-h-screen">
                 <ThemeProvider enableSystem={true} attribute="class">
                     <Navbar />
