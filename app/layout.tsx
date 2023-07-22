@@ -1,8 +1,8 @@
-"use client";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Head from "./head";
-import { ThemeProvider } from "next-themes";
+import Providers from "./provider";
+import Script from "next/script";
 
 export default function RootLayout({
     children,
@@ -10,13 +10,15 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html lang="en" x-data="data()">
             <Head />
             <body className="dark:bg-background bg-foreground min-h-screen">
-                <ThemeProvider enableSystem={true} attribute="class">
+                <Providers>
                     <Navbar />
                     {children}
-                </ThemeProvider>
+                </Providers>
+
+                <Script src="./alpine.min.js" />
             </body>
         </html>
     );
