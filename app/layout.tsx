@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Head from "./head";
-import Providers from "./provider";
+import Providers from "./providers";
 import Script from "next/script";
 
 export default function RootLayout({

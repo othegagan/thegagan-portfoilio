@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 import { userAgent } from "next/server";
+import { Provider } from "react-wrap-balancer";
 
 const Providers = ({ children }: any) => {
     const [mounted, setMounted] = useState(false);
@@ -13,7 +14,12 @@ const Providers = ({ children }: any) => {
         return <>{children}</>;
     }
 
-    return <ThemeProvider attribute="class">{children}</ThemeProvider>;
+    return (
+        <ThemeProvider attribute="class">
+            <Provider>{children}</Provider>
+            {/* {children} */}
+        </ThemeProvider>
+    );
 };
 
 export default Providers;
