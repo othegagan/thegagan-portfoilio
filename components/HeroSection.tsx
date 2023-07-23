@@ -15,9 +15,7 @@ const HeroSection = () => {
                     height={100}
                 /> */}
 
-                
-
-                <h1 className="relative dark:bg-gradient-to-b dark:from-white dark:to-[#adadad] bg-gradient-to-b from-[#555] to-[#000] text-transparent bg-clip-text font-extrabold text-[max(48px,min(5vw,76px))] leading-[1.2] tracking-tighter p-[24px]">
+                <h1 className=" dark:bg-gradient-to-b dark:from-white dark:to-[#adadad] bg-gradient-to-b from-[#555] to-[#000] text-transparent bg-clip-text font-extrabold text-[max(48px,min(5vw,76px))] leading-[1.2] tracking-tighter p-[24px]">
                     {/* I am no hero..! Just a web wizard weaving digital dreams. */}
                     <Balancer>
                         <span className="text-[max(48px,min(4vw,76px))]">

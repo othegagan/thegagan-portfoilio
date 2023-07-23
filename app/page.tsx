@@ -1,10 +1,13 @@
+import About from "@/components/About";
 import HeroSection from "@/components/HeroSection";
-import Image from "next/image";
+import Skillset from "@/components/Skillset";
 
 export default function Home() {
     return (
         <>
             <div className="relative"></div>
+
+            {/* blob image */}
             <svg
                 className="blob blur-[80px] absolute opacity-0 dark:opacity-20 bottom-56  left-20 rotate-90 scale-[0.6]   "
                 viewBox="0 0 500 500">
@@ -16,15 +19,9 @@ export default function Home() {
                 </g>
             </svg>
 
-
-
-
-
             <HeroSection />
-
-            <div className=""></div>
-
-
+            <About />
+            <Skillset />
         </>
     );
 }
