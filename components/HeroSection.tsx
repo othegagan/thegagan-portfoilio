@@ -1,12 +1,45 @@
 import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
-import Herobg from "@/public/hero-bg.png";
+import BlurBg from "@/public/blurbg.png";
 
 const HeroSection = () => {
     return (
         <>
-            <section className="w-full min-h-[90vh] flex flex-col text-center items-center justify-center  sm:px-14 overflow-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-8 px-4 pt-8 md:pt-12 pb-8">
+            <section className="relative w-full min-h-[90vh] flex flex-col text-center items-center justify-center  sm:px-14 overflow-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-4 md:gap-6 px-4 pt-8 md:pt-12 pb-8">
+                <Image
+                    src={BlurBg}
+                    className="hidden dark:block scale-[10] absolute top-10"
+                    alt="blur bg"
+                    width={100}
+                    height={100}
+                />
+                <Image
+                    src={BlurBg}
+                    className="hidden dark:block scale-[10] opacity-20  absolute top-10"
+                    alt="blur bg"
+                    width={100}
+                    height={100}
+                />
+
+
+
+                <Image
+                    src={BlurBg}
+                    className="hidden dark:block scale-[4] absolute opacity-40 -bottom-5 left-10"
+                    alt="blur bg"
+                    width={100}
+                    height={100}
+                />
+
+                <Image
+                    src={BlurBg}
+                    className="hidden dark:block scale-[4] absolute opacity-40 -bottom-5 right-10"
+                    alt="blur bg"
+                    width={100}
+                    height={100}
+                />
+
                 <h1 className="relative dark:bg-gradient-to-b dark:from-white dark:to-[#adadad] bg-gradient-to-b from-[#555] to-[#000] text-transparent bg-clip-text font-extrabold text-[max(48px,min(5vw,76px))] leading-[1.2] tracking-tighter p-[24px]">
                     {/* I am no hero..! Just a web wizard weaving digital dreams. */}
                     <Balancer>
@@ -37,15 +70,18 @@ const HeroSection = () => {
 
                 <div className="flex w-full items-center justify-center p-[24px]  space-x-4 ">
                     <Link
-                        className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2"
+                        className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-background/90 h-9 px-4 py-2 dark:bg-foreground dark:text-background"
                         href="#contact">
-                        <span className="animate-bounce duration-300 transition-all mr-1"> 👋🏻 </span>Contact
+                        <span className="mr-1 wave">📜 </span> Download CV
                     </Link>
                     <Link
                         target="_blank"
-                        className="inline-flex items-center justify-center rounded-md text-sm font-medium  text-foreground transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
+                        className="inline-flex items-center justify-center rounded-md text-sm font-medium  text-foreground transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-accent shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
                         href="#">
-                        <span className="mr-1 ">📜 </span> Download CV
+                        <span className="wave duration-300 transition-all mr-1">
+                            👋🏻
+                        </span>
+                        Contact
                     </Link>
                 </div>
             </section>

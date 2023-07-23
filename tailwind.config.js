@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    mode: 'jit',
+    mode: "jit",
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +8,7 @@ module.exports = {
     ],
     darkMode: "class",
     theme: {
+
         extend: {
             screens: { sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
             colors: {
@@ -30,6 +31,9 @@ module.exports = {
                 destructive: "hsl(0, 62.8%, 30.6%)",
                 "destructive-foreground": "hsl(0, 85.7%, 97.3%)",
                 ring: "hsl(240, 3.7%, 15.9%)",
+            },
+            backgroundImage: {
+                "hero-img": "url('../public/hero-bg.png')"
             },
         },
     },

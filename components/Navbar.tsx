@@ -1,18 +1,16 @@
 "use client";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import Logo from "@/public/logo.svg";
 
 const Navbar = () => {
     const { theme, setTheme } = useTheme();
 
     return (
         <>
-
-            <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full border-b  backdrop-blur dark:bg-background">
+            <header className="supports-backdrop-blur:bg-background/60 sticky backdrop-blur-[5px] top-0 z-40 w-full    dark:bg-background/60 shadow-sm dark:shadow-neutral-800">
                 <div className="container flex h-14 items-center px-4 sm:px-6 lg:px-8">
                     <Link
-                        className=" mr-4 sm:mr-6  items-center space-x-2"
+                        className=" mr-4 sm:mr-6  items-center space-x-2 overflow-visible z-40"
                         href="/">
                         <svg
                             width="142"
@@ -98,11 +96,10 @@ const Navbar = () => {
                                 <span className="sr-only">Toggle theme</span>
                             </button>
 
-                            <button className="group group hover:transform-wave inline-block items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90  px-2 py-1 ">
+                            <button className="group group  inline-block items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90  px-2 py-1 ">
                                 Say Hi.!{" "}
-                                <span className="group hover:transform-wave mr-1">
-                                    {" "}
-                                    👋🏻{" "}
+                                <span className="wave">
+                                    👋🏻
                                 </span>
                             </button>
                         </nav>
