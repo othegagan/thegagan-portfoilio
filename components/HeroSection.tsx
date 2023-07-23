@@ -9,24 +9,7 @@ const HeroSection = () => {
             <section className="relative w-full min-h-[90vh] flex flex-col text-center items-center justify-center  sm:px-14 overflow-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-4 md:gap-6 px-4 pt-8 md:pt-12 pb-8">
                 <Image
                     src={BlurBg}
-                    className="hidden dark:block scale-[10] absolute top-10"
-                    alt="blur bg"
-                    width={100}
-                    height={100}
-                />
-                <Image
-                    src={BlurBg}
-                    className="hidden dark:block scale-[10] opacity-20  absolute top-10"
-                    alt="blur bg"
-                    width={100}
-                    height={100}
-                />
-
-
-
-                <Image
-                    src={BlurBg}
-                    className="hidden dark:block scale-[4] absolute opacity-40 -bottom-5 left-10"
+                    className="hidden opacity-30 md:opacity-100 dark:block scale-[10] absolute top-10"
                     alt="blur bg"
                     width={100}
                     height={100}
@@ -34,7 +17,15 @@ const HeroSection = () => {
 
                 <Image
                     src={BlurBg}
-                    className="hidden dark:block scale-[4] absolute opacity-40 -bottom-5 right-10"
+                    className="hidden lg:block scale-[4] absolute opacity-40 -bottom-5 left-10"
+                    alt="blur bg"
+                    width={100}
+                    height={100}
+                />
+
+                <Image
+                    src={BlurBg}
+                    className="hidden lg:block scale-[4] absolute opacity-40 -bottom-5 right-10"
                     alt="blur bg"
                     width={100}
                     height={100}
