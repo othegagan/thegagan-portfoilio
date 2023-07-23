@@ -1,15 +1,12 @@
 import HeroSection from "@/components/HeroSection";
 import Image from "next/image";
-import Herobg from "@/public/hero-bg.png";
 
 export default function Home() {
     return (
         <>
-            <HeroSection />
-            <div className="min-h-screen"></div>
-
+            <div className="relative"></div>
             <svg
-                className="blob blur-[80px]  opacity-50  rotate-90 scale-[0.2]   "
+                className="blob blur-[80px] absolute opacity-0 dark:opacity-20 bottom-56  left-20 rotate-90 scale-[0.6]   "
                 viewBox="0 0 500 500">
                 <g transform="translate(300,300)">
                     <path
@@ -18,6 +15,16 @@ export default function Home() {
                     />
                 </g>
             </svg>
+
+
+
+
+
+            <HeroSection />
+
+            <div className=""></div>
+
+
         </>
     );
 }
