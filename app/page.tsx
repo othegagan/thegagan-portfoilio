@@ -6,10 +6,6 @@ import { motion } from "framer-motion";
 export default function Home() {
     return (
         <>
-            <div className="relative overflow-hidden   "></div>
-
-           
-
             <HeroSection />
             <About />
             <Skillset />

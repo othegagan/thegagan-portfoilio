@@ -16,16 +16,13 @@ export default function RootLayout({
             <Head />
             <body
                 className={`${inter.className} h-[300vh] dark:bg-background bg-foreground min-h-screen`}>
-                <div className=" sm:w-full sm:justify-center absolute -top-[30rem] items-center flex">
-                    <div
-                        className=" top-[-6rem] -z-10  sm:right-[50%] h-[8rem] w-[8rem] rounded-full blur-[10rem] sm:w-[40rem] sm:h-[40rem] dark:bg-[#202020]"
-                        style={{ transform: "scale3d(1.5, 1.5, 1.5)" }}></div>
+                <div className="w-full sm:justify-center absolute -top-[30rem] items-center flex ">
+                    <div className="lg:scale-[1.4] top-[-6rem] -z-10  sm:right-[50%] h-[8rem] w-[8rem] rounded-full blur-[10rem] sm:w-[40rem] sm:h-[40rem] dark:bg-[#202020]"></div>
                 </div>
 
-                <div className="sm:hidden w-full left-[8rem] justify-center absolute  items-center ">
-                    <div
-                        className=" top-[-1rem] -z-10  h-[8rem] w-[8rem] rounded-full blur-[10rem]  dark:bg-[#202020]"
-                        style={{ transform: "scale3d(1.5, 1.5, 1.5)" }}></div>
+                {/* mobile blob */}
+                <div className="w-full sm:hidden justify-center absolute -top-[4rem] items-center flex ">
+                    <div className="    scale-[1.3] -z-10  right-[40%] h-[8rem] w-[8rem] rounded-full blur-[8rem]  dark:bg-[#8a8a8a]"></div>
                 </div>
 
                 <ThemeContextProvider>
