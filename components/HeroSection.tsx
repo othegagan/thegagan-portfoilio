@@ -1,12 +1,16 @@
-import Image from "next/image";
+"use client";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
-import BlurBg from "@/public/blurbg.png";
 
 const HeroSection = () => {
     return (
         <>
-            <section className="relative w-full min-h-[90vh] flex flex-col text-center items-center justify-center  sm:px-14 overflow-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-4 md:gap-6 px-4 pt-8 md:pt-12 pb-8">
+            <motion.section
+                className="relative w-full  flex flex-col text-center items-center justify-center  sm:px-14 overflow-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-4 md:gap-6 px-4 pt-8 md:pt-12 pb-8"
+                initial={{ opacity: 0, y: 200 }}
+                animate={{ opacity: 1, y: 0 }}
+            >
                 {/* <Image
                     src={BlurBg}
                     className="hidden opacity-30 md:opacity-100 dark:block scale-[10] absolute top-10"
@@ -45,21 +49,21 @@ const HeroSection = () => {
 
                 <div className="flex w-full items-center justify-center p-[24px]  space-x-4 ">
                     <Link
-                        className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-background/90 h-9 px-4 py-2 dark:bg-foreground dark:text-background"
-                        href="#contact">
+                        className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow darki:hover:bg-background/90 h-9 px-4 py-2 dark:bg-foreground dark:text-background"
+                        href="#">
                         <span className="mr-1 wave">📜 </span> Download CV
                     </Link>
                     <Link
                         target="_blank"
                         className="inline-flex items-center justify-center rounded-md text-sm font-medium  text-foreground transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-accent shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
-                        href="#">
+                        href="#contact">
                         <span className="wave duration-300 transition-all mr-1">
                             👋🏻
                         </span>
                         Contact
                     </Link>
                 </div>
-            </section>
+            </motion.section>
         </>
     );
 };

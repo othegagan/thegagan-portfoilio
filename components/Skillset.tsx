@@ -3,6 +3,7 @@ import SkillsDark from "@/public/skills-darkbg.png";
 import SkillsLightLG from "@/public/skills-lightlg.png"
 import SkillsDarkLG from "@/public/skills-darklg.png"
 import Image from "next/image";
+import Subheading from "./Subheading";
 
 const Skillset = () => {
     return (
@@ -10,9 +11,8 @@ const Skillset = () => {
             <section
                 id="about"
                 className=" min-h-[400px] container  space-y-16 p-6 justify-center items-center  flex flex-col  ">
-                <p className="w-full text-left sm:text-center mt-4  text-4xl font-extrabold tracking-tigh dark:bg-gradient-to-b dark:from-white dark:to-[#adadad] bg-gradient-to-b from-[#555] to-[#000] text-transparent bg-clip-text">
-                    Skill set
-                </p>
+
+                <Subheading title="Skill set"/>
 
                 <div className="flex justify-center items-center">
 
