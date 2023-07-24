@@ -1,6 +1,6 @@
 "use client";
+import { useTheme } from "@/components/Providers";
 
-import { useTheme } from "@/components/providers";
 import React from "react";
 
 const ThemeButton = () => {
