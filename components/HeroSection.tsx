@@ -7,10 +7,9 @@ const HeroSection = () => {
     return (
         <>
             <motion.section
-                className="relative w-full  flex flex-col text-center items-center justify-center  sm:px-14 overflow-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-4 md:gap-6 px-4 pt-8 md:pt-12 pb-8"
+                className="relative w-full py-20 flex flex-col text-center items-center justify-center  sm:px-14 overflow-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-4 md:gap-6 px-4 pt-8 md:pt-12 pb-8"
                 initial={{ opacity: 0, y: 200 }}
-                animate={{ opacity: 1, y: 0 }}
-            >
+                animate={{ opacity: 1, y: 0 }}>
                 {/* <Image
                     src={BlurBg}
                     className="hidden opacity-30 md:opacity-100 dark:block scale-[10] absolute top-10"

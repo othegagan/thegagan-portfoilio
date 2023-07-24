@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import Subheading from "./Subheading";
+import SectionHeading from "./SeactionHeading";
 
 const About = () => {
     return (
@@ -10,8 +10,8 @@ const About = () => {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.175 }}
-                className=" min-h-[600px] container  space-y-16 p-6  justify-center items-center flex flex-col  ">
-                <Subheading title="Get to know me" />
+                className=" py-20 container  space-y-16 p-6  justify-center items-center flex flex-col  ">
+                <SectionHeading title="Get to know me" />
 
                 <div className="max-w-2xl space-y-6 text-center sm:text-base  leading-[1.78]  text-zinc-700 dark:text-[#888]">
                     <div className="sm:w-full">
