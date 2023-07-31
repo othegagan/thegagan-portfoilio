@@ -1,12 +1,7 @@
 "use client";
 import Image from "next/image";
 import SeactionHeading from "./SeactionHeading";
-import LG1 from "@/public/lgskill1.png";
-import LG2 from "@/public/lgskill2.png";
-import LG3 from "@/public/lgskill3.png";
-import SM1 from "@/public/smskill1.png";
-import SM2 from "@/public/smskill2.png";
-import SM3 from "@/public/smskill3.png";
+
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -18,7 +13,7 @@ const Skillset = () => {
         target: skill,
     });
     const scaleProgess = useTransform(scrollYProgress, [1, 0], [0.7, 1.1]);
-    const scaleProgessSM = useTransform(scrollYProgress, [1, 0], [0.7, 0.9]);
+    const scaleProgessSM = useTransform(scrollYProgress, [1, 0], [0.6, 1]);
 
     return (
         <section
@@ -75,7 +70,7 @@ const Skillset = () => {
                         width={600}
                         quality={100}
                         height={600}
-                        style={{ width: "90%", height: "auto" }}
+                        style={{ width: "100%", height: "auto" }}
                         alt="skill"
                     />
                 </div>
