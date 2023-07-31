@@ -54,3 +54,8 @@ body {
         transform: rotate(0deg);
     }
 }
+
+.cool {
+    border-radius: 0.75rem;
+    background: linear-gradient(180deg, #242424 0%, #121212 40%);
+}

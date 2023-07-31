@@ -15,7 +15,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 200 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className=" py-10 md:py-20 container relativespace-y-12 p-6  justify-center items-center flex flex-col  ">
+                className=" py-10 md:py-20 container relative space-y-12 p-6  justify-center items-center flex flex-col  ">
                 <SectionHeading title="Get to know me" />
 
                 <div className="max-w-2xl space-y-6 text-center sm:text-base  leading-[1.78]  text-zinc-700 dark:text-[#888]">
