@@ -41,7 +41,7 @@ const About = () => {
                 </div>
             </motion.section>
             <Image
-                className="-z-10 absolute rotate-90  -right-[30%]"
+                className="-z-10 hidden sm:block absolute rotate-90  -right-[30%]"
                 src="/stars.svg"
                 width={1200}
                 height={500}
