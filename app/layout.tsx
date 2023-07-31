@@ -15,9 +15,9 @@ export default function RootLayout({
         <html lang="en" className="!scroll-smooth">
             <Head />
             <body
-                className={`${inter.className} h-[300vh] dark:bg-background bg-foreground min-h-screen`}>
+                className={`${inter.className} h-[700vh] dark:bg-background bg-foreground min-h-[90vh] `}>
                 <div className="w-full sm:justify-center absolute -top-[30rem] items-center flex ">
-                    <div className="lg:scale-[1.4] top-[-6rem] -z-10  sm:right-[50%] h-[8rem] w-[8rem] rounded-full blur-[10rem] sm:w-[40rem] sm:h-[40rem] dark:bg-[#202020]"></div>
+                    <div className="lg:scale-[1.4] top-[-6rem] -z-10  sm:right-[50%] h-[8rem] w-[8rem] rounded-full blur-[12rem] sm:w-[40rem] sm:h-[40rem] dark:bg-[#202020]"></div>
                 </div>
 
                 {/* mobile blob */}

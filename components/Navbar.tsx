@@ -24,7 +24,7 @@ const Navbar = () => {
                             <path
                                 fillRule="evenodd"
                                 clipRule="evenodd"
-                                className="text-orange-500 motion-safe:animate-bounce w-3 h-3"
+                                className="text-orange-500  motion-safe:animate-bounce w-3 h-3"
                                 d="M19.5884 7.1025C20.5026 7.02929 21.2641 7.52813 21.6092 8.09904C22.2334 9.13048 21.7488 10.4017 20.9759 10.9133C20.2959 11.3633 19.2999 11.3866 18.6079 10.957C18.0234 10.5947 17.4806 9.83646 17.6427 8.83226C17.7259 8.31753 17.958 7.96057 18.2911 7.65951C18.6085 7.37348 19.0389 7.1462 19.5884 7.1025Z"
                                 fill="currentColor"
                             />
@@ -37,7 +37,7 @@ const Navbar = () => {
                     {/* theme button */}
 
                     <div className="flex flex-1 items-center justify-end space-x-2 md:justify-end">
-                        <nav className="flex items-center space-x-3 sm:space-x-3 text-sm font-medium">
+                        <nav className="flex items-center space-x-3 sm:space-x-6  text-sm font-medium">
                             <Link
                                 className="hidden sm:flex transition-colors hover:text-foreground/80 dark:text-foreground/60"
                                 href="#about">
@@ -51,7 +51,7 @@ const Navbar = () => {
 
                             <ThemeButton />
 
-                            <button className="group group  inline-block items-center justify-center rounded-md text-sm font-normal transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-accent text-foreground shadow dark:hover:bg-accent/90  px-2 py-1 ">
+                            <button className="group group  inline-block items-center justify-center rounded-md text-sm font-normal transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-accent text-foreground shadow dark:hover:bg-accent/90  px-2 py-2 ">
                                 Say Hi.! <span className="wave">👋🏻</span>
                             </button>
                         </nav>

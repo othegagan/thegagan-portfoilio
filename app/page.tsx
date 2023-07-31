@@ -1,7 +1,6 @@
 import About from "@/components/About";
 import HeroSection from "@/components/HeroSection";
 import Skillset from "@/components/Skillset";
-import { motion } from "framer-motion";
 
 export default function Home() {
     return (
@@ -9,6 +8,8 @@ export default function Home() {
             <HeroSection />
             <About />
             <Skillset />
+
+            <div className="w-full"></div>
         </>
     );
 }
