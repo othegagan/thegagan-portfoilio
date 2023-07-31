@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
@@ -7,11 +8,9 @@ const HeroSection = () => {
     return (
         <>
             <motion.section
-                className="relative w-full  py-20 flex flex-col text-center items-center justify-center  sm:px-14 overflow-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-4 md:gap-6 px-4 pt-8 md:pt-12 pb-8"
+                className="relative w-full  py-20 flex flex-col text-center items-center justify-center  sm:px-14 overflow-x-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-4 md:gap-6 px-4 pt-8 md:pt-12 pb-8"
                 initial={{ opacity: 0, y: 350 }}
-                animate={{ opacity: 1, y: 0 }}
-                >
-
+                animate={{ opacity: 1, y: 0 }}>
                 <h1 className=" dark:bg-gradient-to-b md:mt-6 dark:from-white dark:to-[#adadad] bg-gradient-to-b from-[#555] to-[#000] text-transparent bg-clip-text font-extrabold text-[max(48px,min(5vw,76px))] leading-[1.2] tracking-tighter p-[24px]">
                     {/* I am no hero..! Just a web wizard weaving digital dreams. */}
                     <Balancer>
@@ -21,7 +20,13 @@ const HeroSection = () => {
                         <br /> Just a wizard weaving digital dreams.
                     </Balancer>
                 </h1>
-
+                <Image
+                    className="sm:hidden absolute  top-0 "
+                    src="/stars.svg"
+                    width={400}
+                    height={200}
+                    alt="stars"
+                />
                 <p className="text-[#888] text-[max(15px,min(2vw,20px))] leading-[1.8] font-normal z-[1] p-[24px] left-1">
                     <Balancer>
                         Hello there..! I’m{" "}
@@ -57,6 +62,14 @@ const HeroSection = () => {
                     </Link>
                 </div>
 
+                <Image
+                    priority
+                    className="-z-10 hidden sm:block absolute animate-pulse bottom-0 left-50%"
+                    src="/stars.svg"
+                    width={2600}
+                    height={500}
+                    alt="stars"
+                />
             </motion.section>
         </>
     );
