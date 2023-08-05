@@ -1,22 +1,27 @@
 import About from "@/components/About";
-import Education from "@/components/Education";
-import HeroSection from "@/components/HeroSection";
+import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import Personal from "@/components/Personal";
 import Projects from "@/components/Projects";
 import Skillset from "@/components/Skillset";
-import Test from "@/components/Test";
 
 export default function Home() {
     return (
         <>
-            {/* <HeroSection />
-            <About />
-            <Skillset />
-            <Projects />
-            <Education /> */}
+            <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
+
+                <About />
+                <Experience />
+                <Projects />
+                <Personal />
+                <Footer />
 
 
 
-            <div className="w-full"></div>
+            </main>
+
+
         </>
     );
 }
