@@ -251,7 +251,7 @@ const Test = () => {
                                                         <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">WordPress</div>
                                                     </li>
                                                 </ul>
-                                            </div>'
+                                            </div>
                                         </div>
                                     </li>
                                     <li className="mb-12">
