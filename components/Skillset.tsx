@@ -128,6 +128,30 @@ const Skillset = () => {
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
+                                width="30"
+                                height="30"
+                                viewBox="0 0 30 30"
+                                className="w-6 h-6 rounded-[2px]"
+                                fill="none">
+                                <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M0 0H30V30H0V0Z"
+                                    fill="#F7DF1E"
+                                />
+                                <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M13.5 23.625V13.875H16.125V23.625C16.125 27.375 10.875 29.625 7.875 25.125L10.125 23.625C11.25 25.875 13.5 25.125 13.5 23.625ZM24.75 17.25C23.25 15.1875 21.375 16.125 21.375 17.4375C21.375 19.5 27.5625 19.125 27.5625 23.625C27.375 28.875 20.0625 28.6875 17.8125 24.75L20.0625 23.4375C21.75 26.0625 24.75 25.125 24.75 23.625C24.5625 21 18.75 22.3125 18.75 17.4375C18.5625 13.6875 24.1875 11.625 26.8125 15.9375L24.75 17.25Z"
+                                    fill="#323232"
+                                />
+                            </svg>
+                            Javascript
+                        </div>
+
+                        <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
                                 width="231"
                                 height="231"
                                 viewBox="0 0 231 231"
@@ -177,29 +201,7 @@ const Skillset = () => {
                             Tailwind CSS
                         </div>
 
-                        <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="30"
-                                height="30"
-                                viewBox="0 0 30 30"
-                                className="w-6 h-6 rounded-[2px]"
-                                fill="none">
-                                <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M0 0H30V30H0V0Z"
-                                    fill="#F7DF1E"
-                                />
-                                <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M13.5 23.625V13.875H16.125V23.625C16.125 27.375 10.875 29.625 7.875 25.125L10.125 23.625C11.25 25.875 13.5 25.125 13.5 23.625ZM24.75 17.25C23.25 15.1875 21.375 16.125 21.375 17.4375C21.375 19.5 27.5625 19.125 27.5625 23.625C27.375 28.875 20.0625 28.6875 17.8125 24.75L20.0625 23.4375C21.75 26.0625 24.75 25.125 24.75 23.625C24.5625 21 18.75 22.3125 18.75 17.4375C18.5625 13.6875 24.1875 11.625 26.8125 15.9375L24.75 17.25Z"
-                                    fill="#323232"
-                                />
-                            </svg>
-                            Javascript
-                        </div>
+
 
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
                             <svg
