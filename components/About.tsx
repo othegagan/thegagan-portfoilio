@@ -1,33 +1,44 @@
+"use client";
+import { motion } from "framer-motion";
+import SectionHeading from "./SeactionHeading";
+import { useRef } from "react";
+import Image from "next/image";
+import Balancer from "react-wrap-balancer";
+
+
 const About = () => {
+    const skill = useRef<HTMLDivElement>(null);
 
     return (
-        <>
-            <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About me">
-                <div className="nav">
-                    <h2 className="text-sm font-bold uppercase tracking-widest  lg:sr-only">About</h2>
-                </div>
-                <div>
-                    <p className="mb-4">Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and had the privilege of building software for an advertising agency, a start-up, a student-led design studio, and a huge corporation.
+        <div className="relative  overflow-hidden bg-gradient-to-br  from-[hsl(0,0%,90%)] to-[hsl(0,0%,100%)] dark:from-[hsl(0,0%,6%)] dark:to-[hsl(0,0%,0%)]">
+            <motion.section
+                ref={skill}
+                id="about"
+                initial={{ opacity: 0, y: 200 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className=" py-10 md:py-20 container relative space-y-16 p-6  justify-center items-center flex flex-col  ">
 
-                        My main focus these days is building products and leading projects for our clients at Upstatement. In my free time also released an online video course that covers everything you need to know to build a web app with the Spotify API.
+                <SectionHeading title="Get to know me" />
+                <div className="flex flex-col md:flex-row max-w-5xl gap-8 justify-around">
 
-                        When  not at the computer, usually rock climbing, hanging out with my wife and two cats, or running around Hyrule searching for Korok seeds.</p>
-                    <p>When  not at the computer,  usually rock climbing, hanging out with my wife and two cats, or running around Hyrule searching for <span className="group/korok inline-flex lg:cursor-[url('/images/koroks/Elma.png'),_pointer] lg:font-medium lg:">
-                        <span className="sr-only">Korok seeds</span>
-                        <span className="group-hover/korok:text-red-400 transition duration-75 group-hover/korok:-translate-y-px delay-[50ms]" aria-hidden="true">K</span>
-                        <span className="group-hover/korok:text-orange-400 transition duration-75 group-hover/korok:-translate-y-px delay-[75ms]" aria-hidden="true">o</span>
-                        <span className="group-hover/korok:text-yellow-400 transition duration-75 group-hover/korok:-translate-y-px delay-[100ms]" aria-hidden="true">r</span>
-                        <span className="group-hover/korok:text-lime-400 transition duration-75 group-hover/korok:-translate-y-px delay-[125ms]" aria-hidden="true">o</span>
-                        <span className="group-hover/korok:text-green-400 transition duration-75 group-hover/korok:-translate-y-px delay-[150ms]" aria-hidden="true">k</span>
-                        <span className="group-hover/korok:text-teal-400 transition duration-75 group-hover/korok:-translate-y-px delay-[175ms]" aria-hidden="true">&nbsp;</span>
-                        <span className="group-hover/korok:text-cyan-400 transition duration-75 group-hover/korok:-translate-y-px delay-[200ms]" aria-hidden="true">s</span>
-                        <span className="group-hover/korok:text-sky-400 transition duration-75 group-hover/korok:-translate-y-px delay-[225ms]" aria-hidden="true">e</span>
-                        <span className="group-hover/korok:text-blue-400 transition duration-75 group-hover/korok:-translate-y-px delay-[250ms]" aria-hidden="true">e</span>
-                        <span className="group-hover/korok:text-indigo-400 transition duration-75 group-hover/korok:-translate-y-px delay-[275ms]" aria-hidden="true">d</span>
-                        <span className="group-hover/korok:text-violet-400 transition duration-75 group-hover/korok:-translate-y-px delay-[300ms]" aria-hidden="true">s</span>
-                    </span>. </p>
+                    <p className="md:max-w-[65%] sm:text-base md:text-center  order-2 md:order-1  leading-[1.5]  text-zinc-700 dark:text-[#888]">
+                        <Balancer>
+
+                            Welcome to my digital realm where design meets code..! <br className="hidden md:block" /> My name is Gagan Kumar, a dedicated and dynamic web developer and designer with a strong passion for crafting immersive digital experiences. With a recent Master's degree in Computer Applications (MCA), my journey into the world of technology has been both enlightening and exhilarating.
+                            <br />
+                            <br />
+                            In the ever-evolving landscape of technology, I thrive on keeping up with the latest trends and advancements. My curiosity propels me to explore new technologies, experiment with design concepts, and stay ahead.
+                        </Balancer>
+                    </p>
+
+                    {/* <div className="md:w-[30%] h-60 relative bg-white order-1 md:order-2">
+                        <div className="bg-orange-600 h-10 w-10 absolute rounded-e-2xl bottom-0"></div>
+                    </div> */}
                 </div>
-            </section></>
+            </motion.section>
+            
+        </div>
     );
 };
 
