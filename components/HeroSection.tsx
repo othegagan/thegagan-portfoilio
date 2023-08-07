@@ -8,7 +8,7 @@ const HeroSection = () => {
     return (
         <>
             <motion.section
-                className="relative w-full min-h-[90vh]   py-28 flex flex-col text-center items-center justify-center  sm:px-14 overflow-x-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-4 md:gap-6 px-4 pt-8 md:pt-12 pb-8"
+                className="relative w-full  min-h-[90vh] py-28 flex flex-col text-center items-center justify-center  sm:px-14 overflow-x-hidden isolate max-w-[calc(1234px + 56px * 2)] gap-4 md:gap-6 px-4 pt-8 md:pt-12 pb-8"
                 initial={{ opacity: 0, y: 350 }}
                 animate={{ opacity: 1, y: 0 }}>
                 <h1 className=" dark:bg-gradient-to-b md:mt-6 dark:from-white dark:to-[#adadad] bg-gradient-to-b from-[#555] to-[#000] text-transparent bg-clip-text font-extrabold text-[max(48px,min(5vw,76px))] leading-[1.2] tracking-tighter p-[24px]">
@@ -55,15 +55,6 @@ const HeroSection = () => {
                         Contact
                     </Link>
                 </div>
-
-                <Image
-                    priority
-                    className="-z-10 hidden sm:block absolute animate-pulse bottom-0 left-50%"
-                    src="/stars.svg"
-                    width={2600}
-                    height={500}
-                    alt="stars"
-                />
             </motion.section>
         </>
     );

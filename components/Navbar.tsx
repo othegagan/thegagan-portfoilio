@@ -39,12 +39,12 @@ const Navbar = () => {
                     <div className="flex flex-1 items-center justify-end space-x-2 md:justify-end">
                         <nav className="flex items-center space-x-3 sm:space-x-6  text-sm font-medium">
                             <Link
-                                className="hidden sm:flex transition-colors hover:text-foreground/80 dark:text-foreground/60"
+                                className="hidden sm:flex transition-colors dark:hover:bg-foreground/10  hover:bg-background/10 px-3 py-2 hover:rounded-lg hover:dark:text-foreground dark:text-foreground/60"
                                 href="#about">
                                 About
                             </Link>
                             <Link
-                                className="hidden sm:flex transition-colors hover:text-foreground/80 dark:text-foreground/60"
+                                className="hidden sm:flex transition-colors dark:hover:bg-foreground/10 hover:bg-background/10 px-3 py-2 hover:rounded-lg hover:dark:text-foreground dark:text-foreground/60"
                                 href="#projects">
                                 Projects
                             </Link>
@@ -52,7 +52,7 @@ const Navbar = () => {
                             <ThemeButton />
 
                             <button className="group group  inline-block items-center justify-center rounded-md text-sm font-normal transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-accent text-foreground shadow dark:hover:bg-accent/90  px-3 py-2 ">
-                                Contact me <span className="wave">👋🏻</span>
+                                Contact <span className="wave">👋🏻</span>
                             </button>
                         </nav>
                     </div>

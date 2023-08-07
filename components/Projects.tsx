@@ -25,7 +25,7 @@ const Projects = () => {
                                     clipRule="evenodd"></path>
                             </svg>
                         </h2>
-                        <p className="  sm:text-sm mx-auto  leading-[1.78]  text-zinc-700 dark:text-[#888]">
+                        <p className=" text-sm mx-auto  leading-[1.4]  text-zinc-700 dark:text-[#888]">
                             Within my arsenal of skills and expertise lies a diverse
                             array of programming languages, tools, and latest
                             technologies that I have learnt and continually seeking new
@@ -84,7 +84,7 @@ const Projects = () => {
                                     clipRule="evenodd"></path>
                             </svg>
                         </h2>
-                        <p className="  sm:text-sm mx-auto  leading-[1.78]  text-zinc-700 dark:text-[#888]">
+                        <p className=" text-sm mx-auto  leading-[1.4]  text-zinc-700 dark:text-[#888]">
                             Within my arsenal of skills and expertise lies a diverse
                             array of programming languages, tools, and latest
                             technologies that I have learnt and continually seeking new
@@ -143,7 +143,7 @@ const Projects = () => {
                                     clipRule="evenodd"></path>
                             </svg>
                         </h2>
-                        <p className="  sm:text-sm mx-auto  leading-[1.78]  text-zinc-700 dark:text-[#888]">
+                        <p className=" text-sm mx-auto  leading-[1.4]  text-zinc-700 dark:text-[#888]">
                             Within my arsenal of skills and expertise lies a diverse
                             array of programming languages, tools, and latest
                             technologies that I have learnt and continually seeking new

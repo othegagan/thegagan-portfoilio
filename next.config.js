@@ -10,15 +10,6 @@ const nextConfig = {
     },
 };
 
-const experimentalOptions = {
-    experimental: {
-        images: {
-            allowFutureImage: true,
-        },
-    },
-};
-
 module.exports = {
-    ...nextConfig,
-    ...experimentalOptions,
+    ...nextConfig
 };
