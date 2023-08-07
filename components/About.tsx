@@ -25,7 +25,7 @@ const About = () => {
                     <p className="md:max-w-[65%] sm:text-base md:text-center  order-2 md:order-1  leading-[1.5]  text-zinc-700 dark:text-[#888]">
                         <Balancer>
 
-                            Welcome to my digital realm where design meets code..! <br className="hidden md:block" /> My name is Gagan Kumar, a dedicated and dynamic web developer and designer with a strong passion for crafting immersive digital experiences. With a recent Master's degree in Computer Applications (MCA), my journey into the world of technology has been both enlightening and exhilarating.
+                            Welcome to my digital realm where design meets code..! <br className="hidden md:block" /> My name is Gagan Kumar, a dedicated and dynamic web developer and designer with a strong passion for crafting immersive digital experiences. With a recent Master&lsqno;s degree in Computer Applications (MCA), my journey into the world of technology has been both enlightening and exhilarating.
                             <br />
                             <br />
                             In the ever-evolving landscape of technology, I thrive on keeping up with the latest trends and advancements. My curiosity propels me to explore new technologies, experiment with design concepts, and stay ahead.
@@ -37,7 +37,7 @@ const About = () => {
                     </div> */}
                 </div>
             </motion.section>
-            
+
         </div>
     );
 };
