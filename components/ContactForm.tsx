@@ -13,7 +13,8 @@ const ContactForm = () => {
         <div>
             <section id="contact">
                 <div className="container p-6 py-10 flex items-center justify-center md:py-20">
-                    <div className="max-w-6xl flex w-full items-center justify-center ">
+                    <div className="max-w-6xl flex  flex-col md:flex-row w-full  md:justify-center ">
+
                         <div className="p-6 md:w-1/2 text-accent dark:text-accent-foreground">
                             <h1 className="w-full    text-4xl font-extrabold tracking-tigh dark:bg-gradient-to-b dark:from-white dark:to-[#adadad] bg-gradient-to-b from-[#555] to-[#000] text-transparent bg-clip-text">
                                 Get in touch
