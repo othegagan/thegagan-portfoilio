@@ -82,7 +82,7 @@ const Projects = () => {
                                     <Image
                                         alt="project"
                                         className="group-hover:scale-105 transition-all"
-                                        src="/covid-project.png"
+                                        src="/covid.png"
                                         priority
                                         quality={100}
                                         width="1728"
