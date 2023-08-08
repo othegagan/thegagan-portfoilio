@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Projects from "@/components/Projects";
@@ -11,6 +12,7 @@ export default function Home() {
             <About />
             <Skillset />
             <Projects />
+            <ContactForm />
             <Footer />
         </>
     );

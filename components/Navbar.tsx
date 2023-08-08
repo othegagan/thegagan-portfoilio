@@ -51,9 +51,9 @@ const Navbar = () => {
 
                             <ThemeButton />
 
-                            <button className="group group  inline-block items-center justify-center rounded-md text-sm font-normal transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-accent text-foreground shadow dark:hover:bg-accent/90  px-3 py-2 ">
+                            <Link href="#contact" className="group group  inline-block items-center justify-center rounded-md text-sm font-normal transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-accent text-foreground shadow dark:hover:bg-accent/90  px-3 py-2 ">
                                 Contact <span className="wave">👋🏻</span>
-                            </button>
+                            </Link>
                         </nav>
                     </div>
                 </div>

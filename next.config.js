@@ -1,4 +1,15 @@
 const nextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "images.unsplash.com",
+            },
+        ],
+    },
+    experimental: {
+        serverActions: true,
+    },
     webpack(config) {
         config.module.rules.push({
             test: /\.svg$/i,
@@ -11,5 +22,5 @@ const nextConfig = {
 };
 
 module.exports = {
-    ...nextConfig
+    ...nextConfig,
 };
