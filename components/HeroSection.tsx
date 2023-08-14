@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
@@ -42,11 +41,13 @@ const HeroSection = () => {
                 <div className="flex w-full items-center justify-center p-[24px]  space-x-4 ">
                     <Link
                         className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow darki:hover:bg-background/90 h-9 px-4 py-2 dark:bg-foreground dark:text-background"
-                        href="#">
+                        download
+                        target="_blank"
+                        href="/Gagan_Kumar_Resume.pdf">
                         <span className="mr-1 wave">📜 </span> Download CV
                     </Link>
                     <Link
-                        target="_blank"
+                        
                         className="inline-flex items-center justify-center rounded-md text-sm font-medium  text-foreground transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-accent shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
                         href="#contact">
                         <span className="wave duration-300 transition-all mr-1">

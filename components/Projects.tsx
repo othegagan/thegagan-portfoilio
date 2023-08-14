@@ -16,7 +16,7 @@ const Projects = () => {
                         target="_blank">
                         <div className="group w-full bg-gradient-to-br flex group hover:cursor-pointer from-[hsl(0,0%,90%)] to-[hsl(0,0%,100%)] dark:from-[hsl(0,0%,8%)] dark:to-[hsl(0,0%,0%)] relative overflow-hidden rounded-xl sm:max-w-4xl h-auto  items-center justify-between sm:p-6  duration-400 p-4  flex-col text-accent dark:text-foreground max-w-4xl  ">
                             <div className=" hidden md:block md:w-full md:mb-4">
-                                <h2 className="font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem]   ">
+                                <h2 className="font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem]  group-hover:text-orange-500 ">
                                     Covid Vaccination and Pharma Store Platform
                                     <svg
                                         className="inline-block group-hover:text-orange-500 w-6 h-6 transition-transform ml-2 shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-y-0 group-focus-visible:translate-x-0 motion-reduce:transition-none"
@@ -33,7 +33,7 @@ const Projects = () => {
 
                             <div className="  flex md:flex-row flex-col">
                                 <div className="md:w-[60%] w-full flex-col gap-4 items-start justify-start order-2 md:order-1 flex">
-                                    <h2 className="md:hidden block font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem]  ">
+                                    <h2 className="md:hidden block font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem]  group-hover:text-orange-500">
                                         Covid Vaccination and Pharma Store
                                         Platform
                                         <svg
@@ -97,7 +97,7 @@ const Projects = () => {
                     <Link href="https://triboon.web.app/" target="_blank">
                         <div className="group w-full bg-gradient-to-bl flex group hover:cursor-pointer from-[hsl(0,0%,90%)] to-[hsl(0,0%,100%)] dark:from-[hsl(0,0%,8%)] dark:to-[hsl(0,0%,0%)] relative overflow-hidden rounded-xl sm:max-w-4xl h-auto  items-center justify-between sm:p-6  duration-400 p-4  flex-col text-accent dark:text-foreground max-w-4xl  ">
                             <div className=" hidden md:block md:w-full md:mb-4">
-                                <h2 className="font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem] max-w-xl  ">
+                                <h2 className="font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem] max-w-xl group-hover:text-orange-500 ">
                                     Triboon: Project Management Solution
                                     <svg
                                         className="inline-block group-hover:text-orange-500 w-6 h-6 transition-transform ml-2 shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-y-0 group-focus-visible:translate-x-0 motion-reduce:transition-none"
@@ -114,7 +114,7 @@ const Projects = () => {
 
                             <div className="  flex md:flex-row flex-col">
                                 <div className="md:w-[60%] w-full flex-col gap-4 items-start justify-start order-2 md:order-1 flex">
-                                    <h2 className="md:hidden block font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem] max-w-xl  ">
+                                    <h2 className="md:hidden block font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem] max-w-xl group-hover:text-orange-500  ">
                                         Triboon: Project Management Solution
                                         <svg
                                             className="inline-block group-hover:text-orange-500 w-6 h-6 transition-transform ml-2 shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-y-0 group-focus-visible:translate-x-0 motion-reduce:transition-none"
@@ -183,7 +183,7 @@ const Projects = () => {
                         target="_blank">
                         <div className="group w-full bg-gradient-to-br flex group hover:cursor-pointer from-[hsl(0,0%,90%)] to-[hsl(0,0%,100%)] dark:from-[hsl(0,0%,8%)] dark:to-[hsl(0,0%,0%)] relative overflow-hidden rounded-xl sm:max-w-4xl h-auto  items-center justify-between sm:p-6  duration-400 p-4  flex-col text-accent dark:text-foreground max-w-4xl  ">
                             <div className=" hidden md:block md:w-full md:mb-4">
-                                <h2 className="font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem] max-w-xl  ">
+                                <h2 className="font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem] max-w-xl  group-hover:text-orange-500">
                                     Hiring Helper for Managers
                                     <svg
                                         className="inline-block group-hover:text-orange-500 w-6 h-6 transition-transform ml-2 shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-y-0 group-focus-visible:translate-x-0 motion-reduce:transition-none"
@@ -200,7 +200,7 @@ const Projects = () => {
 
                             <div className="  flex md:flex-row flex-col">
                                 <div className="md:w-[60%] w-full flex-col gap-4 items-start justify-start order-2 md:order-1 flex">
-                                    <h2 className="md:hidden block font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem] max-w-xl  ">
+                                    <h2 className="md:hidden block font-semibold sm:text-[1.75rem] group-hover:text-neutral-700-500  text-[1.4rem] max-w-xl  group-hover:text-orange-500">
                                         Hiring Helper for Managers
                                         <svg
                                             className="inline-block group-hover:text-orange-500 w-6 h-6 transition-transform ml-2 shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 group-focus-visible:translate-y-0 group-focus-visible:translate-x-0 motion-reduce:transition-none"
