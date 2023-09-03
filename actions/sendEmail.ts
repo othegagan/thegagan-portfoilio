@@ -35,10 +35,18 @@ const getErrorMessage = (error: unknown): string => {
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
-    const senderEmail = formData.get("senderEmail");
-    const message = formData.get("message");
+    const senderEmail = formData.get("senderEmail") as string | null;
+    const message = formData.get("message") as string | null;
+    const senderName = formData.get("senderName") as string | null;
 
-    // simple server-side validation
+    // Check if senderName is null or empty
+    if (!senderName || senderName.trim() === "") {
+        return {
+            error: "Sender name is required",
+        };
+    }
+
+    // Simple server-side validation for other fields
     if (!validateString(senderEmail, 500)) {
         return {
             error: "Invalid sender email",
@@ -57,12 +65,13 @@ export const sendEmail = async (formData: FormData) => {
             to: "gagankumar8711@gmail.com",
             subject: "Message from contact form",
             reply_to: senderEmail,
-            react: React.createElement(ContactFormEmail, {
-                message: message,
-                senderEmail: senderEmail,
-            }),
+            react: ContactFormEmail({
+                message: message || '', // Ensure message is not null
+                senderName: senderName || '', // Ensure senderName is not null
+                senderEmail: senderEmail || '', // Ensure senderEmail is not null
+            }) as React.ReactElement,
         });
-    } catch (error: unknown) {
+    } catch (error) {
         return {
             error: getErrorMessage(error),
         };

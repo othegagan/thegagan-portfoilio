@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import SectionHeading from "./SeactionHeading";
 import Link from "next/link";
 import { experimental_useFormStatus as useFormStatus } from "react-dom";
@@ -8,7 +8,8 @@ import { sendEmail } from "@/actions/sendEmail";
 
 const ContactForm = () => {
     const { pending } = useFormStatus();
-    const [error, seterror] = useState("");
+    const [error, setError] = useState("");
+
     return (
         <div>
             <section id="contact">
@@ -135,18 +136,13 @@ const ContactForm = () => {
                         </div>
 
                         <form
+                            id="contact-form"
                             className="p-6 md:w-1/2 flex flex-col justify-center space-y-6"
                             action={async (formData) => {
-                                const { data, error } = await sendEmail(
-                                    formData
-                                );
+                                const { error } = await sendEmail(formData);
 
-                                if (error) {
-                                    seterror(error);
-                                    return;
-                                }
-
-                                seterror("Email sent successfully!");
+                                // Set error or success message
+                                setError(error ? error : 'Email sent successfully!');
                             }}>
                             <input
                                 className="flex h-9 w-full rounded-md border dark:text-foreground border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-accent dark:placeholder:text-foreground/30 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
@@ -171,7 +167,7 @@ const ContactForm = () => {
                                 className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50  bg-background text-foreground dark:bg-primary dark:text-primary-foreground shadow dark:hover:bg-primary/90 h-9 px-4 py-2 hover:bg-background/90"
                                 disabled={pending}>
                                 {pending ? (
-                                    <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+                                    <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white">Pending</div>
                                 ) : (
                                     <>Submit </>
                                 )}
