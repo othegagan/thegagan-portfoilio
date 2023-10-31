@@ -45,7 +45,6 @@ const Skillset = () => {
                     whileInView="visible"
                     viewport={{ root: scrollRef }}
                     className="max-w-3xl flex  flex-col gap-10 items-center justify-center">
-
                     <div className="flex flex-wrap justify-center gap-2  text-lg text-gray-800">
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
                             <svg
@@ -182,7 +181,7 @@ const Skillset = () => {
                             </svg>
                             Javascript
                         </div>
- <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
+                        <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
                             <svg
                                 width="30"
                                 height="30"
@@ -198,27 +197,28 @@ const Skillset = () => {
                             Nextjs 13
                         </div>
 
-                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
-                           <svg id="Layer_1" width="30"
+                        <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
+                            <svg
+                                width="30"
                                 height="30"
                                 className="h-6 w-6"
-                                viewBox="0 0 256 256" style="enable-background:new 0 0 250 250;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#DD0031;}
-	.st1{fill:#C3002F;}
-	.st2{fill:#FFFFFF;}
-</style>
-<g>
-	<polygon class="st0" points="125,30 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,230 203.9,186.3 218.1,63.2  "/>
-	<polygon class="st1" points="125,30 125,52.2 125,52.1 125,153.4 125,153.4 125,230 125,230 203.9,186.3 218.1,63.2 125,30  "/>
-	<path class="st2" d="M125,52.1L66.8,182.6h0h21.7h0l11.7-29.2h49.4l11.7,29.2h0h21.7h0L125,52.1L125,52.1L125,52.1L125,52.1   L125,52.1z M142,135.4H108l17-40.9L142,135.4z"/>
-</g>
-</svg>
+                                viewBox="0 0 256 256"
+                                preserveAspectRatio="xMidYMid">
+                                <path
+                                    d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
+                                    fill="#E23237"
+                                />
+                                <path
+                                    d="M255.104 44.725L125.908.697v270.444l108.277-59.866 20.919-166.55z"
+                                    fill="#B52E31"
+                                />
+                                <path
+                                    d="M126.107 32.274L47.714 206.693l29.285-.498 15.739-39.347h70.325l17.233 39.845 27.99.498-82.179-174.917zm.2 55.882l26.496 55.383h-49.806l23.31-55.383z"
+                                    fill="#FFF"
+                                />
+                            </svg>
                             Angular
                         </div>
-
-                        
-
 
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
                             <svg
@@ -238,8 +238,6 @@ const Skillset = () => {
                             Tailwind CSS
                         </div>
 
-
-
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -258,8 +256,6 @@ const Skillset = () => {
                             </svg>
                             Typescript
                         </div>
-
-                       
 
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
                             <svg
@@ -310,8 +306,6 @@ const Skillset = () => {
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
                             .NET Core MVC
                         </div>
-
-
 
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
                             SQL Server
