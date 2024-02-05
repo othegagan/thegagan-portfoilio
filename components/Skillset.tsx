@@ -18,7 +18,8 @@ const Skillset = () => {
         <div className="w-full bg-gradient-to-tl  from-[hsl(0,0%,90%)] to-[hsl(0,0%,100%)] dark:from-[hsl(0,0%,6%)] dark:to-[hsl(0,0%,0%)]">
             <section
                 id="skills"
-                className="overflow-hidden relative min-h-[400px] container py-10 md:py-20 space-y-12 p-6 justify-center items-center  flex flex-col  ">
+                className="overflow-hidden relative min-h-[400px] container py-10 md:py-20 space-y-12 p-6 justify-center items-center  flex flex-col  "
+            >
                 <Image
                     className="-z-10 absolute  animate-pulse rotate-45  -left-[40%]"
                     src="/stars.svg"
@@ -44,7 +45,8 @@ const Skillset = () => {
                     }}
                     whileInView="visible"
                     viewport={{ root: scrollRef }}
-                    className="max-w-3xl flex  flex-col gap-10 items-center justify-center">
+                    className="max-w-3xl flex  flex-col gap-10 items-center justify-center"
+                >
                     <div className="flex flex-wrap justify-center gap-2  text-lg text-gray-800">
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
                             <svg
@@ -53,7 +55,8 @@ const Skillset = () => {
                                 height="30"
                                 viewBox="0 0 30 30"
                                 className="h-6 w-6"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     fillRule="evenodd"
                                     clipRule="evenodd"
@@ -89,7 +92,8 @@ const Skillset = () => {
                                 height="30"
                                 className="w-6 h-6"
                                 viewBox="0 0 30 30"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     fillRule="evenodd"
                                     clipRule="evenodd"
@@ -131,7 +135,8 @@ const Skillset = () => {
                                 height="231"
                                 viewBox="0 0 231 231"
                                 className="w-7 h-7"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     d="M110.273 132.824C120.08 132.824 128.03 124.874 128.03 115.067C128.03 105.26 120.08 97.3097 110.273 97.3097C100.466 97.3097 92.5156 105.26 92.5156 115.067C92.5156 124.874 100.466 132.824 110.273 132.824Z"
                                     fill="#00D8FF"
@@ -165,7 +170,8 @@ const Skillset = () => {
                                 height="30"
                                 viewBox="0 0 30 30"
                                 className="w-6 h-6 rounded-[2px]"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     fillRule="evenodd"
                                     clipRule="evenodd"
@@ -186,15 +192,17 @@ const Skillset = () => {
                                 width="30"
                                 height="30"
                                 className="h-6 w-6"
-                                viewBox="0 0 256 256">
+                                viewBox="0 0 256 256"
+                            >
                                 <g>
                                     <path
                                         className=""
                                         d="M119.616813,0.0688905149 C119.066276,0.118932037 117.314565,0.294077364 115.738025,0.419181169 C79.3775171,3.69690087 45.3192571,23.3131775 23.7481916,53.4631946 C11.7364614,70.2271045 4.05395894,89.2428829 1.15112414,109.384595 C0.12512219,116.415429 0,118.492153 0,128.025062 C0,137.557972 0.12512219,139.634696 1.15112414,146.665529 C8.10791789,194.730411 42.3163245,235.11392 88.7116325,250.076335 C97.0197458,252.753556 105.778299,254.580072 115.738025,255.680985 C119.616813,256.106338 136.383187,256.106338 140.261975,255.680985 C157.453763,253.779407 172.017986,249.525878 186.382014,242.194795 C188.584164,241.068861 189.00958,240.768612 188.709286,240.518404 C188.509091,240.36828 179.124927,227.782837 167.86393,212.570214 L147.393939,184.922273 L121.743891,146.965779 C107.630108,126.098464 96.0187683,109.034305 95.9186706,109.034305 C95.8185728,109.009284 95.7184751,125.873277 95.6684262,146.465363 C95.5933529,182.52028 95.5683284,183.971484 95.1178886,184.82219 C94.4672532,186.048207 93.9667644,186.548623 92.915738,187.099079 C92.114956,187.499411 91.4142717,187.574474 87.6355816,187.574474 L83.3063539,187.574474 L82.1552297,186.848872 C81.4044966,186.373477 80.8539589,185.747958 80.4785924,185.022356 L79.9530792,183.896422 L80.0031281,133.729796 L80.0782014,83.5381493 L80.8539589,82.5623397 C81.25435,82.0369037 82.1051808,81.3613431 82.7057674,81.0360732 C83.7317693,80.535658 84.1321603,80.4856165 88.4613881,80.4856165 C93.5663734,80.4856165 94.4172043,80.6857826 95.7434995,82.1369867 C96.1188661,82.5373189 110.007429,103.454675 126.623656,128.650581 C143.239883,153.846488 165.962072,188.250034 177.122972,205.139048 L197.392766,235.839522 L198.418768,235.163961 C207.502639,229.259062 217.112023,220.852086 224.719453,212.09482 C240.910264,193.504394 251.345455,170.835585 254.848876,146.665529 C255.874878,139.634696 256,137.557972 256,128.025062 C256,118.492153 255.874878,116.415429 254.848876,109.384595 C247.892082,61.3197135 213.683675,20.9362052 167.288368,5.97379012 C159.105376,3.32158945 150.396872,1.49507389 140.637341,0.394160408 C138.234995,0.143952798 121.693842,-0.131275573 119.616813,0.0688905149 L119.616813,0.0688905149 Z M172.017986,77.4831252 C173.219159,78.0836234 174.195112,79.2345784 174.545455,80.435575 C174.74565,81.0861148 174.795699,94.9976579 174.74565,126.348671 L174.670577,171.336 L166.73783,159.17591 L158.780059,147.01582 L158.780059,114.313685 C158.780059,93.1711423 158.880156,81.2862808 159.030303,80.7108033 C159.430694,79.3096407 160.306549,78.2087272 161.507722,77.5581875 C162.533724,77.0327515 162.909091,76.98271 166.837928,76.98271 C170.541544,76.98271 171.19218,77.0327515 172.017986,77.4831252 Z"
-                                        fill="currentColor"></path>
+                                        fill="currentColor"
+                                    ></path>
                                 </g>
                             </svg>
-                            Nextjs 13
+                            Nextjs 14
                         </div>
 
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
@@ -203,7 +211,8 @@ const Skillset = () => {
                                 height="30"
                                 className="h-6 w-6"
                                 viewBox="0 0 256 256"
-                                preserveAspectRatio="xMidYMid">
+                                preserveAspectRatio="xMidYMid"
+                            >
                                 <path
                                     d="M.1 45.522L125.908.697l129.196 44.028-20.919 166.45-108.277 59.966-106.583-59.169L.1 45.522z"
                                     fill="#E23237"
@@ -217,7 +226,7 @@ const Skillset = () => {
                                     fill="#FFF"
                                 />
                             </svg>
-                            Angular
+                            Angular 16
                         </div>
 
                         <div className="bg-white rounded-xl flex gap-2 items-center justify-center px-4 py-2 dark:bg-white/5 dark:text-white/80">
@@ -227,7 +236,8 @@ const Skillset = () => {
                                 height="33"
                                 viewBox="0 0 54 33"
                                 className="w-6 h-6"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     fillRule="evenodd"
                                     clipRule="evenodd"
@@ -245,7 +255,8 @@ const Skillset = () => {
                                 height="30"
                                 viewBox="0 0 30 30"
                                 className="w-6 h-6 rounded-[2px]"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     xmlns="http://www.w3.org/2000/svg"
                                     fillRule="evenodd"
@@ -264,7 +275,8 @@ const Skillset = () => {
                                 height="38"
                                 viewBox="0 0 40 38"
                                 className="w-6 h-6"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     fillRule="evenodd"
                                     clipRule="evenodd"
@@ -284,7 +296,8 @@ const Skillset = () => {
                                         y1="38"
                                         x2="1392.66"
                                         y2="-2801.16"
-                                        gradientUnits="userSpaceOnUse">
+                                        gradientUnits="userSpaceOnUse"
+                                    >
                                         <stop stop-color="#387EB8" />
                                         <stop offset="1" stop-color="#366994" />
                                     </linearGradient>
@@ -294,7 +307,8 @@ const Skillset = () => {
                                         y1="28.3899"
                                         x2="1456.38"
                                         y2="-2810.6"
-                                        gradientUnits="userSpaceOnUse">
+                                        gradientUnits="userSpaceOnUse"
+                                    >
                                         <stop stop-color="#FFE052" />
                                         <stop offset="1" stop-color="#FFC331" />
                                     </linearGradient>
@@ -318,7 +332,8 @@ const Skillset = () => {
                                 height="38"
                                 viewBox="0 0 18 38"
                                 className="h-7"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     d="M8.63947 0.102844L9.64954 1.99454C9.86896 2.33621 10.1246 2.65332 10.4122 2.94039C11.2576 3.7834 12.0609 4.66698 12.7824 5.61282C14.4936 7.85361 15.6479 10.3298 16.4721 13.0329C16.9665 14.6769 17.2352 16.3629 17.2551 18.0683C17.3379 23.1665 15.585 27.5438 12.0515 31.1819C11.4766 31.7588 10.8556 32.2882 10.1945 32.7646C9.84445 32.7646 9.67887 32.4971 9.53457 32.2504C9.26585 31.7989 9.10169 31.2833 9.0189 30.7705C8.89494 30.1539 8.8131 29.5369 8.85331 28.9V28.6123C8.82493 28.5392 8.51647 0.23682 8.639 0.103316L8.63947 0.102844Z"
                                     fill="#599636"
@@ -342,7 +357,8 @@ const Skillset = () => {
                                 height="35"
                                 viewBox="0 0 26 35"
                                 className="w-6 h-6"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     d="M16.5852 12.6371L13.0839 15.8956L9.83496 9.34093L11.5163 5.57098C11.9537 4.80579 12.6356 4.81454 13.062 5.57098L16.5852 12.6371Z"
                                     fill="#FFA000"
@@ -370,7 +386,8 @@ const Skillset = () => {
                                 height="30"
                                 viewBox="0 0 31 30"
                                 className="h-6 w-6"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     d="M0.257812 3.86822C0.257812 1.73162 1.98967 0 4.12603 0H26.3896C28.5262 0 30.2578 1.73186 30.2578 3.86822V26.1318C30.2578 28.2684 28.526 30 26.3896 30H4.12603C1.98944 30 0.257812 28.2681 0.257812 26.1318V3.86822Z"
                                     fill="#7222EC"
@@ -390,7 +407,8 @@ const Skillset = () => {
                                 height="30"
                                 viewBox="0 0 32 30"
                                 className="w-6 h-6"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     fillRule="evenodd"
                                     clipRule="evenodd"
@@ -408,7 +426,8 @@ const Skillset = () => {
                                 height="35"
                                 className="w-6 h-6"
                                 viewBox="0 0 23 35"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     d="M5.75 35C8.924 35 11.5 32.3867 11.5 29.1667V23.3333H5.75C2.576 23.3333 0 25.9467 0 29.1667C0 32.3867 2.576 35 5.75 35Z"
                                     fill="#0ACF83"
@@ -440,7 +459,8 @@ const Skillset = () => {
                                 height="32"
                                 viewBox="0 0 33 32"
                                 className="w-6 h-6"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     d="M5.92448 0H26.5911C29.7245 0 32.2578 2.59829 32.2578 5.81197V26.188C32.2578 29.4017 29.7245 32 26.5911 32H5.92448C2.79115 32 0.257812 29.4017 0.257812 26.188V5.81197C0.257812 2.59829 2.79115 0 5.92448 0Z"
                                     fill="#001E36"
@@ -464,7 +484,8 @@ const Skillset = () => {
                                 height="32"
                                 className="w-6 h-6"
                                 viewBox="0 0 33 32"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     d="M5.92448 0H26.5911C29.7245 0 32.2578 2.59829 32.2578 5.81197V26.188C32.2578 29.4017 29.7245 32 26.5911 32H5.92448C2.79115 32 0.257812 29.4017 0.257812 26.188V5.81197C0.257812 2.59829 2.79115 0 5.92448 0Z"
                                     fill="#330000"
@@ -484,14 +505,16 @@ const Skillset = () => {
                                 height="32"
                                 className="w-6 h-6"
                                 viewBox="0 0 33 32"
-                                fill="none">
+                                fill="none"
+                            >
                                 <mask
                                     id="mask0_565_86"
                                     maskUnits="userSpaceOnUse"
                                     x="0"
                                     y="0"
                                     width="33"
-                                    height="32">
+                                    height="32"
+                                >
                                     <path
                                         fillRule="evenodd"
                                         clipRule="evenodd"
@@ -533,7 +556,8 @@ const Skillset = () => {
                                         width="48.6862"
                                         height="40.9773"
                                         filterUnits="userSpaceOnUse"
-                                        color-interpolation-filters="sRGB">
+                                        color-interpolation-filters="sRGB"
+                                    >
                                         <feFlood
                                             flood-opacity="0"
                                             result="BackgroundImageFix"
@@ -569,7 +593,8 @@ const Skillset = () => {
                                         width="26.6667"
                                         height="48.6667"
                                         filterUnits="userSpaceOnUse"
-                                        color-interpolation-filters="sRGB">
+                                        color-interpolation-filters="sRGB"
+                                    >
                                         <feFlood
                                             flood-opacity="0"
                                             result="BackgroundImageFix"
@@ -604,7 +629,8 @@ const Skillset = () => {
                                         y1="32"
                                         x2="16.2383"
                                         y2="-1.12617e-05"
-                                        gradientUnits="userSpaceOnUse">
+                                        gradientUnits="userSpaceOnUse"
+                                    >
                                         <stop stop-color="white" />
                                         <stop
                                             offset="1"
