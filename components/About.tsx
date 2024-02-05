@@ -24,10 +24,10 @@ const About = () => {
                         <Balancer>
                             Welcome to my digital realm, where design seamlessly
                             merges with code! <br className="hidden md:block" />{" "}
-                            I'm Gagan Kumar, a committed and dynamic web
+                            I&aposm Gagan Kumar, a committed and dynamic web
                             developer and designer, driven by a profound passion
                             for creating immersive digital experiences. Armed
-                            with a recent Master's degree in Computer
+                            with a recent Master&aposs degree in Computer
                             Applications (MCA), my journey in the tech world has
                             been both enlightening and exhilarating.
                             <br />
