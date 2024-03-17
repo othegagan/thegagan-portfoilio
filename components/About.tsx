@@ -23,9 +23,11 @@ const About = () => {
                     <p className="md:max-w-[65%] sm:text-base md:text-center  order-2 md:order-1  leading-[1.5]  text-zinc-700 dark:text-[#888]">
                         <Balancer>
                             Welcome to my digital realm, where design seamlessly
-                            merges with code! <br className="hidden md:block" />{" "} I bring design and code together seamlessly to craft user-centric experiences.
-                           Armed
-                            with a recent Master's degree in Computer
+                            merges with code! <br className="hidden md:block" />{" "}
+                            I&aposm Gagan Kumar, a committed and dynamic web
+                            developer and designer, driven by a profound passion
+                            for creating immersive digital experiences. Armed
+                            with a recent Master&aposs degree in Computer
                             Applications (MCA), my journey in the tech world has
                             been both enlightening and exhilarating.
                             <br />
