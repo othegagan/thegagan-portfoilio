@@ -25,7 +25,7 @@ const About = () => {
                             Welcome to my digital realm, where design seamlessly
                             merges with code! <br className="hidden md:block" />{" "} I bring design and code together seamlessly to craft user-centric experiences.
                            Armed
-                            with a recent Master's degree in Computer
+                            with a recent Master&apos;s degree in Computer
                             Applications (MCA), my journey in the tech world has
                             been both enlightening and exhilarating.
                             <br />
