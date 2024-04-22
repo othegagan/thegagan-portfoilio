@@ -28,7 +28,7 @@ const HeroSection = () => {
                             Gagan Kumar
                         </span>
                         , a passionate web design and development enthusiast, driven by a vision to make the web a better place. 
-                       . Explore my{" "}
+                     Explore my{" "}
                         <span className="font-medium text-zinc-700 dark:text-zinc-300">
                             {" "}
                             portfolio{" "}
