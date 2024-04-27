@@ -19,7 +19,7 @@ export default function RootLayout({
     return (
         <html lang='en' suppressHydrationWarning className='dark'>
             <head>
-                <link rel='shortcut icon' href='./favicon.ico' type='image/x-icon' />
+                <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
             </head>
             <body className={`${inter.className} min-h-screen antialiased`}>
                 <Navbar />
