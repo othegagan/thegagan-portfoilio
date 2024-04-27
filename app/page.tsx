@@ -1,20 +1,21 @@
-import About from "@/components/About";
-import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
-import HeroSection from "@/components/HeroSection";
-import Projects from "@/components/Projects";
-import Skillset from "@/components/Skillset";
-import SparklesCore from "@/components/SparklesCore";
+import AboutSection from '@/components/sections/AboutSection';
+import ContactSection from '@/components/sections/Contact';
+import Experience from '@/components/sections/Experience';
+import HeroSection from '@/components/sections/HeroSection';
+import Projects from '@/components/sections/Projects';
+import Skills from '@/components/sections/Skills';
 
 export default function Home() {
     return (
-        <>
-            <HeroSection />
-            <About />
-            <Skillset />
-            <Projects />
-            <ContactForm />
-            <Footer />
-        </>
+        <div className='relative flex flex-col overflow-x-hidden'>
+            <main className='flex-1 '>
+                <HeroSection />
+                <AboutSection />
+                <Experience />
+                <Skills />
+                <Projects />
+                <ContactSection />
+            </main>
+        </div>
     );
 }
