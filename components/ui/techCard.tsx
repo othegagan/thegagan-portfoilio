@@ -10,7 +10,7 @@ export function TechCard({ technology }: TechnologyCardProps) {
     return (
         <div className='flex items-center justify-center gap-2 rounded-md bg-muted p-2 px-4 text-white'>
             <Icon className='size-5' />
-            <div className=' text-xs  md:text-base '>{technology.name}</div>
+            <div className=' text-md  md:text-base '>{technology.name}</div>
         </div>
     );
 }
