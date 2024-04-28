@@ -39,12 +39,15 @@ export default function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
+<Link herf="#contact">
+
 
                         <Button
-                            variant='outline'
+                            variant='outline'  type="button"
                             className='duration-400 inline-flex  transform animate-shimmer items-center justify-center rounded-md border border-neutral-700  bg-[linear-gradient(110deg,#000103,45%,#26272B,55%,#000103)] bg-[length:200%_100%] transition-all  hover:-translate-y-1 focus:outline-none'>
                             Contact
                         </Button>
+</Link>
                     </nav>
                 </div>
             </div>
