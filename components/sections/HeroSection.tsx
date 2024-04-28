@@ -12,7 +12,6 @@ export default function HeroSection() {
             className='relative mx-auto flex min-h-screen  w-full max-w-5xl flex-col items-center justify-center gap-4 py-24 text-center md:py-32'>
             <Particles className='absolute inset-0 -z-10 ' />
             <Particles className='absolute inset-0 -z-10 ' />
-            <Particles className='absolute inset-0 -z-10 ' />
             <h1
                 className=' animate-fade-up bg-gradient-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-4   text-2xl font-bold tracking-tight text-transparent md:text-3xl lg:text-5xl '
                 style={{ animationDelay: '0.20s', animationFillMode: 'both' }}

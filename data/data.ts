@@ -123,6 +123,11 @@ export const technologies: Technology[] = [
         icon: 'mongodb',
     },
     {
+        id: 'nodejs',
+        name: 'Node JS',
+        icon: 'nodejs',
+    },
+    {
         id: 'firebase',
         name: 'Firebase',
         icon: 'firebase',
