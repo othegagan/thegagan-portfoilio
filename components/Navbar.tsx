@@ -39,7 +39,7 @@ export default function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
-<Link herf="#contact">
+<Link href="#contact">
 
 
                         <Button
