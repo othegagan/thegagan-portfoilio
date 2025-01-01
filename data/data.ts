@@ -52,7 +52,7 @@ export const timeline = [
         cross-functional teams to deliver high-quality and impactful projects.`,
         place: 'Dimension64',
         link: 'https://dimension64.com/',
-        year: 'AUG 2023 - PRESENT',
+        year: 'AUG 2023 - DEC 2024',
     },
 ];
 
