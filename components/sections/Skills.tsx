@@ -23,7 +23,7 @@ const Skills = () => {
             <Particles className='absolute inset-0 -z-10 ' />
             <h3
                 ref={skill}
-                className='bg-gradient-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-3 text-4xl font-bold text-transparent lg:text-6xl'>
+                className='bg-linear-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-3 text-4xl font-bold text-transparent lg:text-6xl'>
                 Skills
             </h3>
             <p className='text-md mb-8 text-center text-neutral-400'>

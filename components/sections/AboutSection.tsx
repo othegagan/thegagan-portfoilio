@@ -32,7 +32,7 @@ export default function AboutSection() {
                         <div className='mx-auto flex max-w-xl flex-col gap-8 space-y-8 space-y-reverse md:max-w-none md:flex-row md:space-x-8 md:space-y-0 lg:space-x-16 xl:space-x-20'>
                             {/* Content */}
                             <div className='order-1 max-md:text-center md:order-none md:w-7/12 lg:w-[60%]' data-aos='fade-down'>
-                                <h3 className='bg-gradient-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-3 text-4xl font-bold text-transparent lg:text-6xl'>
+                                <h3 className='bg-linear-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-3 text-4xl font-bold text-transparent lg:text-6xl'>
                                     Get to know me
                                 </h3>
                                 <p className='text-md mb-8 text-neutral-400'>

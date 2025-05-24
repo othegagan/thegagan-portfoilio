@@ -91,7 +91,7 @@ export default function ContactSection() {
 
     return (
         <section id='contact' className='relative  py-10 md:py-20'>
-            <h3 className='bg-gradient-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-3 text-center text-4xl font-bold text-transparent lg:text-6xl'>
+            <h3 className='bg-linear-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-3 text-center text-4xl font-bold text-transparent lg:text-6xl'>
                 Get in touch
             </h3>
             <div className='container mt-5 flex items-center justify-center '>
@@ -121,10 +121,10 @@ export default function ContactSection() {
                         <Input name='senderEmail' placeholder='Your Email ID' type='email' className='dark:placeholder:text-foreground/30' />
 
                         <textarea
-                            className='flex  w-full resize-none rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 dark:text-foreground dark:placeholder:text-foreground/30'
+                            className='flex  w-full resize-none rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-xs placeholder:text-accent focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 dark:text-foreground dark:placeholder:text-foreground/30'
                             placeholder='Tell us a little bit about yourself'
                             name='message'></textarea>
-                        {error && <p className=' mx-auto text-sm  leading-[1.5]  text-red-400'>{error}</p>}
+                        {error && <p className=' mx-auto text-sm  leading-normal  text-red-400'>{error}</p>}
 
                         <Button disabled={isSubmitting} className='flex w-full items-center justify-center' type='submit'>
                             {isSubmitting ? 'Submitting...' : 'Submit'}
@@ -132,7 +132,7 @@ export default function ContactSection() {
 
                         {emailSent && (
                             <div className='flex items-center  '>
-                                <p className='mx-auto text-center text-sm  leading-[1.5]  text-green-400'>
+                                <p className='mx-auto text-center text-sm  leading-normal  text-green-400'>
                                     Thank you for contacting me..! <br /> I will get in touch with you soon. 😎
                                 </p>
                             </div>

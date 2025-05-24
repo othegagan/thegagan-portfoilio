@@ -13,13 +13,13 @@ export default function HeroSection() {
             <Particles className='absolute inset-0 -z-10 ' />
             <Particles className='absolute inset-0 -z-10 ' />
             <h1
-                className=' animate-fade-up bg-gradient-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-4   text-2xl font-bold tracking-tight text-transparent md:text-3xl lg:text-5xl '
+                className=' animate-fade-up bg-linear-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-4   text-2xl font-bold tracking-tight text-transparent md:text-3xl lg:text-5xl '
                 style={{ animationDelay: '0.20s', animationFillMode: 'both' }}
                 data-aos='fade-down'>
                 <ReactWrapBalancer>I am no Hero.!</ReactWrapBalancer>
             </h1>
             <h1
-                className=' -mt-5 animate-fade-up bg-gradient-to-r from-neutral-200/60 via-neutral-200 to-neutral-100 bg-clip-text pb-4   text-5xl font-extrabold tracking-tight  text-transparent md:text-6xl lg:text-7xl '
+                className=' -mt-5 animate-fade-up bg-linear-to-r from-neutral-200/60 via-neutral-200 to-neutral-100 bg-clip-text pb-4   text-5xl font-extrabold tracking-tight  text-transparent md:text-6xl lg:text-7xl '
                 style={{ animationDelay: '0.20s', animationFillMode: 'both' }}
                 data-aos='fade-down'>
                 <ReactWrapBalancer>Just a wizard weaving digital dreams.</ReactWrapBalancer>
@@ -37,7 +37,7 @@ export default function HeroSection() {
                 className=' mt-10 flex animate-fade-up flex-wrap items-center justify-center gap-6'
                 style={{ animationDelay: '0.40s', animationFillMode: 'both' }}>
                 <div className='group relative  inline-flex'>
-                    <div className='transitiona-all animate-tilt absolute -inset-px scale-[1.2] rounded-xl bg-gradient-to-r from-[#ffffffa1] via-[#ffffffa1] to-[#ffffffa1] opacity-70 blur-lg duration-200 group-hover:-inset-1 group-hover:opacity-90 group-hover:duration-200'></div>
+                    <div className='transitiona-all animate-tilt absolute -inset-px scale-[1.2] rounded-xl bg-linear-to-r from-[#ffffffa1] via-[#ffffffa1] to-[#ffffffa1] opacity-70 blur-lg duration-200 group-hover:-inset-1 group-hover:opacity-90 group-hover:duration-200'></div>
                     <Link href='/Gagan_Kumar_Resume.pdf' download className=' relative'>
                         <Button variant='outline' size='lg' className='group flex gap-2'>
                             <FileDown className='duration-800 size-4 transition-all group-hover:animate-bounce' />

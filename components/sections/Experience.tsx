@@ -37,7 +37,7 @@ export default function Experience() {
             {timeline.map(item => (
                 <div key={item.id} className='md:hidden'>
                     <div className='group relative flex gap-x-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10'>
-                        <a className='absolute inset-0 z-[1]' href='#'></a>
+                        <a className='absolute inset-0 z-1' href='#'></a>
 
                         <div className='relative after:absolute after:bottom-0 after:start-3.5 after:top-7 after:w-px after:-translate-x-[0.5px] after:bg-neutral-200 last:after:hidden '>
                             <div className='relative z-10 flex size-7 items-center justify-center'>

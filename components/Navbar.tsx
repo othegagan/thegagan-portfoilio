@@ -5,11 +5,11 @@ import { Button } from '@/components//ui/button';
 export default function Navbar() {
     const Links = [
         { id: 1, name: 'About', link: '#about' },
-        { id: 1, name: 'Projects', link: '#projects' },
+        { id: 2, name: 'Projects', link: '#projects' },
     ];
 
     return (
-        <header className='supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full shadow-sm    backdrop-blur-[5px] dark:bg-background/60 dark:shadow-neutral-800'>
+        <header className='supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full shadow-xs    backdrop-blur-[5px] dark:bg-background/60 dark:shadow-neutral-800'>
             <div className='container flex h-14 items-center px-4 sm:px-6 lg:px-8'>
                 <Link className=' z-40 mr-4 items-center  space-x-2 overflow-visible dark:text-foreground sm:mr-6' href='/'>
                     <svg width='142' height='37' viewBox='0 0 142 37' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -34,7 +34,7 @@ export default function Navbar() {
                         {Links.map((item: any) => (
                             <Link
                                 key={item.id}
-                                className='hidden px-3 py-2 transition-colors  hover:rounded-lg hover:bg-background/10 dark:text-foreground/60 dark:hover:bg-foreground/10 hover:dark:text-foreground sm:flex'
+                                className='hidden px-3 py-2 transition-colors  hover:rounded-lg hover:bg-background/10 dark:text-foreground/60 dark:hover:bg-foreground/10 dark:hover:text-foreground sm:flex'
                                 href={item.link}>
                                 {item.name}
                             </Link>
@@ -44,7 +44,7 @@ export default function Navbar() {
 
                         <Button
                             variant='outline'  type="button"
-                            className='duration-400 inline-flex  transform animate-shimmer items-center justify-center rounded-md border border-neutral-700  bg-[linear-gradient(110deg,#000103,45%,#26272B,55%,#000103)] bg-[length:200%_100%] transition-all  hover:-translate-y-1 focus:outline-none'>
+                            className='duration-400 inline-flex  transform animate-shimmer items-center justify-center rounded-md border border-neutral-700  bg-[linear-gradient(110deg,#000103,45%,#26272B,55%,#000103)] bg-size-[200%_100%] transition-all  hover:-translate-y-1 focus:outline-hidden'>
                             Contact
                         </Button>
 </Link>

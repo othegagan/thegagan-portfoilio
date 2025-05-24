@@ -17,7 +17,7 @@ export const sendEmail = async (senderEmail, senderName, message) => {
                 message: message || '', // Ensure message is not null
                 senderName: senderName || '', // Ensure senderName is not null
                 senderEmail: senderEmail || '', // Ensure senderEmail is not null
-            }) as React.ReactElement,
+            }) as React.ReactElement<any>,
         });
 
         if (data) {

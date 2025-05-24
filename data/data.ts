@@ -1,4 +1,4 @@
-import { Icons } from '@/components/icons/icons';
+import type { Icons } from '@/components/icons/icons';
 
 export const timeline = [
     {
@@ -12,7 +12,7 @@ export const timeline = [
     },
     {
         id: 2,
-        name: `freelance `,
+        name: "freelance ",
         title: 'Freelance graphic designer',
         desc: `Worked as a freelance graphic designer for local startups and vendors, by crafting impactful logos,
         business cards, brochures, billboards, and flyers. Which intern boosting revenue for clients through

@@ -8,7 +8,7 @@ export default function Projects() {
         <section
             id='projects'
             className='container relative flex min-h-[400px] flex-col items-center justify-center space-y-12 overflow-hidden p-6  py-10 md:py-20 '>
-            <h3 className='bg-gradient-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-3 text-4xl font-bold text-transparent lg:text-6xl'>
+            <h3 className='bg-linear-to-r from-neutral-200/60 via-neutral-200 to-neutral-200/60 bg-clip-text pb-3 text-4xl font-bold text-transparent lg:text-6xl'>
                 Projects
             </h3>
             <BentoGrid className='mx-auto max-w-6xl z-20'>
@@ -33,10 +33,8 @@ export const ProjectCardImage = ({ imageURL, alt }: { link: string; imageURL: st
     <div className='relative  overflow-hidden rounded-md bg-gray-50 '>
         <Image
             alt={alt}
-            loading='lazy'
             width={1728}
             height={400}
-            placeholder="blur"
             decoding='async'
             priority={true}
             style={{ color: 'transparent' }}
