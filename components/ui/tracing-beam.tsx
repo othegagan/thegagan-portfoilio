@@ -30,7 +30,9 @@ export const TracingBeam = ({ children, className }: { children: React.ReactNode
     });
 
     return (
-        <motion.div ref={ref} className={cn('relative mx-auto h-full w-full max-w-4xl', className)}>
+        <motion.div ref={ref}
+                //@ts-ignore
+        className={cn('relative mx-auto h-full w-full max-w-4xl', className)}>
             <div className='absolute -left-4 top-3 md:-left-20'>
                 <motion.div
                     transition={{
@@ -40,6 +42,7 @@ export const TracingBeam = ({ children, className }: { children: React.ReactNode
                     animate={{
                         boxShadow: scrollYProgress.get() > 0 ? 'none' : 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
                     }}
+                //@ts-ignore
                     className='border-netural-200 ml-[27px] flex h-4 w-4 items-center justify-center rounded-full border shadow-xs'>
                     <motion.div
                         transition={{
@@ -50,6 +53,7 @@ export const TracingBeam = ({ children, className }: { children: React.ReactNode
                             backgroundColor: scrollYProgress.get() > 0 ? 'white' : 'var(--emerald-500)',
                             borderColor: scrollYProgress.get() > 0 ? 'white' : 'var(--emerald-600)',
                         }}
+                        // @ts-ignore
                         className='h-2 w-2  rounded-full border border-neutral-300 bg-white'
                     />
                 </motion.div>

@@ -14,6 +14,7 @@ export default function Projects() {
             <BentoGrid className='mx-auto max-w-6xl z-20'>
                 {projects.map((project, i) => (
                     <BentoGridItem
+                        // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                         key={i}
                         title={project.title}
                         description={project.description}

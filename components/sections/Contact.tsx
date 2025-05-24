@@ -123,7 +123,7 @@ export default function ContactSection() {
                         <textarea
                             className='flex  w-full resize-none rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-xs placeholder:text-accent focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 dark:text-foreground dark:placeholder:text-foreground/30'
                             placeholder='Tell us a little bit about yourself'
-                            name='message'></textarea>
+                            name='message' />
                         {error && <p className=' mx-auto text-sm  leading-normal  text-red-400'>{error}</p>}
 
                         <Button disabled={isSubmitting} className='flex w-full items-center justify-center' type='submit'>

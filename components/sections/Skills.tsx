@@ -39,6 +39,7 @@ const Skills = () => {
                 }}
                 whileInView='visible'
                 viewport={{ root: scrollRef }}
+                //@ts-ignore
                 className='flex max-w-4xl  flex-col items-center justify-center gap-10'>
                 <div className='col-span-1 flex cursor-default flex-wrap items-center justify-center gap-4'>
                     {technologies.map(technology => (

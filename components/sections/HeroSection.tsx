@@ -37,7 +37,7 @@ export default function HeroSection() {
                 className=' mt-10 flex animate-fade-up flex-wrap items-center justify-center gap-6'
                 style={{ animationDelay: '0.40s', animationFillMode: 'both' }}>
                 <div className='group relative  inline-flex'>
-                    <div className='transitiona-all animate-tilt absolute -inset-px scale-[1.2] rounded-xl bg-linear-to-r from-[#ffffffa1] via-[#ffffffa1] to-[#ffffffa1] opacity-70 blur-lg duration-200 group-hover:-inset-1 group-hover:opacity-90 group-hover:duration-200'></div>
+                    <div className='transitiona-all animate-tilt absolute -inset-px scale-[1.2] rounded-xl bg-linear-to-r from-[#ffffffa1] via-[#ffffffa1] to-[#ffffffa1] opacity-70 blur-lg duration-200 group-hover:-inset-1 group-hover:opacity-90 group-hover:duration-200' />
                     <Link href='/Gagan_Kumar_Resume.pdf' download className=' relative'>
                         <Button variant='outline' size='lg' className='group flex gap-2'>
                             <FileDown className='duration-800 size-4 transition-all group-hover:animate-bounce' />
