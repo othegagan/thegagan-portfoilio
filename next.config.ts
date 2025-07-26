@@ -1,15 +1,18 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-	reactStrictMode: false,
-	images: {
-		remotePatterns: [
-			{
-				protocol: "https",
-				hostname: "images.unsplash.com",
-			},
-		],
-	},
+    reactStrictMode: false,
+    devIndicators: false,
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: '**',
+                port: '',
+            },
+        ],
+        formats: ['image/webp'],
+    },
 };
 
 export default nextConfig;
