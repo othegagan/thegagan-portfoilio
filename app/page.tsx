@@ -1,5 +1,6 @@
 import { About } from '@/features/about';
 import { TeckStack } from '@/features/tech-stack';
+import Work from '@/features/work';
 import { cn } from '@/lib/utils';
 
 export default function Page() {
@@ -15,6 +16,7 @@ export default function Page() {
             <TeckStack />
 
             <Separator />
+            <Work />
         </div>
     );
 }
