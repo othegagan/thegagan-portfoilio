@@ -38,6 +38,118 @@
     --font-mono: var(--font-mono);
 
     --shadow-popover: var(--shadow-popover);
+
+    --animate-accordion-down: accordion-down 0.2s ease-out;
+    --animate-accordion-up: accordion-up 0.2s ease-out;
+    --animate-fade-down: fade-down 0.5s;
+    --animate-fade-up: fade-up 0.5s;
+    --animate-stroke-dashoffset: stroke-dashoffset 0.2s linear forwards;
+    --animate-expand-width: expand-width forwards;
+    --animate-expand-height: expand-height forwards;
+    --animate-skeleton-shimmer: skeleton-shimmer 2s infinite ease-out;
+    --animate-skeleton-gradient: skeleton-gradient 2s infinite ease-out;
+    --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+
+    --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+
+    --color-one: var(--color-one);
+
+    @keyframes spotlight {
+        0% {
+            opacity: 0;
+            transform: translate(-72%, -62%) scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-50%, -40%) scale(1);
+        }
+    }
+
+    @keyframes fade-down {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        80% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes fade-up {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        80% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes accordion-down {
+        from {
+            height: 0;
+        }
+        to {
+            height: var(--radix-accordion-content-height);
+        }
+    }
+    @keyframes accordion-up {
+        from {
+            height: var(--radix-accordion-content-height);
+        }
+        to {
+            height: 0;
+        }
+    }
+    @keyframes stroke-dashoffset {
+        0% {
+            stroke-dashoffset: 100%;
+        }
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+    @keyframes expand-width {
+        0% {
+            border-color: var(--color-foreground);
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+    @keyframes expand-height {
+        0% {
+            border-color: var(--color-foreground);
+            height: 0;
+        }
+        100% {
+            height: 100%;
+        }
+    }
+    @keyframes skeleton-shimmer {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(200%);
+        }
+    }
+    @keyframes skeleton-gradient {
+        0%,
+        100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
 }
 
 @utility no-scrollbar {
@@ -128,6 +240,8 @@
     --code-highlight: oklch(0.274 0.006 286.033);
 
     --shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
+
+    --color-one: oklch(83% 0.12 65);
 }
 
 @layer base {
@@ -169,49 +283,5 @@
 
     .tech-icon {
         @apply mx-1 inline-flex h-[22px] items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-border bg-muted/40 px-1.5 py-2 pr-2 font-medium text-white text-xs transition-colors  disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-3.5 [&_svg]:shrink-0;
-    }
-}
-
-@layer components {
-    [data-rehype-pretty-code-figure] {
-        @apply relative my-6 rounded-lg bg-code text-code-foreground;
-
-        pre {
-            @apply overflow-x-auto px-4 py-4 has-data-line-numbers:px-0;
-        }
-
-        code {
-            @apply font-mono text-sm;
-        }
-    }
-
-    [data-line] {
-        @apply py-0.5;
-    }
-
-    [data-line] span {
-        @apply text-(--shiki-light) dark:text-(--shiki-dark);
-    }
-
-    [data-rehype-pretty-code-title] {
-        @apply flex items-center gap-2 border-b px-4 py-2.5 text-sm text-muted-foreground [&_svg]:size-4 [&_svg]:text-muted-foreground;
-    }
-
-    [data-line-numbers] {
-        counter-reset: line;
-    }
-
-    [data-line-numbers] > [data-line]::before {
-        counter-increment: line;
-        content: counter(line);
-        @apply sticky left-0 inline-block w-16 bg-code pr-6 text-right text-sm text-code-number;
-    }
-
-    [data-line-numbers] [data-highlighted-line][data-line]::before {
-        @apply bg-code-highlight;
-    }
-
-    [data-highlighted-line] {
-        @apply bg-code-highlight;
     }
 }

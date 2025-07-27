@@ -5,7 +5,7 @@ export function About() {
     return (
         <Panel id="about">
             <PanelHeader>
-                <PanelTitle>About</PanelTitle>
+                <PanelTitle>Get to know me</PanelTitle>
             </PanelHeader>
 
             <PanelContent>

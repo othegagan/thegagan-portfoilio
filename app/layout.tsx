@@ -6,6 +6,7 @@ import { Providers } from '@/components/providers';
 import { ScrollTop } from '@/components/scroll-top';
 import { SiteFooter } from '@/components/site-footer';
 import { USER } from '@/data/user';
+import Hero from '@/features/hero';
 import { fontMono, fontSans } from '@/lib/fonts';
 
 export const metadata: Metadata = {
@@ -72,7 +73,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html className={`${fontSans.variable} ${fontMono.variable} dark`} lang="en">
             <body>
                 <Providers>
-                    <main className="max-w-screen overflow-x-hidden px-2">{children}</main>
+                    <main className="max-w-screen overflow-x-hidden px-2">
+                        <Hero />
+
+                        {children}
+                    </main>
                     <SiteFooter />
                     <ScrollTop />
                 </Providers>

@@ -20,7 +20,7 @@ function PanelTitle({ className, asChild = false, ...props }: React.ComponentPro
 }
 
 function PanelContent({ className, ...props }: React.ComponentProps<'div'>) {
-    return <div className={cn('p-4', className)} data-slot="panel-body" {...props} />;
+    return <div className={cn('p-4 font-sans ', className)} data-slot="panel-body" {...props} />;
 }
 
 export { Panel, PanelContent, PanelHeader, PanelTitle };
