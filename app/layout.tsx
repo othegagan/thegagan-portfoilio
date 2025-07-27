@@ -75,7 +75,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Providers>
                     <main className="max-w-screen overflow-x-hidden px-2">
                         <Hero />
-
                         {children}
                     </main>
                     <SiteFooter />

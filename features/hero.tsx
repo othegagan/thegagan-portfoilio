@@ -2,7 +2,7 @@ import SiteHeader from '@/components/site-header';
 
 export default function Hero() {
     return (
-        <div className="flex h-dvh flex-1 flex-col ">
+        <div className="relative flex h-dvh flex-1 flex-col overflow-hidden">
             <SiteHeader />
             <div className="mx-auto flex h-full w-full max-w-5xl flex-1 flex-col items-center px-3 font-mono">
                 <div className="relative flex h-full w-full flex-col items-center justify-center gap-4 sm:gap-6">
@@ -15,7 +15,7 @@ export default function Hero() {
                         I am no Hero.!
                     </h1>
 
-                    <h1 className="relative z-10 animate-fade-up text-balance bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-center font-bold text-lg text-transparent tracking-tighter md:text-6xl">
+                    <h1 className="relative z-10 animate-fade-up text-balance bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-center font-bold text-3xl text-transparent tracking-tighter md:text-6xl">
                         Just a wizard weaving digital dreams<span className="text-orange-400">.</span>
                     </h1>
 
@@ -41,6 +41,7 @@ export default function Hero() {
                     </div>
                 </footer>
             </div>
+            <div className="-z-10 pointer-events-none absolute right-0 bottom-[-20rem] left-0 mx-auto h-[50rem] overflow-hidden [--color:var(--color-one)] [mask-image:radial-gradient(ellipse_at_center_center,#000,transparent_50%)] before:absolute before:inset-0 before:h-full before:w-full before:opacity-40 after:absolute after:top-1/2 after:left-1/2 after:aspect-[1/0.7] after:w-[200%] after:translate-x-[-50%] after:rounded-[50%] after:border-[hsl(var(--border))] after:border-t after:bg-background before:[background-image:radial-gradient(circle_at_bottom_center,var(--color),transparent_70%)]" />
         </div>
     );
 }
