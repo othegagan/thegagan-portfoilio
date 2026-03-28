@@ -1,0 +1,85 @@
+/**
+ * Portfolio: only what Tailwind cannot express cleanly.
+ * — Cursor morph when links/buttons are hovered (:has)
+ * — Hero headline shimmer (gradient + background-clip)
+ */
+
+@media (min-width: 641px) {
+    [data-portfolio]:has(a:hover) #cur {
+        width: 14px;
+        height: 14px;
+        background: var(--color-portfolio-orange);
+    }
+
+    [data-portfolio]:has(a:hover) #cur-ring {
+        width: 48px;
+        height: 48px;
+        border-color: rgb(249 115 22 / 0.5);
+    }
+
+    [data-portfolio]:has(button:hover) #cur {
+        width: 14px;
+        height: 14px;
+        background: var(--color-portfolio-orange);
+    }
+
+    [data-portfolio]:has(button:hover) #cur-ring {
+        width: 48px;
+        height: 48px;
+        border-color: rgb(249 115 22 / 0.5);
+    }
+}
+
+/* Hero title: shimmer + entrance (default; was hover-only) */
+[data-portfolio] [data-hero-title] span[data-word]:not([data-word-ai]) {
+    display: inline-block;
+    color: transparent;
+    background: linear-gradient(90deg, #fff 0%, #888 50%, #fff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200%;
+    opacity: 0;
+    animation: portfolio-word-up 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[data-portfolio] [data-hero-title] span[data-word]:not([data-word-ai]):nth-child(1) {
+    animation-delay: 180ms;
+}
+
+[data-portfolio] [data-hero-title] span[data-word]:not([data-word-ai]):nth-child(2) {
+    animation-delay: 240ms;
+}
+
+[data-portfolio] [data-hero-title] span[data-word]:not([data-word-ai]):nth-child(3) {
+    animation-delay: 300ms;
+}
+
+[data-portfolio] [data-hero-title] span[data-word]:not([data-word-ai]):nth-child(4) {
+    animation-delay: 360ms;
+}
+
+[data-portfolio] [data-hero-title] span[data-word]:not([data-word-ai]):nth-child(5) {
+    animation-delay: 420ms;
+}
+
+[data-portfolio] [data-hero-title] span[data-word]:not([data-word-ai]):nth-child(6) {
+    animation-delay: 480ms;
+}
+
+[data-portfolio] [data-hero-title] span[data-word]:not([data-word-ai]):nth-child(7) {
+    animation-delay: 540ms;
+}
+
+[data-portfolio] [data-hero-title] span[data-word]:not([data-word-ai]):nth-child(8) {
+    animation-delay: 580ms;
+}
+
+[data-portfolio] [data-hero-title] span[data-word-ai] {
+    display: inline-block;
+    color: var(--color-portfolio-orange);
+    -webkit-text-fill-color: var(--color-portfolio-orange);
+    background: none;
+    opacity: 0;
+    animation: portfolio-word-up 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 620ms;
+}

@@ -1,0 +1,91 @@
+@import '@thegagan-portfoilio/ui/globals.css';
+@import './styles/portfolio.css';
+
+/* Portfolio palette — use as bg-portfolio-bg, text-portfolio-orange, etc. */
+@theme inline {
+    --color-portfolio-bg: #030303;
+    --color-portfolio-bg2: #080808;
+    --color-portfolio-border: rgba(255, 255, 255, 0.07);
+    --color-portfolio-border-high: rgba(255, 255, 255, 0.16);
+    --color-portfolio-text: #efefef;
+    --color-portfolio-muted: #666666;
+    --color-portfolio-muted2: #333333;
+    --color-portfolio-orange: #f97316;
+    --color-portfolio-orange-dim: rgb(249 115 22 / 0.12);
+    --color-portfolio-orange-glow: rgb(249 115 22 / 0.18);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes drift {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+    to {
+        transform: translate(35px, 25px) scale(1.07);
+    }
+}
+
+@keyframes pulseOrange {
+    0%,
+    100% {
+        box-shadow: 0 0 6px rgb(249 115 22 / 0.4);
+    }
+    50% {
+        box-shadow: 0 0 14px rgb(249 115 22 / 0.7);
+    }
+}
+
+@keyframes portfolio-word-up {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes portfolio-shimmer {
+    from {
+        background-position: 200% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes portfolio-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes portfolio-blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes portfolio-scroll-bounce {
+    0%,
+    100% {
+        transform: rotate(45deg) translateY(0);
+    }
+    50% {
+        transform: rotate(45deg) translateY(5px);
+    }
+}
