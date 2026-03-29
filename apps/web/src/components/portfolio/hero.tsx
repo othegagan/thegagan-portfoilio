@@ -1,5 +1,9 @@
-import Link from 'next/link';
+'use client';
 
+import { ChevronDownIcon } from '@thegagan-portfoilio/ui/components/chevron-down';
+import { RadioIcon } from '@thegagan-portfoilio/ui/components/radio';
+import Link from 'next/link';
+import { AlwaysAnimated } from './always-animated';
 import { HeroBackground } from './hero-background';
 
 export function Hero() {
@@ -14,7 +18,9 @@ export function Hero() {
             <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_75%_52%_at_50%_0%,rgba(255,255,255,0.05)_0%,transparent_65%)]' />
             <div className='relative z-2 mx-auto max-w-[860px]'>
                 <div className='mb-8 inline-flex animate-[fadeInUp_0.6s_ease_forwards_0.05s] items-center gap-2 rounded-full border border-portfolio-border bg-white/4 fill-mode-[forwards] px-3.5 py-1.5 text-portfolio-muted text-xs uppercase tracking-[1.4px] opacity-0'>
-                    <span className='h-1.5 w-1.5 animate-[pulseOrange_2s_ease-in-out_infinite] rounded-full bg-portfolio-orange shadow-[0_0_8px_var(--color-portfolio-orange-glow)]' />
+                    <AlwaysAnimated interval={2500}>
+                        {(ref) => <RadioIcon className='text-portfolio-orange' ref={ref} size={14} />}
+                    </AlwaysAnimated>
                     Available for new opportunities
                 </div>
 
@@ -23,7 +29,7 @@ export function Hero() {
                 </p>
 
                 <h1
-                    className='mb-0 font-extrabold text-[clamp(46px,7.5vw,88px)] text-white leading-none tracking-[-3.5px] max-md:tracking-[-2px]'
+                    className='mb-4 text-balance font-extrabold text-[clamp(40px,7.5vw,88px)] text-white leading-none tracking-[-3.5px] max-md:tracking-[-2px]'
                     data-hero-title>
                     {['Code', 'with', 'Purpose.', 'Design', 'with', 'Intent.', 'Ship', 'with'].map((w, i) => (
                         <span className='inline-block' data-word key={`${String(i)}-${w}`}>
@@ -36,8 +42,8 @@ export function Hero() {
                     </span>
                 </h1>
 
-                <p className='mb-7 animate-[fadeInUp_0.6s_ease_forwards_0.7s] fill-mode-[forwards] text-[clamp(13px,1.3vw,16px)] text-white/22 leading-[1.7] opacity-0'>
-                    Pentesting agents &nbsp;·&nbsp; AI-powered frontends &nbsp;·&nbsp; Agentic workflows
+                <p className='mb-6 animate-[fadeInUp_0.6s_ease_forwards_0.7s] fill-mode-[forwards] text-[clamp(13px,1.3vw,16px)] text-white/22 leading-[1.7] opacity-0'>
+                    AI-powered frontends &nbsp;·&nbsp; Agentic workflows
                 </p>
 
                 <p className='mx-auto mb-10 max-w-[540px] animate-[fadeInUp_0.6s_ease_forwards_0.92s] fill-mode-[forwards] text-[17px] text-portfolio-muted leading-[1.75] opacity-0'>
@@ -59,7 +65,7 @@ export function Hero() {
                 </div>
                 <div className='inline-flex animate-[fadeInUp_0.6s_ease_forwards_1.1s] items-center gap-2.5 rounded-[10px] border border-portfolio-border bg-white/3.5 fill-mode-[forwards] px-5 py-2.5 font-mono text-[13px] text-portfolio-muted opacity-0 transition-[border-color,background] duration-200 hover:border-portfolio-border-high hover:bg-white/5.5'>
                     <span className='text-portfolio-muted'>$</span>
-                    <span className='text-white/85'>building autonomous-pentesting-agent --ai --agentic</span>
+                    <span className='text-white/85'>bun run ship --purpose --intent --ai</span>
                     <span
                         className='inline-block h-[13px] w-2 animate-[portfolio-blink_1.1s_step-end_infinite] rounded-sm bg-white/65 align-middle'
                         style={{ marginLeft: '2px' }}
@@ -67,7 +73,9 @@ export function Hero() {
                 </div>
             </div>
             <div className='absolute bottom-8 left-1/2 flex -translate-x-1/2 animate-[fadeInUp_0.6s_ease_forwards_1.4s] flex-col items-center gap-1.5 fill-mode-[forwards] opacity-0'>
-                <div className='h-[18px] w-[18px] animate-[portfolio-scroll-bounce_2s_ease-in-out_infinite] border-portfolio-muted2 border-r border-b' />
+                <AlwaysAnimated interval={1500}>
+                    {(ref) => <ChevronDownIcon className='text-portfolio-muted' ref={ref} size={22} />}
+                </AlwaysAnimated>
             </div>
         </section>
     );

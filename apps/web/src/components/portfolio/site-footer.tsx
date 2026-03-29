@@ -1,4 +1,8 @@
+'use client';
+
+import { GithubIcon, type GithubIconHandle } from '@thegagan-portfoilio/ui/components/github';
 import Link from 'next/link';
+import { useRef } from 'react';
 
 const FOOTER_LINKS = [
     { href: '#about', label: 'About' },
@@ -8,6 +12,8 @@ const FOOTER_LINKS = [
 ] as const;
 
 export function SiteFooter() {
+    const githubRef = useRef<GithubIconHandle>(null);
+
     return (
         <footer className='mx-auto max-w-[1140px] border-portfolio-border border-t px-7 py-10'>
             <div className='flex flex-col items-start justify-between gap-6 text-portfolio-muted text-sm md:flex-row md:items-center'>
@@ -21,10 +27,13 @@ export function SiteFooter() {
                         </Link>
                     ))}
                     <a
-                        className='transition hover:text-portfolio-orange'
+                        className='inline-flex items-center gap-1.5 transition hover:text-portfolio-orange'
                         href='https://github.com/othegagan'
+                        onMouseEnter={() => githubRef.current?.startAnimation()}
+                        onMouseLeave={() => githubRef.current?.stopAnimation()}
                         rel='noopener noreferrer'
                         target='_blank'>
+                        <GithubIcon ref={githubRef} size={14} />
                         GitHub ↗
                     </a>
                 </nav>

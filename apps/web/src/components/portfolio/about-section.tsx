@@ -1,6 +1,46 @@
+'use client';
+
+import { LayersIcon } from '@thegagan-portfoilio/ui/components/layers';
+import { RocketIcon } from '@thegagan-portfoilio/ui/components/rocket';
+import { TrendingUpIcon } from '@thegagan-portfoilio/ui/components/trending-up';
 import { cn } from '@thegagan-portfoilio/ui/lib/utils';
+import { useRef } from 'react';
 
 import { revealCls } from '@/lib/portfolio-styles';
+
+interface StatCardProps {
+    Icon: React.ForwardRefExoticComponent<
+        React.HTMLAttributes<HTMLDivElement> & { size?: number } & React.RefAttributes<{
+                startAnimation: () => void;
+                stopAnimation: () => void;
+            }>
+    >;
+    l: string;
+    n: string;
+}
+
+function StatCard({ n, l, Icon }: StatCardProps) {
+    const iconRef = useRef<{ startAnimation: () => void; stopAnimation: () => void }>(null);
+    return (
+        <div
+            className='rounded-xl border border-portfolio-border bg-portfolio-bg2 p-6 transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-orange-500/30'
+            onMouseEnter={() => iconRef.current?.startAnimation()}
+            onMouseLeave={() => iconRef.current?.stopAnimation()}
+            role='presentation'>
+            <div className='mb-1 flex items-center gap-2'>
+                <span className='font-extrabold text-[28px] text-portfolio-orange tracking-tight'>{n}</span>
+                <Icon className='text-portfolio-orange/70' ref={iconRef} size={20} />
+            </div>
+            <div className='text-portfolio-muted text-xs uppercase tracking-wide'>{l}</div>
+        </div>
+    );
+}
+
+const STATS = [
+    { n: '3+', l: 'Years of building on the web', Icon: TrendingUpIcon as StatCardProps['Icon'] },
+    { n: '7+', l: 'Projects shipped', Icon: RocketIcon as StatCardProps['Icon'] },
+    { n: '16+', l: 'Technologies in active use', Icon: LayersIcon as StatCardProps['Icon'] }
+];
 
 export function AboutSection() {
     return (
@@ -12,7 +52,7 @@ export function AboutSection() {
                         <h2 className='mb-6 font-extrabold text-[clamp(30px,4.5vw,52px)] text-white tracking-tight'>
                             Developer by craft,
                             <br />
-                            security AI by obsession.
+                            Agentic AI by obsession.
                         </h2>
                         <div className='text-base text-portfolio-muted leading-[1.85] [&_p]:mb-5'>
                             <p>
@@ -38,18 +78,8 @@ export function AboutSection() {
                         </div>
                     </div>
                     <div className='flex flex-col gap-5'>
-                        {[
-                            { n: '5+', l: 'Years of building on the web' },
-                            { n: '7+', l: 'Projects shipped' },
-                            { n: '16+', l: 'Technologies in active use' },
-                            { n: '8.2', l: 'CGPA — Masters, PES University' }
-                        ].map((s) => (
-                            <div
-                                className='rounded-xl border border-portfolio-border bg-portfolio-bg2 p-6 transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-orange-500/30'
-                                key={s.l}>
-                                <div className='mb-1 font-extrabold text-[28px] text-portfolio-orange tracking-tight'>{s.n}</div>
-                                <div className='text-portfolio-muted text-xs uppercase tracking-wide'>{s.l}</div>
-                            </div>
+                        {STATS.map((s) => (
+                            <StatCard key={s.l} {...s} />
                         ))}
                     </div>
                 </div>
