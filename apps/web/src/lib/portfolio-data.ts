@@ -213,8 +213,15 @@ export const EDUCATION_ITEMS: TimelineItem[] = [
 ];
 
 export interface Project {
+    /** CSS `background` for the colored mockup frame (gradient). */
+    accentGradient: string;
+    /** Tailwind grid placement on large screens (12-column bento). */
+    bentoClass: string;
     description: string;
     featured?: boolean;
+    imageSrc: string;
+    /** Tailwind classes for the screenshot area aspect / min-height. */
+    imageFrameClass: string;
     links: { label: string; href: string }[];
     placeholder: string;
     tags: string[];
@@ -229,7 +236,12 @@ export const PROJECTS: Project[] = [
         description:
             'A full-featured, responsive project management solution powered by ReactJS and Firebase. Real-time collaboration, task tracking, and team dashboards — all in one place.',
         tags: ['React', 'Firebase', 'Tailwind'],
-        links: [{ label: 'Live ↗', href: 'https://triboon.web.app/' }]
+        links: [{ label: 'Live ↗', href: 'https://triboon.web.app/' }],
+        imageSrc: '/projects/triboon.png',
+        bentoClass: 'col-span-12 lg:col-span-6',
+        imageFrameClass: 'aspect-[16/10] min-h-[180px] sm:min-h-[200px]',
+        accentGradient:
+            'linear-gradient(145deg, rgb(251 146 60 / 0.55) 0%, rgb(244 63 94 / 0.35) 45%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'RAPIDLOGR',
@@ -237,7 +249,12 @@ export const PROJECTS: Project[] = [
         description:
             'A dynamic log exploration tool with robust search and analysis. Navigate logs effortlessly, uncover insights, and troubleshoot at speed.',
         tags: ['React', 'Search'],
-        links: [{ label: 'Live ↗', href: 'https://rapidlogr.vercel.app/' }]
+        links: [{ label: 'Live ↗', href: 'https://rapidlogr.vercel.app/' }],
+        imageSrc: '/projects/rapidlogr.png',
+        bentoClass: 'col-span-12 lg:col-span-6',
+        imageFrameClass: 'aspect-[16/10] min-h-[180px] sm:min-h-[200px]',
+        accentGradient:
+            'linear-gradient(145deg, rgb(74 222 128 / 0.5) 0%, rgb(34 197 94 / 0.25) 40%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'GITFINDER',
@@ -245,7 +262,25 @@ export const PROJECTS: Project[] = [
         description:
             'Search GitHub users and explore profiles — repos, followers, and contributions — built with Angular and Tailwind CSS.',
         tags: ['Angular 16', 'GitHub API', 'Tailwind'],
-        links: [{ label: 'Live ↗', href: 'https://fyle-internship-challenge-23.vercel.app/' }]
+        links: [{ label: 'Live ↗', href: 'https://fyle-internship-challenge-23.vercel.app/' }],
+        imageSrc: '/projects/gitfinder.png',
+        bentoClass: 'col-span-12 lg:col-span-4',
+        imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
+        accentGradient:
+            'linear-gradient(145deg, rgb(96 165 250 / 0.5) 0%, rgb(167 139 250 / 0.35) 50%, rgb(15 15 15) 100%)'
+    },
+    {
+        placeholder: 'ECOMMERCE',
+        title: 'Ecommerce Store',
+        description:
+            'A responsive storefront experience with product browsing, cart, and checkout-focused UI — polished for conversion and clarity.',
+        tags: ['React', 'E-commerce', 'UI'],
+        links: [{ label: 'Live ↗', href: 'https://github.com/othegagan' }],
+        imageSrc: '/projects/ecommerce.png',
+        bentoClass: 'col-span-12 lg:col-span-4',
+        imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
+        accentGradient:
+            'linear-gradient(145deg, rgb(52 211 153 / 0.45) 0%, rgb(16 185 129 / 0.3) 45%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'HIRELINK',
@@ -253,7 +288,12 @@ export const PROJECTS: Project[] = [
         description:
             'A hiring portal that streamlines applicant tracking and candidate evaluation — built during my internship at EXL Service using .NET Core MVC and Tailwind.',
         tags: ['.NET Core', 'Tailwind', 'MVC'],
-        links: [{ label: 'GitHub ↗', href: 'https://github.com/othegagan/hirelink' }]
+        links: [{ label: 'GitHub ↗', href: 'https://github.com/othegagan/hirelink' }],
+        imageSrc: '/projects/hirelink.png',
+        bentoClass: 'col-span-12 lg:col-span-4',
+        imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
+        accentGradient:
+            'linear-gradient(145deg, rgb(192 132 252 / 0.45) 0%, rgb(236 72 153 / 0.3) 50%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'CARBON CELL',
@@ -261,7 +301,12 @@ export const PROJECTS: Project[] = [
         description:
             'Clean analytics dashboard with live Cryptocurrency pricing and US Population analysis charts — intuitive and information-dense.',
         tags: ['React', 'Charts', 'API'],
-        links: [{ label: 'Live ↗', href: 'https://carbon-cell-dashboard.vercel.app/' }]
+        links: [{ label: 'Live ↗', href: 'https://carbon-cell-dashboard.vercel.app/' }],
+        imageSrc: '/projects/carboncell.png',
+        bentoClass: 'col-span-12 lg:col-span-7',
+        imageFrameClass: 'aspect-[21/10] min-h-[190px] sm:min-h-[210px]',
+        accentGradient:
+            'linear-gradient(145deg, rgb(45 212 191 / 0.4) 0%, rgb(14 165 233 / 0.25) 45%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'C19',
@@ -269,7 +314,12 @@ export const PROJECTS: Project[] = [
         description:
             'A dynamic web solution for COVID vaccination services and pharmacy store management — built for real-world healthcare workflow needs.',
         tags: ['Web App', 'Healthcare'],
-        links: [{ label: 'GitHub ↗', href: 'https://github.com/othegagan/project-c19' }]
+        links: [{ label: 'GitHub ↗', href: 'https://github.com/othegagan/project-c19' }],
+        imageSrc: '/projects/covid.png',
+        bentoClass: 'col-span-12 lg:col-span-5',
+        imageFrameClass: 'aspect-[21/10] min-h-[190px] sm:min-h-[210px]',
+        accentGradient:
+            'linear-gradient(145deg, rgb(163 230 53 / 0.35) 0%, rgb(34 197 94 / 0.3) 40%, rgb(15 15 15) 100%)'
     }
 ];
 
