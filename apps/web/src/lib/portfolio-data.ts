@@ -1,16 +1,21 @@
 export const MARQUEE_ITEMS = [
-    'Next.js',
     'React',
+    'Next.js',
     'TypeScript',
-    'Tailwind CSS',
     'Node.js',
-    'Angular',
+    'Tailwind CSS',
     'MongoDB',
+    'PostgreSQL',
     'Firebase',
-    '.NET Core',
-    'Python',
+    'Git',
+    'GitHub',
     'Figma',
-    'Git'
+    'Framer Motion',
+    'Cursor',
+    'Photoshop',
+    'Illustrator',
+    'Linear',
+    'Notion',
 ] as const;
 
 export const SKILLS = [

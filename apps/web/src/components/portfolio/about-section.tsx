@@ -22,24 +22,24 @@ interface StatCardProps {
 function StatCard({ n, l, Icon }: StatCardProps) {
     const iconRef = useRef<{ startAnimation: () => void; stopAnimation: () => void }>(null);
     return (
-        <div
-            className='rounded-xl border border-portfolio-border bg-portfolio-bg2 p-6 transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-orange-500/30'
+        <button
+            className='relative overflow-hidden rounded-xl border border-portfolio-border bg-portfolio-bg2 p-6 text-left transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-orange-500/30'
             onMouseEnter={() => iconRef.current?.startAnimation()}
             onMouseLeave={() => iconRef.current?.stopAnimation()}
-            role='presentation'>
-            <div className='mb-1 flex items-center gap-2'>
-                <span className='font-extrabold text-[28px] text-portfolio-orange tracking-tight'>{n}</span>
-                <Icon className='text-portfolio-orange/70' ref={iconRef} size={20} />
+            type='button'>
+            <Icon aria-hidden className='pointer-events-none absolute right-3 -bottom-2 text-portfolio-orange/15' ref={iconRef} size={96} />
+            <div className='relative z-10'>
+                <div className='mb-1 font-extrabold text-[28px] text-portfolio-orange tracking-tight'>{n}</div>
+                <div className='text-portfolio-muted text-xs uppercase tracking-wide'>{l}</div>
             </div>
-            <div className='text-portfolio-muted text-xs uppercase tracking-wide'>{l}</div>
-        </div>
+        </button>
     );
 }
 
 const STATS = [
-    { n: '3+', l: 'Years of building on the web', Icon: TrendingUpIcon as StatCardProps['Icon'] },
+    { n: '3', l: 'Years of building on the web', Icon: TrendingUpIcon as StatCardProps['Icon'] },
     { n: '7+', l: 'Projects shipped', Icon: RocketIcon as StatCardProps['Icon'] },
-    { n: '16+', l: 'Technologies in active use', Icon: LayersIcon as StatCardProps['Icon'] }
+    { n: '16+', l: 'Tools & Technologies in active use', Icon: LayersIcon as StatCardProps['Icon'] }
 ];
 
 export function AboutSection() {
@@ -49,32 +49,51 @@ export function AboutSection() {
                 <div className={cn('grid grid-cols-1 items-start gap-16 lg:grid-cols-2', revealCls)} data-reveal>
                     <div>
                         <span className='mb-3.5 block text-[11px] text-portfolio-orange/85 uppercase tracking-[1.8px]'>About me</span>
-                        <h2 className='mb-6 font-extrabold text-[clamp(30px,4.5vw,52px)] text-white tracking-tight'>
+                        <h2 className='mb-6 font-extrabold text-[clamp(30px,4.5vw,52px)] text-white'>
                             Developer by craft,
                             <br />
                             Agentic AI by obsession.
                         </h2>
-                        <div className='text-base text-portfolio-muted leading-[1.85] [&_p]:mb-5'>
+                        <div className='text-[17px] text-portfolio-muted leading-[1.75] [&_p]:mb-5'>
                             <p>
-                                I&apos;m Gagan Kumar — a full-stack developer based in Bengaluru, India with a Master&apos;s in Computer
-                                Applications from PES University, specializing in Web Technologies.
+                                I&apos;m Gagan Kumar. My strongest work is on the{' '}
+                                <strong className='font-medium text-[#bbb]'>frontend and product surface</strong>—AI-assisted interfaces,
+                                motion, and the layer where a complex stack still has to feel obvious to the person using it.
                             </p>
                             <p>
-                                Right now I&apos;m deep in something that genuinely excites me — building{' '}
-                                <strong className='font-medium text-[#bbb]'>AI agents that do autonomous pentesting</strong>. Teaching
-                                machines to think like attackers, find vulnerabilities, and act without hand-holding. It&apos;s the most
-                                interesting problem I&apos;ve worked on.
+                                Lately that obsession shows up as <strong className='font-medium text-[#bbb]'>pentesting automation</strong>{' '}
+                                and autonomous agents—attack-surface reasoning, real vulnerabilities, minimal hand-holding. The domain is
+                                unforgiving; the abstractions have to earn their keep.
                             </p>
                             <p>
-                                Beyond that I&apos;m obsessively exploring what else agentic AI can unlock — orchestration, tooling,
-                                workflows. And yes, I still care deeply about great UI. Good design and intelligent systems aren&apos;t
-                                opposites.
+                                I still split time between <strong className='font-medium text-[#bbb]'>AI frontends</strong>, orchestration,
+                                and whatever comes next for agentic workflows. From pixel-level UI to systems that think and act on their
+                                own—the surface and the machinery have to agree.
                             </p>
-                            <div className='my-7 rounded-r-lg border-portfolio-orange border-l-2 bg-portfolio-orange-dim py-5 pr-6 pl-6'>
-                                <p className='m-0 text-base text-white/65 italic leading-[1.75]'>
-                                    &quot;If your work is work, you&apos;re not doing the right thing.&quot;
-                                </p>
-                            </div>
+                            <figure className='relative my-8 overflow-hidden rounded-2xl border border-portfolio-border bg-linear-to-br from-portfolio-bg2 via-portfolio-bg2 to-[rgb(249_115_22_/0.08)] shadow-[inset_0_1px_0_0_rgb(255_255_255_/0.05)]'>
+                                <div
+                                    aria-hidden
+                                    className='absolute inset-y-0 left-0 w-[3px] bg-linear-to-b from-10% from-portfolio-orange via-portfolio-orange/75 to-transparent'
+                                />
+                                <span
+                                    aria-hidden
+                                    className='pointer-events-none absolute -top-3 right-2 select-none font-serif text-[4.5rem] text-portfolio-orange/10 leading-none sm:text-[5rem]'>
+                                    &ldquo;
+                                </span>
+                                <blockquote className='relative space-y-1 p-4 px-6'>
+                                    <div>
+                                        <p className='max-w-prose text-white/90 leading-relaxed'>
+                                            {'What I cannot create, I do not understand.'}
+                                        </p>
+                                        <footer className='-mt-4 text-[13px] text-portfolio-muted not-italic'>- Richard Feynman</footer>
+                                    </div>
+                                    <p className='max-w-prose border-portfolio-border border-t pt-4 text-[15px] text-white/75 leading-relaxed'>
+                                        {
+                                            'I build for whoever inherits this repo—usually me, in a worse hoodie, wondering why the last version of me was that clever.'
+                                        }
+                                    </p>
+                                </blockquote>
+                            </figure>
                         </div>
                     </div>
                     <div className='flex flex-col gap-5'>
