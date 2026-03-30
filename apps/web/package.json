@@ -8,11 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@ridemountainpig/svgl-react": "^1.0.16",
     "@thegagan-portfoilio/env": "workspace:*",
     "@thegagan-portfoilio/ui": "workspace:*",
     "babel-plugin-react-compiler": "^1.0.0",
     "dotenv": "catalog:",
     "lucide-react": "catalog:",
+    "motion": "^12.38.0",
     "next": "^16.2.1",
     "next-themes": "catalog:",
     "react": "catalog:",
