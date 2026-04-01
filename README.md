@@ -1,38 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# thegagan-portfoilio
+
+This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines Next.js, and more.
+
+## Features
+
+- **TypeScript** - For type safety and improved developer experience
+- **Next.js** - Full-stack React framework
+- **TailwindCSS** - Utility-first CSS for rapid UI development
+- **Shared UI package** - shadcn/ui primitives live in `packages/ui`
+- **Biome** - Linting and formatting
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Open [http://localhost:3001](http://localhost:3001) in your browser to see the web application.
 
-## Learn More
+## UI Customization
 
-To learn more about Next.js, take a look at the following resources:
+React web apps in this stack share shadcn/ui primitives through `packages/ui`.
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Change design tokens and global styles in `packages/ui/src/styles/globals.css`
+- Update shared primitives in `packages/ui/src/components/*`
+- Adjust shadcn aliases or style config in `packages/ui/components.json` and `apps/web/components.json`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Add more shared components
 
-## Deploy on Vercel
+Run this from the project root to add more primitives to the shared UI package:
 
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the
-creators of Next.js.
+```bash
+npx shadcn@latest add accordion dialog popover sheet table -c packages/ui
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Import shared components like this:
+
+```tsx
+import { Button } from "@thegagan-portfoilio/ui/components/button";
+```
+
+### Add app-specific blocks
+
+If you want to add app-specific blocks instead of shared primitives, run the shadcn CLI from `apps/web`.
+
+## Git Hooks and Formatting
+
+- Format and lint fix: `bun run check`
+
+## Project Structure
+
+```
+thegagan-portfoilio/
+├── apps/
+│   ├── web/         # Frontend application (Next.js)
+├── packages/
+│   ├── ui/          # Shared shadcn/ui components and styles
+```
+
+## Available Scripts
+
+- `bun run dev`: Start all applications in development mode
+- `bun run build`: Build all applications
+- `bun run dev:web`: Start only the web application
+- `bun run check-types`: Check TypeScript types across all apps
+- `bun run check`: Run Biome formatting and linting

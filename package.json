@@ -1,44 +1,43 @@
 {
-  "name": "new_portfoilio",
-  "version": "0.1.0",
+  "name": "thegagan-portfoilio",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "dotenv": "^17.3.1",
+      "zod": "^4.3.6",
+      "lucide-react": "^1.7.0",
+      "next-themes": "^0.4.6",
+      "react": "^19.2.4",
+      "react-dom": "^19.2.4",
+      "sonner": "^2.0.7",
+      "@types/react": "^19.2.14",
+      "@types/react-dom": "^19.2.3",
+      "tailwindcss": "^4.2.2"
+    }
+  },
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "bun run --filter '*' dev",
+    "build": "bun run --filter '*' build",
+    "check-types": "bun run --filter '*' check-types",
+    "dev:web": "bun run --filter web dev",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
   },
   "dependencies": {
-    "@radix-ui/react-icons": "^1.3.0",
-    "@radix-ui/react-slot": "^1.0.2",
-    "@react-email/components": "^0.0.16",
-    "@react-email/tailwind": "^0.0.15",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "framer-motion": "^11.1.7",
-    "lucide-react": "^0.376.0",
-    "next": "15.1.8",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-wrap-balancer": "^1.1.0",
-    "resend": "^3.2.0",
-    "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "@thegagan-portfoilio/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.7",
-    "@types/node": "^22",
-    "@types/react": "19.1.5",
-    "@types/react-dom": "19.1.5",
-    "postcss": "^8",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.1.7",
-    "typescript": "^5"
+    "@biomejs/biome": "2.4.9",
+    "@thegagan-portfoilio/config": "workspace:*",
+    "typescript": "^6",
+    "ultracite": "7.3.2"
   },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "19.1.5",
-      "@types/react-dom": "19.1.5"
-    }
-  }
+  "packageManager": "bun@1.3.11"
 }

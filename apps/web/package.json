@@ -1,0 +1,34 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@ridemountainpig/svgl-react": "^1.0.16",
+    "@thegagan-portfoilio/env": "workspace:*",
+    "@thegagan-portfoilio/ui": "workspace:*",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "dotenv": "catalog:",
+    "lucide-react": "catalog:",
+    "motion": "^12.38.0",
+    "next": "^16.2.1",
+    "next-themes": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "sonner": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@thegagan-portfoilio/config": "workspace:*",
+    "@types/node": "^25",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "^6"
+  }
+}
