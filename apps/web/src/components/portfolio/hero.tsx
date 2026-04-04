@@ -58,14 +58,14 @@ export function Hero() {
                         href='#projects'>
                         View My Work
                     </Link>
-                    <Link
+                    <a
                         aria-label='Download resume PDF'
                         className='inline-flex cursor-none items-center gap-2 rounded-lg border border-portfolio-border bg-transparent px-[26px] py-3 font-bold text-[15px] text-portfolio-text transition-all hover:-translate-y-0.5 hover:border-portfolio-border-high hover:bg-white/5'
                         download='Gagan_Kumar_Resume.pdf'
                         href='/Gagan_Kumar_Resume.pdf'>
                         <Download aria-hidden className='size-4 shrink-0' />
                         Resume
-                    </Link>
+                    </a>
                 </div>
                 <div className='inline-flex animate-[fadeInUp_0.6s_ease_forwards_1.1s] items-center gap-2.5 rounded-[10px] border border-portfolio-border bg-white/3.5 fill-mode-[forwards] px-5 py-2.5 font-mono text-[13px] text-portfolio-muted opacity-0 transition-[border-color,background] duration-200 hover:border-portfolio-border-high hover:bg-white/5.5'>
                     <span className='text-portfolio-muted'>$</span>
