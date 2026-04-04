@@ -2,6 +2,7 @@
 
 import { ChevronDownIcon } from '@thegagan-portfoilio/ui/components/chevron-down';
 import { RadioIcon } from '@thegagan-portfoilio/ui/components/radio';
+import { Download } from 'lucide-react';
 import Link from 'next/link';
 import { AlwaysAnimated } from './always-animated';
 import { HeroBackground } from './hero-background';
@@ -43,13 +44,13 @@ export function Hero() {
                 </h1>
 
                 <p className='mb-6 animate-[fadeInUp_0.6s_ease_forwards_0.7s] fill-mode-[forwards] text-[clamp(13px,1.3vw,16px)] text-white/22 leading-[1.7] opacity-0'>
-                    AI-powered frontends &nbsp;·&nbsp; Agentic workflows
+                    Frontend Engineer &nbsp;·&nbsp; AI Tooling
                 </p>
 
                 <p className='mx-auto mb-10 max-w-[540px] animate-[fadeInUp_0.6s_ease_forwards_0.92s] fill-mode-[forwards] text-[17px] text-portfolio-muted leading-[1.75] opacity-0'>
                     Gagan Kumar — <strong className='font-medium text-[#bbb]'>building at the edge of software and intelligence.</strong>{' '}
-                    From pixel-perfect UIs to agents that think and act on their own. Currently obsessing over pentesting automation, AI
-                    frontends, and whatever comes next.
+                    Frontend Engineer with 3 years building production UIs — currently focused on AI-powered interfaces, LLM integrations,
+                    and the craft of making complex AI systems feel effortless to use.
                 </p>
                 <div className='mb-14 flex animate-[fadeInUp_0.6s_ease_forwards_1.06s] flex-wrap items-center justify-center gap-3 fill-mode-[forwards] opacity-0'>
                     <Link
@@ -58,9 +59,12 @@ export function Hero() {
                         View My Work
                     </Link>
                     <Link
-                        className='cursor-none rounded-lg border border-portfolio-border bg-transparent px-[26px] py-3 font-bold text-[15px] text-portfolio-text transition-all hover:-translate-y-0.5 hover:border-portfolio-border-high hover:bg-white/5'
-                        href='#about'>
-                        About Me ↓
+                        aria-label='Download resume PDF'
+                        className='inline-flex cursor-none items-center gap-2 rounded-lg border border-portfolio-border bg-transparent px-[26px] py-3 font-bold text-[15px] text-portfolio-text transition-all hover:-translate-y-0.5 hover:border-portfolio-border-high hover:bg-white/5'
+                        download='Gagan_Kumar_Resume.pdf'
+                        href='/Gagan_Kumar_Resume.pdf'>
+                        <Download aria-hidden className='size-4 shrink-0' />
+                        Resume
                     </Link>
                 </div>
                 <div className='inline-flex animate-[fadeInUp_0.6s_ease_forwards_1.1s] items-center gap-2.5 rounded-[10px] border border-portfolio-border bg-white/3.5 fill-mode-[forwards] px-5 py-2.5 font-mono text-[13px] text-portfolio-muted opacity-0 transition-[border-color,background] duration-200 hover:border-portfolio-border-high hover:bg-white/5.5'>

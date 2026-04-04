@@ -14,20 +14,21 @@ export function getSiteUrl(): string {
 
 export const SITE_NAME = 'Gagan Kumar';
 
-export const SITE_TAGLINE = 'Software Developer';
+export const SITE_TAGLINE = 'Frontend Engineer · AI Tooling';
 
 export const SITE_DESCRIPTION =
-    'Software developer in Bengaluru — AI-powered frontends, agentic workflows, and autonomous pentesting agents. Next.js, React, TypeScript.';
+    'Frontend engineer in Bengaluru — AI-powered interfaces, agentic workflows, and pentesting automation. Next.js, React, TypeScript.';
 
 export const SITE_KEYWORDS = [
     'Gagan Kumar',
-    'software developer',
+    'frontend engineer',
+    'AI tooling',
+    'pentesting automation',
+    'AI agents',
     'Bengaluru',
     'Next.js',
     'React',
     'TypeScript',
-    'AI',
-    'frontend',
     'portfolio'
 ] as const;
 

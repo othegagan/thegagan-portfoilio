@@ -50,7 +50,7 @@ export function AboutSection() {
                     <div>
                         <span className='mb-3.5 block text-[11px] text-portfolio-orange/85 uppercase tracking-[1.8px]'>About me</span>
                         <h2 className='mb-6 font-extrabold text-[clamp(30px,4.5vw,52px)] text-white'>
-                            Developer by craft,
+                            Frontend engineer by craft,
                             <br />
                             Agentic AI by obsession.
                         </h2>

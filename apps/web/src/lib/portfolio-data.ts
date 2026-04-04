@@ -154,7 +154,7 @@ export interface TimelineItem {
 export const EXPERIENCE_ITEMS: TimelineItem[] = [
     {
         date: 'APR 2020 — PRESENT',
-        title: 'Software Developer',
+        title: 'Frontend Engineer · AI Tooling',
         org: 'Astra Security',
         orgHref: 'https://getastra.com/',
         description:
@@ -171,7 +171,7 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
     },
     {
         date: 'AUG 2023 — DEC 2024',
-        title: 'Software Developer',
+        title: 'Frontend Engineer',
         org: 'Dimension64',
         orgHref: 'https://dimension64.com/',
         description:
@@ -240,8 +240,7 @@ export const PROJECTS: Project[] = [
         imageSrc: '/projects/triboon.png',
         bentoClass: 'col-span-12 lg:col-span-6',
         imageFrameClass: 'aspect-[16/10] min-h-[180px] sm:min-h-[200px]',
-        accentGradient:
-            'linear-gradient(145deg, rgb(251 146 60 / 0.55) 0%, rgb(244 63 94 / 0.35) 45%, rgb(15 15 15) 100%)'
+        accentGradient: 'linear-gradient(145deg, rgb(251 146 60 / 0.55) 0%, rgb(244 63 94 / 0.35) 45%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'RAPIDLOGR',
@@ -253,8 +252,7 @@ export const PROJECTS: Project[] = [
         imageSrc: '/projects/rapidlogr.png',
         bentoClass: 'col-span-12 lg:col-span-6',
         imageFrameClass: 'aspect-[16/10] min-h-[180px] sm:min-h-[200px]',
-        accentGradient:
-            'linear-gradient(145deg, rgb(74 222 128 / 0.5) 0%, rgb(34 197 94 / 0.25) 40%, rgb(15 15 15) 100%)'
+        accentGradient: 'linear-gradient(145deg, rgb(74 222 128 / 0.5) 0%, rgb(34 197 94 / 0.25) 40%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'GITFINDER',
@@ -266,8 +264,7 @@ export const PROJECTS: Project[] = [
         imageSrc: '/projects/gitfinder.png',
         bentoClass: 'col-span-12 lg:col-span-4',
         imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
-        accentGradient:
-            'linear-gradient(145deg, rgb(96 165 250 / 0.5) 0%, rgb(167 139 250 / 0.35) 50%, rgb(15 15 15) 100%)'
+        accentGradient: 'linear-gradient(145deg, rgb(96 165 250 / 0.5) 0%, rgb(167 139 250 / 0.35) 50%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'ECOMMERCE',
@@ -275,12 +272,11 @@ export const PROJECTS: Project[] = [
         description:
             'A responsive storefront experience with product browsing, cart, and checkout-focused UI — polished for conversion and clarity.',
         tags: ['React', 'E-commerce', 'UI'],
-        links: [{ label: 'Live ↗', href: 'https://github.com/othegagan' }],
+        links: [{ label: 'GitHub ↗', href: 'https://github.com/othegagan/ecommerce_assignment' }],
         imageSrc: '/projects/ecommerce.png',
         bentoClass: 'col-span-12 lg:col-span-4',
         imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
-        accentGradient:
-            'linear-gradient(145deg, rgb(52 211 153 / 0.45) 0%, rgb(16 185 129 / 0.3) 45%, rgb(15 15 15) 100%)'
+        accentGradient: 'linear-gradient(145deg, rgb(52 211 153 / 0.45) 0%, rgb(16 185 129 / 0.3) 45%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'HIRELINK',
@@ -292,8 +288,7 @@ export const PROJECTS: Project[] = [
         imageSrc: '/projects/hirelink.png',
         bentoClass: 'col-span-12 lg:col-span-4',
         imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
-        accentGradient:
-            'linear-gradient(145deg, rgb(192 132 252 / 0.45) 0%, rgb(236 72 153 / 0.3) 50%, rgb(15 15 15) 100%)'
+        accentGradient: 'linear-gradient(145deg, rgb(192 132 252 / 0.45) 0%, rgb(236 72 153 / 0.3) 50%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'CARBON CELL',
@@ -305,8 +300,7 @@ export const PROJECTS: Project[] = [
         imageSrc: '/projects/carboncell.png',
         bentoClass: 'col-span-12 lg:col-span-7',
         imageFrameClass: 'aspect-[21/10] min-h-[190px] sm:min-h-[210px]',
-        accentGradient:
-            'linear-gradient(145deg, rgb(45 212 191 / 0.4) 0%, rgb(14 165 233 / 0.25) 45%, rgb(15 15 15) 100%)'
+        accentGradient: 'linear-gradient(145deg, rgb(45 212 191 / 0.4) 0%, rgb(14 165 233 / 0.25) 45%, rgb(15 15 15) 100%)'
     },
     {
         placeholder: 'C19',
@@ -318,8 +312,7 @@ export const PROJECTS: Project[] = [
         imageSrc: '/projects/covid.png',
         bentoClass: 'col-span-12 lg:col-span-5',
         imageFrameClass: 'aspect-[21/10] min-h-[190px] sm:min-h-[210px]',
-        accentGradient:
-            'linear-gradient(145deg, rgb(163 230 53 / 0.35) 0%, rgb(34 197 94 / 0.3) 40%, rgb(15 15 15) 100%)'
+        accentGradient: 'linear-gradient(145deg, rgb(163 230 53 / 0.35) 0%, rgb(34 197 94 / 0.3) 40%, rgb(15 15 15) 100%)'
     }
 ];
 
