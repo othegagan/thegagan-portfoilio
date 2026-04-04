@@ -153,7 +153,7 @@ export interface TimelineItem {
 
 export const EXPERIENCE_ITEMS: TimelineItem[] = [
     {
-        date: 'APR 2020 — PRESENT',
+        date: 'JAN 2025 — PRESENT',
         title: 'Frontend Engineer · AI Tooling',
         org: 'Astra Security',
         orgHref: 'https://getastra.com/',
@@ -161,9 +161,9 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
             'Building AI-powered pentesting agents and customer-facing tools in a security product org—where the UI has to keep up with fast-moving agentic workflows.',
         featured: true,
         highlights: [
-            'Ship and iterate on AI-powered pentesting agents—reasoning over attack surfaces, not just scripted scans—alongside product and security stakeholders.',
-            'Own planning and execution for upgrading core front-end frameworks and shared libraries: sequencing risk, rollouts, and regression coverage so the product keeps shipping.',
-            'Partner across the org to land stack updates without freezing the roadmap—translating technical debt into a plan people can commit to.'
+            'Built real-time agentic workflow UIs that surface multi-step AI reasoning to non-technical users — handling streaming states, partial results, and agent handoffs in a production React/Next.js app.',
+            'Own full lifecycle of frontend framework upgrades — from dependency audit and migration planning through rollout and regression coverage — keeping the product shipping without freezing the roadmap.',
+            'Partner with product and engineering stakeholders to translate technical debt into sequenced, committable plans; reduced cross-team friction on stack decisions.'
         ],
         tags: ['AI agents', 'Framework upgrades', 'Product UI', 'Security'],
         badge: 'Full-time',
@@ -177,9 +177,9 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
         description:
             'Product engineering in a fast-moving team—shipping features while modernizing how the codebase kept pace with the roadmap.',
         highlights: [
-            'Owned heavy lifting on updating and migrating core frameworks and shared libraries (React / Angular ecosystem)—from audit through rollout, with clear ownership of regressions.',
-            'Drove planning and execution across squads so upgrades landed on a schedule stakeholders could trust, not as surprise fire drills.',
-            'Shipped customer-facing capabilities on top of a cleaner, more maintainable stack—less glue code, clearer boundaries between modules.'
+            'Led end-to-end migration of React and Angular codebases — from audit through staged rollout — with clear regression ownership and zero unplanned downtime.',
+            'Drove cross-squad upgrade coordination so framework changes landed on schedule, not as emergency fire drills.',
+            'Shipped customer-facing features on a modernized, maintainable stack with cleaner module boundaries and significantly less glue code.'
         ],
         tags: ['Angular', 'React', 'Platform', 'Migrations'],
         badge: 'Full-time',
@@ -193,8 +193,8 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
         description:
             'Owned the Hirelink hiring portal end to end in a short window—backend business rules, responsive UI, and alignment with HR stakeholders.',
         highlights: [
-            'Implemented .NET Core MVC services and Tailwind-backed UI for applicant tracking and recruiter workflows—production-bound, not a demo.',
-            'Translated messy requirements into shippable milestones; paired with senior devs on patterns that would survive the next hire on the project.'
+            'Built Hirelink hiring portal end-to-end in a 6-month window — .NET Core MVC backend, Tailwind UI, applicant tracking and recruiter workflows — production-bound, not a demo.',
+            'Translated ambiguous HR stakeholder requirements into shippable milestones; paired with senior devs to write patterns that survived handoff.'
         ],
         tags: ['.NET Core', 'Tailwind', 'MVC', 'Delivery'],
         badge: 'Internship'
@@ -255,30 +255,6 @@ export const PROJECTS: Project[] = [
         accentGradient: 'linear-gradient(145deg, rgb(74 222 128 / 0.5) 0%, rgb(34 197 94 / 0.25) 40%, rgb(15 15 15) 100%)'
     },
     {
-        placeholder: 'GITFINDER',
-        title: 'Git Finder',
-        description:
-            'Search GitHub users and explore profiles — repos, followers, and contributions — built with Angular and Tailwind CSS.',
-        tags: ['Angular 16', 'GitHub API', 'Tailwind'],
-        links: [{ label: 'Live ↗', href: 'https://fyle-internship-challenge-23.vercel.app/' }],
-        imageSrc: '/projects/gitfinder.png',
-        bentoClass: 'col-span-12 lg:col-span-4',
-        imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
-        accentGradient: 'linear-gradient(145deg, rgb(96 165 250 / 0.5) 0%, rgb(167 139 250 / 0.35) 50%, rgb(15 15 15) 100%)'
-    },
-    {
-        placeholder: 'ECOMMERCE',
-        title: 'Ecommerce Store',
-        description:
-            'A responsive storefront experience with product browsing, cart, and checkout-focused UI — polished for conversion and clarity.',
-        tags: ['React', 'E-commerce', 'UI'],
-        links: [{ label: 'GitHub ↗', href: 'https://github.com/othegagan/ecommerce_assignment' }],
-        imageSrc: '/projects/ecommerce.png',
-        bentoClass: 'col-span-12 lg:col-span-4',
-        imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
-        accentGradient: 'linear-gradient(145deg, rgb(52 211 153 / 0.45) 0%, rgb(16 185 129 / 0.3) 45%, rgb(15 15 15) 100%)'
-    },
-    {
         placeholder: 'HIRELINK',
         title: 'Hirelink',
         description:
@@ -290,30 +266,6 @@ export const PROJECTS: Project[] = [
         imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
         accentGradient: 'linear-gradient(145deg, rgb(192 132 252 / 0.45) 0%, rgb(236 72 153 / 0.3) 50%, rgb(15 15 15) 100%)'
     },
-    {
-        placeholder: 'CARBON CELL',
-        title: 'Carbon Cell Dashboard',
-        description:
-            'Clean analytics dashboard with live Cryptocurrency pricing and US Population analysis charts — intuitive and information-dense.',
-        tags: ['React', 'Charts', 'API'],
-        links: [{ label: 'Live ↗', href: 'https://carbon-cell-dashboard.vercel.app/' }],
-        imageSrc: '/projects/carboncell.png',
-        bentoClass: 'col-span-12 lg:col-span-7',
-        imageFrameClass: 'aspect-[21/10] min-h-[190px] sm:min-h-[210px]',
-        accentGradient: 'linear-gradient(145deg, rgb(45 212 191 / 0.4) 0%, rgb(14 165 233 / 0.25) 45%, rgb(15 15 15) 100%)'
-    },
-    {
-        placeholder: 'C19',
-        title: 'Covid Vaccination Platform',
-        description:
-            'A dynamic web solution for COVID vaccination services and pharmacy store management — built for real-world healthcare workflow needs.',
-        tags: ['Web App', 'Healthcare'],
-        links: [{ label: 'GitHub ↗', href: 'https://github.com/othegagan/project-c19' }],
-        imageSrc: '/projects/covid.png',
-        bentoClass: 'col-span-12 lg:col-span-5',
-        imageFrameClass: 'aspect-[21/10] min-h-[190px] sm:min-h-[210px]',
-        accentGradient: 'linear-gradient(145deg, rgb(163 230 53 / 0.35) 0%, rgb(34 197 94 / 0.3) 40%, rgb(15 15 15) 100%)'
-    }
 ];
 
 export const RESUME_URL = 'https://thegagan-portfolio.vercel.app/Gagan_Kumar_Resume.pdf' as const;

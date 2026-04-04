@@ -4,7 +4,6 @@ import { GithubIcon, type GithubIconHandle } from '@thegagan-portfoilio/ui/compo
 import { LinkedinIcon, type LinkedinIconHandle } from '@thegagan-portfoilio/ui/components/linkedin';
 import { MailCheckIcon, type MailCheckIconHandle } from '@thegagan-portfoilio/ui/components/mail-check';
 import { cn } from '@thegagan-portfoilio/ui/lib/utils';
-import { Phone } from 'lucide-react';
 import { useRef } from 'react';
 
 import { revealCls } from '@/lib/portfolio-styles';
@@ -42,12 +41,7 @@ const CONTACT_LINKS: ContactLinkData[] = [
         value: 'Gagan Kumar',
         renderIcon: (ref) => <LinkedinIcon ref={ref as React.Ref<LinkedinIconHandle>} size={18} />
     },
-    {
-        href: 'tel:+919036644552',
-        label: 'Phone',
-        value: '+91 9036644552',
-        renderIcon: () => <Phone size={18} />
-    }
+
 ];
 
 function ContactLinkCard({ link }: { link: ContactLinkData }) {
@@ -84,8 +78,8 @@ export function ContactSection() {
                     Get in touch
                 </span>
                 <h2 className={cn('mb-14 font-extrabold text-[clamp(30px,4.5vw,52px)] text-white tracking-tight', revealCls)} data-reveal>
-                    Don't be shy, to <br />
-                    say <span className='text-portfolio-orange'>hello there.!</span>
+                    Don&apos;t be shy — <br />
+                    say <span className='text-portfolio-orange'>hello.</span>
                 </h2>
                 <div className={cn('mt-14 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16', revealCls)} data-reveal>
                     <div className='flex flex-col gap-8'>

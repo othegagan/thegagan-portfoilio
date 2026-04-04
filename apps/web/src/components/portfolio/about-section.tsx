@@ -38,7 +38,7 @@ function StatCard({ n, l, Icon }: StatCardProps) {
 
 const STATS = [
     { n: '3', l: 'Years of building on the web', Icon: TrendingUpIcon as StatCardProps['Icon'] },
-    { n: '7+', l: 'Projects shipped', Icon: RocketIcon as StatCardProps['Icon'] },
+    { n: '5+', l: 'Products shipped', Icon: RocketIcon as StatCardProps['Icon'] },
     { n: '16+', l: 'Tools & Technologies in active use', Icon: LayersIcon as StatCardProps['Icon'] }
 ];
 
@@ -70,30 +70,6 @@ export function AboutSection() {
                                 and whatever comes next for agentic workflows. From pixel-level UI to systems that think and act on their
                                 own—the surface and the machinery have to agree.
                             </p>
-                            <figure className='relative my-8 overflow-hidden rounded-2xl border border-portfolio-border bg-linear-to-br from-portfolio-bg2 via-portfolio-bg2 to-[rgb(249_115_22_/0.08)] shadow-[inset_0_1px_0_0_rgb(255_255_255_/0.05)]'>
-                                <div
-                                    aria-hidden
-                                    className='absolute inset-y-0 left-0 w-[3px] bg-linear-to-b from-10% from-portfolio-orange via-portfolio-orange/75 to-transparent'
-                                />
-                                <span
-                                    aria-hidden
-                                    className='pointer-events-none absolute -top-3 right-2 select-none font-serif text-[4.5rem] text-portfolio-orange/10 leading-none sm:text-[5rem]'>
-                                    &ldquo;
-                                </span>
-                                <blockquote className='relative space-y-1 p-4 px-6'>
-                                    <div>
-                                        <p className='max-w-prose text-white/90 leading-relaxed'>
-                                            {'What I cannot create, I do not understand.'}
-                                        </p>
-                                        <footer className='-mt-4 text-[13px] text-portfolio-muted not-italic'>- Richard Feynman</footer>
-                                    </div>
-                                    <p className='max-w-prose border-portfolio-border border-t pt-4 text-[15px] text-white/75 leading-relaxed'>
-                                        {
-                                            'I build for whoever inherits this repo—usually me, in a worse hoodie, wondering why the last version of me was that clever.'
-                                        }
-                                    </p>
-                                </blockquote>
-                            </figure>
                         </div>
                     </div>
                     <div className='flex flex-col gap-5'>
