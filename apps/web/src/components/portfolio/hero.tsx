@@ -48,9 +48,10 @@ export function Hero() {
                 </p>
 
                 <p className='mx-auto mb-10 max-w-[540px] animate-[fadeInUp_0.6s_ease_forwards_0.92s] fill-mode-[forwards] text-[17px] text-portfolio-muted leading-[1.75] opacity-0'>
-                    Gagan Kumar — <strong className='font-medium text-[#bbb]'>building at the edge of software and intelligence.</strong>{' '}
-                    Frontend Engineer with 3 years building production UIs — currently focused on AI-powered interfaces, LLM integrations,
-                    and the craft of making complex AI systems feel effortless to use.
+                    Gagan Kumar —{' '}
+                    <strong className='font-medium text-[#bbb]'>Frontend interfaces for AI-native products.</strong>{' '}
+                    Three years shipping production UIs in React and Next.js—lately agentic workflows, streaming experiences, and UX that
+                    keeps powerful AI tooling legible for the people using it.
                 </p>
                 <div className='mb-14 flex animate-[fadeInUp_0.6s_ease_forwards_1.06s] flex-wrap items-center justify-center gap-3 fill-mode-[forwards] opacity-0'>
                     <Link
