@@ -2,8 +2,8 @@
 
 import { cn } from '@thegagan-portfoilio/ui/lib/utils';
 import { Sparkles } from 'lucide-react';
-import { motion, useScroll } from 'motion/react';
-import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
 import type { TimelineItem } from '@/lib/portfolio-data';
 import { EDUCATION_ITEMS, EXPERIENCE_ITEMS } from '@/lib/portfolio-data';
 import { revealCls } from '@/lib/portfolio-styles';
@@ -164,11 +164,21 @@ function TimelineRow({ entry }: { entry: TimelineEntry }) {
 
 export function TimelineSection() {
     const containerRef = useRef<HTMLDivElement>(null);
+    const [containerHeight, setContainerHeight] = useState(0);
+
+    useEffect(() => {
+        if (containerRef.current) {
+            setContainerHeight(containerRef.current.getBoundingClientRect().height);
+        }
+    }, []);
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        /** Map section travel through the viewport — no spring so the beam tracks scroll immediately. */
-        offset: ['start end', 'end start']
+        offset: ['start 10%', 'end 50%']
     });
+
+    const heightTransform = useTransform(scrollYProgress, [0, 1], [0, containerHeight]);
+    const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
     return (
         <div className='border-portfolio-border border-t px-7 py-[100px]' id='experience'>
@@ -189,10 +199,10 @@ export function TimelineSection() {
                     <motion.div
                         aria-hidden
                         className={cn(
-                            'pointer-events-none absolute top-0 bottom-0 w-px origin-top bg-linear-to-b from-portfolio-orange via-orange-500/45 to-orange-500/5',
+                            'pointer-events-none absolute top-0 w-px bg-linear-to-b from-portfolio-orange via-orange-500/45 to-orange-500/5',
                             RAIL_LEFT
                         )}
-                        style={{ scaleY: scrollYProgress }}
+                        style={{ height: heightTransform, opacity: opacityTransform }}
                     />
 
                     <div className={cn('relative', revealCls)} data-reveal>
