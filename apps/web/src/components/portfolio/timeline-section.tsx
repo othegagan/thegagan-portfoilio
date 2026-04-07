@@ -184,18 +184,18 @@ export function TimelineSection() {
                     Skim the bullets; they&apos;re the signal.
                 </p>
 
-                <div className={cn('relative', revealCls)} data-reveal ref={containerRef}>
+                <div className='relative' ref={containerRef}>
                     <div aria-hidden className={cn('pointer-events-none absolute top-0 bottom-0 w-px bg-white/8', RAIL_LEFT)} />
                     <motion.div
                         aria-hidden
                         className={cn(
-                            'pointer-events-none absolute top-0 h-full w-px origin-top bg-linear-to-b from-portfolio-orange via-orange-500/45 to-orange-500/5',
+                            'pointer-events-none absolute top-0 bottom-0 w-px origin-top bg-linear-to-b from-portfolio-orange via-orange-500/45 to-orange-500/5',
                             RAIL_LEFT
                         )}
                         style={{ scaleY: scrollYProgress }}
                     />
 
-                    <div className='relative'>
+                    <div className={cn('relative', revealCls)} data-reveal>
                         {TIMELINE_ENTRIES.map((entry) => (
                             <TimelineRow entry={entry} key={`${entry.kind}-${entry.item.org}-${entry.item.date}`} />
                         ))}

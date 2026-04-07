@@ -9,19 +9,19 @@ import { SkillIcon } from './skill-icons';
 
 const BENTO_PANELS: { items: SkillItem[]; subtitle: string; title: string; wide?: boolean }[] = [
     {
-        title: 'Build',
-        subtitle: 'Languages, frameworks & runtime',
+        title: 'Core & AI',
+        subtitle: 'Production UI, forms, and agentic interfaces',
         items: [...SKILL_GROUPS[0].items, ...SKILL_GROUPS[1].items]
     },
     {
-        title: 'Data, testing & quality',
-        subtitle: 'Persistence, schemas, tests, and observability',
+        title: 'Backend, data & infra',
+        subtitle: 'Services, persistence, delivery, and collaboration tooling',
         items: [...SKILL_GROUPS[2].items, ...SKILL_GROUPS[3].items]
     },
     {
-        title: 'Design & workflow',
-        subtitle: 'Craft, deploy, collaborate, automate',
-        items: [...SKILL_GROUPS[4].items, ...SKILL_GROUPS[5].items],
+        title: 'Design & product',
+        subtitle: 'UX, responsive craft, and design systems',
+        items: SKILL_GROUPS[4].items,
         wide: true
     }
 ];

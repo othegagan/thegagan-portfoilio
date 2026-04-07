@@ -2,20 +2,18 @@ export const MARQUEE_ITEMS = [
     'React',
     'Next.js',
     'TypeScript',
-    'Node.js',
+    'Vercel AI SDK',
+    'TanStack Query',
     'Tailwind CSS',
+    'shadcn',
     'MongoDB',
-    'PostgreSQL',
     'Firebase',
+    'Redis',
     'Git',
     'GitHub',
     'Figma',
-    'Framer Motion',
-    'Cursor',
-    'Photoshop',
-    'Illustrator',
     'Linear',
-    'Notion'
+    'Docker'
 ] as const;
 
 /** Slugs mapped to logos in `skill-icons.tsx` (SVGL via `@ridemountainpig/svgl-react`). */
@@ -65,73 +63,65 @@ export interface SkillGroup {
     title: string;
 }
 
+/** Grouped like the resume “skills trident”; pills use SVGL marks where available. */
 export const SKILL_GROUPS: SkillGroup[] = [
     {
-        title: 'Languages',
-        subtitle: 'JavaScript & TypeScript in production',
+        title: 'Core expertise',
+        subtitle: 'Production UI, forms, and client architecture',
         items: [
-            { label: 'JavaScript', icons: ['javascript'] },
-            { label: 'TypeScript', icons: ['typescript'] }
-        ]
-    },
-    {
-        title: 'Frameworks & runtime',
-        subtitle: 'UI, bundlers, and the JS runtime',
-        items: [
-            { label: 'React', icons: ['react'] },
+            { label: 'React 19', icons: ['react'] },
             { label: 'Next.js 16', icons: ['nextjs'] },
-            { label: 'Tailwind CSS', icons: ['tailwind'] },
-            { label: 'Node.js', icons: ['nodejs'] },
-            { label: 'Vite', icons: ['vite'] },
-            { label: 'Bun', icons: ['bun'] }
-        ]
-    },
-    {
-        title: 'Data & persistence',
-        subtitle: 'Databases, cache, containers',
-        items: [
-            { label: 'MongoDB', icons: ['mongodb'] },
-            { label: 'PostgreSQL', icons: ['postgresql'] },
-            { label: 'Redis', icons: ['redis'] },
-            { label: 'Firebase', icons: ['firebase'] },
-            { label: 'Prisma', icons: ['prisma'] },
-            { label: 'Docker', icons: ['docker'] }
-        ]
-    },
-    {
-        title: 'Testing & quality',
-        subtitle: 'Schemas, tests, linting, observability',
-        items: [
+            { label: 'JavaScript · TypeScript', icons: ['javascript', 'typescript'] },
+            { label: 'Motion', icons: ['react'] },
+            { label: 'TanStack Query · Table', icons: ['reactquery'] },
+            { label: 'Zustand · shadcn · Radix', icons: ['react', 'tailwind'] },
+            { label: 'React Hook Form', icons: ['react'] },
             { label: 'Zod', icons: ['zod'] },
-            { label: 'Vitest', icons: ['vitest'] },
-            { label: 'Playwright', icons: ['playwright'] },
-            { label: 'ESLint', icons: ['eslint'] },
-            { label: 'Biome', icons: ['biome'] },
-            { label: 'Sentry', icons: ['sentry'] }
+            { label: 'Bun · pnpm', icons: ['bun', 'pnpm'] }
         ]
     },
     {
-        title: 'Design & media',
-        subtitle: 'How it looks and feels',
+        title: 'AI & agentic',
+        subtitle: 'Streaming interfaces and multi-step agents',
+        items: [
+            { label: 'Mastra AI', icons: ['nodejs'] },
+            { label: 'Vercel AI SDK', icons: ['vercel'] },
+            { label: 'Agentic workflows · streaming UI', icons: ['vercel', 'react'] },
+            { label: 'LLM tool use · multi-step agents', icons: ['anthropic'] }
+        ]
+    },
+    {
+        title: 'Backend & data',
+        subtitle: 'Services, persistence, and real-time patterns',
+        items: [
+            { label: 'Node.js', icons: ['nodejs'] },
+            { label: 'Firebase', icons: ['firebase'] },
+            { label: 'Redis', icons: ['redis'] },
+            { label: 'REST APIs', icons: ['openapi'] },
+            { label: 'MongoDB', icons: ['mongodb'] },
+            { label: 'WebSockets', icons: ['nodejs'] },
+            { label: 'System design basics', icons: ['docker'] }
+        ]
+    },
+    {
+        title: 'Infra & tooling',
+        subtitle: 'Delivery, observability, and collaboration',
+        items: [
+            { label: 'Git · GitHub', icons: ['git', 'github'] },
+            { label: 'Docker', icons: ['docker'] },
+            { label: 'Vercel', icons: ['vercel'] },
+            { label: 'Sentry', icons: ['sentry'] },
+            { label: 'Linear · Jira', icons: ['linear'] },
+            { label: 'Apidog', icons: ['openapi'] }
+        ]
+    },
+    {
+        title: 'Design & product',
+        subtitle: 'Systems, UX, and responsive craft',
         items: [
             { label: 'Figma', icons: ['figma'] },
-            { label: 'Photoshop', icons: ['photoshop'] },
-            { label: 'Illustrator', icons: ['illustrator'] }
-        ]
-    },
-    {
-        title: 'Workflow, deploy & AI',
-        subtitle: 'Ship, collaborate, automate',
-        items: [
-            { label: 'Git & GitHub', icons: ['git', 'github'] },
-            { label: 'Vercel', icons: ['vercel'] },
-            { label: 'pnpm', icons: ['pnpm'] },
-            { label: 'TanStack Query', icons: ['reactquery'] },
-            { label: 'Cursor', icons: ['cursor'] },
-            { label: 'Linear', icons: ['linear'] },
-            { label: 'Notion', icons: ['notion'] },
-            { label: 'Apidog', icons: ['openapi'] },
-            { label: 'Claude code', icons: ['anthropic'] }
+            { label: 'UX thinking · responsive design', icons: ['figma'] },
+            { label: 'UI design systems', icons: ['tailwind'] }
         ]
     }
 ];
@@ -153,35 +143,38 @@ export interface TimelineItem {
 
 export const EXPERIENCE_ITEMS: TimelineItem[] = [
     {
-        date: 'JAN 2025 — PRESENT',
-        title: 'Frontend Engineer · AI Tooling',
+        date: 'APR 2025 — PRESENT',
+        title: 'Software Developer',
         org: 'Astra Security',
         orgHref: 'https://getastra.com/',
         description:
-            'Building AI-powered pentesting agents and customer-facing tools in a security product org—where the UI has to keep up with fast-moving agentic workflows.',
+            'Frontend for agent-based security workflows—streaming UIs, AI SDK integration, and shipping through high-frequency release cycles.',
         featured: true,
         highlights: [
-            'Built real-time agentic workflow UIs that surface multi-step AI reasoning to non-technical users — handling streaming states, partial results, and agent handoffs in a production React/Next.js app.',
-            'Own full lifecycle of frontend framework upgrades — from dependency audit and migration planning through rollout and regression coverage — keeping the product shipping without freezing the roadmap.',
-            'Partner with product and engineering stakeholders to translate technical debt into sequenced, committable plans; reduced cross-team friction on stack decisions.'
+            'Built real-time streaming UI for agent-based workflows with Next.js and the Vercel AI SDK so users see step-by-step execution instead of blocking responses.',
+            'Developed frontend infrastructure for AI-driven systems, wiring agent execution into responsive, production-ready interfaces.',
+            'Led migration from Next.js 14 to 15—roughly halved bundle size and improved performance and load times.',
+            'Improved developer experience by moving from Yarn to Bun, cutting local build and iteration time.',
+            'Owned production stability—cleared 30+ P0 issues in the first month and kept releases steady under heavy cadence.'
         ],
-        tags: ['AI agents', 'Framework upgrades', 'Product UI', 'Security'],
+        tags: ['Next.js', 'Vercel AI SDK', 'Streaming UI', 'Agents'],
         badge: 'Full-time',
         badgeVariant: 'hot'
     },
     {
         date: 'AUG 2023 — DEC 2024',
-        title: 'Frontend Engineer',
-        org: 'Dimension64',
+        title: 'Software Developer',
+        org: 'Dimension64 (Sarvantar AI)',
         orgHref: 'https://dimension64.com/',
         description:
-            'Product engineering in a fast-moving team—shipping features while modernizing how the codebase kept pace with the roadmap.',
+            'Rebuilt a legacy Angular admin as a responsive React and Next.js product—mobile-capable workflows and a maintainable component layer.',
         highlights: [
-            'Led end-to-end migration of React and Angular codebases — from audit through staged rollout — with clear regression ownership and zero unplanned downtime.',
-            'Drove cross-squad upgrade coordination so framework changes landed on schedule, not as emergency fire drills.',
-            'Shipped customer-facing features on a modernized, maintainable stack with cleaner module boundaries and significantly less glue code.'
+            'Replaced a legacy Angular admin with React and Next.js so workflows that were desktop-only worked reliably on mobile.',
+            'Ran the migration end to end—audit, scoped rewrite, incremental rollout—without disrupting active users.',
+            'Shipped core features including Mapbox-based vehicle search and a reusable component system aligned with product needs.',
+            'Worked with stakeholders to turn shifting operational requirements into stable UI flows.'
         ],
-        tags: ['Angular', 'React', 'Platform', 'Migrations'],
+        tags: ['React', 'Next.js', 'Angular migration', 'Mapbox'],
         badge: 'Full-time',
         badgeVariant: 'hot'
     },
@@ -191,12 +184,13 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
         org: 'EXL Service',
         orgHref: 'https://www.exlservice.com/',
         description:
-            'Owned the Hirelink hiring portal end to end in a short window—backend business rules, responsive UI, and alignment with HR stakeholders.',
+            'Internal hiring platform—.NET Core backend, Tailwind frontend, and recruiter-facing workflows for candidate pipelines.',
         highlights: [
-            'Built Hirelink hiring portal end-to-end in a 6-month window — .NET Core MVC backend, Tailwind UI, applicant tracking and recruiter workflows — production-bound, not a demo.',
-            'Translated ambiguous HR stakeholder requirements into shippable milestones; paired with senior devs to write patterns that survived handoff.'
+            'Built an internal hiring platform with a .NET Core backend and Tailwind UI to manage candidate pipelines.',
+            'Designed recruiter workflows and dashboards that replaced manual tracking with clear stages and bottleneck visibility.',
+            'Collaborated with senior engineers on patterns the team could extend after handoff.'
         ],
-        tags: ['.NET Core', 'Tailwind', 'MVC', 'Delivery'],
+        tags: ['.NET Core', 'Tailwind', 'MVC', 'Internal tools'],
         badge: 'Internship'
     }
 ];
@@ -209,6 +203,12 @@ export const EDUCATION_ITEMS: TimelineItem[] = [
         orgHref: 'https://pes.edu/',
         description:
             'Specialization in Web Technologies. Deepened expertise in modern web architectures, algorithms, and software engineering practices. Aggregate CGPA: 8.2'
+    },
+    {
+        date: 'JUN 2018 — MAY 2021',
+        title: 'Bachelor of Computer Applications',
+        org: 'Vivekananda Institute of Management',
+        description: 'Graduated in 2021. Foundation in computer science, programming fundamentals, and software development.'
     }
 ];
 
@@ -234,8 +234,8 @@ export const PROJECTS: Project[] = [
         placeholder: 'TRIBOON',
         title: 'Triboon — Project Management',
         description:
-            'A full-featured, responsive project management solution powered by ReactJS and Firebase. Real-time collaboration, task tracking, and team dashboards — all in one place.',
-        tags: ['React', 'Firebase', 'Tailwind'],
+            'Full-featured project management: tasks, role-based dashboards, and real-time collaboration. Firestore and the Realtime Database keep state in sync across clients; role-aware UI reflects permissions.',
+        tags: ['React', 'Firebase', 'Firestore', 'Tailwind CSS'],
         links: [{ label: 'Live ↗', href: 'https://triboon.web.app/' }],
         imageSrc: '/projects/triboon.png',
         bentoClass: 'col-span-12 lg:col-span-6',
@@ -246,8 +246,8 @@ export const PROJECTS: Project[] = [
         placeholder: 'RAPIDLOGR',
         title: 'RapidLogr',
         description:
-            'A dynamic log exploration tool with robust search and analysis. Navigate logs effortlessly, uncover insights, and troubleshoot at speed.',
-        tags: ['React', 'Search'],
+            'Log exploration with server-side filtering by search, severity, and time range so performance stays predictable on larger datasets. Filters and pagination sync to the URL for shareable, reproducible views.',
+        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB'],
         links: [{ label: 'Live ↗', href: 'https://rapidlogr.vercel.app/' }],
         imageSrc: '/projects/rapidlogr.png',
         bentoClass: 'col-span-12 lg:col-span-6',
@@ -258,8 +258,8 @@ export const PROJECTS: Project[] = [
         placeholder: 'HIRELINK',
         title: 'Hirelink',
         description:
-            'A hiring portal that streamlines applicant tracking and candidate evaluation — built during my internship at EXL Service using .NET Core MVC and Tailwind.',
-        tags: ['.NET Core', 'Tailwind', 'MVC'],
+            'Internal hiring portal built at EXL: candidates move through a structured five-stage pipeline (application → screening → interview → offer → onboarding). Recruiter dashboard shows per-stage counts, status history, and bottlenecks—built to replace spreadsheet tracking.',
+        tags: ['.NET Core', 'MVC', 'Tailwind CSS', 'SQL Server'],
         links: [{ label: 'GitHub ↗', href: 'https://github.com/othegagan/hirelink' }],
         imageSrc: '/projects/hirelink.png',
         bentoClass: 'col-span-12 lg:col-span-4',
