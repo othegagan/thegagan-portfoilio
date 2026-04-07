@@ -93,8 +93,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html className='scroll-smooth' lang='en' suppressHydrationWarning>
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <html className='relative scroll-smooth' lang='en' suppressHydrationWarning>
+            <body className={`${geistSans.variable} ${geistMono.variable} relative antialiased`}>
                 <StructuredData />
                 <Providers>{children}</Providers>
             </body>

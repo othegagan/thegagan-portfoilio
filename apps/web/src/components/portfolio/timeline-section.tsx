@@ -195,11 +195,14 @@ export function TimelineSection() {
                 </p>
 
                 <div className='relative' ref={containerRef}>
-                    <div aria-hidden className={cn('pointer-events-none absolute top-0 bottom-0 w-px bg-white/8', RAIL_LEFT)} />
+                    <div
+                        aria-hidden
+                        className={cn('pointer-events-none absolute top-0 bottom-0 w-px -translate-x-1/2 bg-white/14', RAIL_LEFT)}
+                    />
                     <motion.div
                         aria-hidden
                         className={cn(
-                            'pointer-events-none absolute top-0 w-px bg-linear-to-b from-portfolio-orange via-orange-500/45 to-orange-500/5',
+                            'pointer-events-none absolute top-0 w-0.5 -translate-x-1/2 rounded-full bg-linear-to-b from-0% from-portfolio-orange via-40% via-orange-400/95 to-100% to-orange-500/55 shadow-[0_0_16px_4px_rgb(249_115_22_/0.38),0_0_6px_1px_rgb(254_215_170_/0.35)]',
                             RAIL_LEFT
                         )}
                         style={{ height: heightTransform, opacity: opacityTransform }}
