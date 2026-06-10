@@ -33,7 +33,7 @@ export function SiteNav() {
                     : 'border-transparent border-b bg-transparent'
             )}
             id='nav'>
-            <div className='container mx-auto flex items-center justify-between px-7'>
+            <div className='container mx-auto flex items-center justify-between lg:px-10'>
                 <Link className='flex items-center gap-2.5 font-bold text-[15px] tracking-tight' href='/'>
                     <NavLogo />
                 </Link>
