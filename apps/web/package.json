@@ -14,8 +14,8 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "dotenv": "catalog:",
     "lucide-react": "catalog:",
-    "motion": "^12.38.0",
-    "next": "^16.2.1",
+    "motion": "^12.40.0",
+    "next": "^16.2.9",
     "next-themes": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
@@ -23,7 +23,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/postcss": "^4.3.0",
     "@thegagan-portfoilio/config": "workspace:*",
     "@types/node": "^25",
     "@types/react": "catalog:",
