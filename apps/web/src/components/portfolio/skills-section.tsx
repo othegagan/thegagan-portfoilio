@@ -1,5 +1,4 @@
 import { cn } from '@thegagan-portfoilio/ui/lib/utils';
-import Link from 'next/link';
 import type { SkillGroup, SkillItem } from '@/lib/portfolio-data';
 import { SKILL_GROUPS } from '@/lib/portfolio-data';
 import { revealCls } from '@/lib/portfolio-styles';
@@ -71,7 +70,7 @@ export function SkillsSection() {
                     Skills & Tools
                 </span>
                 <h2 className={cn('mb-3 font-extrabold text-[clamp(28px,4vw,48px)] text-white tracking-tight', revealCls)} data-reveal>
-                    Stack, craft, and how I work.
+                    Technology is only part of the <span className='text-portfolio-orange'>equation</span>.
                 </h2>
                 <p
                     className={cn(
@@ -79,15 +78,7 @@ export function SkillsSection() {
                         revealCls
                     )}
                     data-reveal>
-                    What I use in production—libraries and services that show up in real codebases. Icons are official brand marks from{' '}
-                    <Link
-                        className='text-portfolio-orange underline decoration-portfolio-orange/35 underline-offset-2 transition-colors hover:text-white hover:decoration-white/40'
-                        href='https://svgl.app/'
-                        rel='noopener noreferrer'
-                        target='_blank'>
-                        SVGL
-                    </Link>
-                    , so each chip is a tool I work with, not a padded keyword list.
+                    The stack behind my work, shaped by real projects and production experience.
                 </p>
 
                 <div className={cn('grid grid-cols-12 items-stretch gap-3 sm:gap-4', revealCls)} data-reveal data-skills-grid>

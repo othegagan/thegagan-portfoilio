@@ -29,7 +29,7 @@ const metadataBase = new URL(siteUrl);
 export const metadata: Metadata = {
     metadataBase,
     title: {
-        default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+        default: `${SITE_NAME} | ${SITE_TAGLINE}`,
         template: `%s | ${SITE_NAME}`
     },
     description: SITE_DESCRIPTION,
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         url: siteUrl,
-        title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+        title: `${SITE_NAME} | ${SITE_TAGLINE}`,
         description: SITE_DESCRIPTION,
         siteName: SITE_NAME,
         locale: SITE_LOCALE,
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+        title: `${SITE_NAME} | ${SITE_TAGLINE}`,
         description: SITE_DESCRIPTION
     },
     formatDetection: {

@@ -38,7 +38,7 @@ function StatCard({ n, l, Icon }: StatCardProps) {
 }
 
 const STATS = [
-    { n: '3+', l: 'Years building production UIs', Icon: TrendingUpIcon as StatCardProps['Icon'] },
+    { n: '3', l: 'Years building production applications', Icon: TrendingUpIcon as StatCardProps['Icon'] },
     { n: '140+', l: 'Triaged issues resolved at Astra', Icon: RocketIcon as StatCardProps['Icon'] },
     { n: '16+', l: 'Tools & technologies in active use', Icon: LayersIcon as StatCardProps['Icon'] }
 ];
@@ -57,21 +57,22 @@ export function AboutSection() {
                         </h2>
                         <div className='text-[17px] text-portfolio-muted leading-[1.75] [&_p]:mb-5'>
                             <p>
-                                I&apos;m Gagan Kumar. My strongest work is on the{' '}
-                                <strong className='font-medium text-[#bbb]'>frontend and product surface</strong>—AI-powered workflows,
-                                workflow orchestration, and the layer where a complex stack still has to feel obvious to the person using
-                                it.
+                                I&apos;m Gagan Kumar, a Software Engineer focused on
+                                <strong className='font-medium text-[#bbb]'> frontend architecture</strong>,{' '}
+                                <strong className='font-medium text-[#bbb]'>AI-powered products</strong>, and{' '}
+                                <strong className='font-medium text-[#bbb]'>developer experience</strong>. I enjoy building systems where
+                                complex workflows feel simple and intuitive to the people using them.
                             </p>
                             <p>
-                                At Astra Security I design and build the frontend architecture for{' '}
-                                <strong className='font-medium text-[#bbb]'>Attack AI</strong>—scalable agent-driven experiences, AI
-                                Validator integration, and platform capabilities that improve automation and operational efficiency across
-                                the product.
+                                At Astra Security, I design and build the frontend architecture for Attack AI, creating scalable
+                                agent-driven experiences, AI Validator integrations, and platform capabilities that improve automation and
+                                operational efficiency.
                             </p>
                             <p>
-                                I also led frontend modernization—React 19, Next.js 15, TanStack Query v5, Tailwind v4—and own strategic
-                                initiatives from dashboard modernization to enterprise customization. The surface and the machinery have to
-                                agree.
+                                I have led frontend modernization efforts across{' '}
+                                <strong className='font-medium text-[#bbb]'> React 19, Next.js 15, TanStack Query v5, and Tailwind v4,</strong> while owning strategic
+                                initiatives ranging from dashboard modernization to enterprise customization. I believe great products are
+                                built when the user experience and the underlying architecture evolve together.
                             </p>
                         </div>
                     </div>

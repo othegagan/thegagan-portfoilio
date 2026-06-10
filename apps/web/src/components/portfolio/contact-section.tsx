@@ -78,13 +78,14 @@ export function ContactSection() {
                     Get in touch
                 </span>
                 <h2 className={cn('mb-14 font-extrabold text-[clamp(30px,4.5vw,52px)] text-white tracking-tight', revealCls)} data-reveal>
-                    Don&apos;t be shy — <br />
+                    Don&apos;t be shy to <br />
                     say <span className='text-portfolio-orange'>hello.</span>
                 </h2>
                 <div className={cn('mt-14 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16', revealCls)} data-reveal>
                     <div className='flex flex-col gap-8'>
                         <p className='text-base text-portfolio-muted leading-[1.8]'>
-                            Whether you have a project in mind, a role to fill, or just want to talk tech — my inbox is always open.
+                            Whether you have a project in mind, a role to fill, or simply want to discuss technology, AI, and building great
+                            products, my inbox is always open.
                         </p>
                         <div className='flex flex-col gap-3'>
                             {CONTACT_LINKS.map((link) => (

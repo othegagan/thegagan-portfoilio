@@ -1,6 +1,5 @@
-import Image from 'next/image';
-
 import { cn } from '@thegagan-portfoilio/ui/lib/utils';
+import Image from 'next/image';
 import type { CSSProperties } from 'react';
 import type { Project } from '@/lib/portfolio-data';
 import { PROJECTS } from '@/lib/portfolio-data';
@@ -28,9 +27,7 @@ function ProjectCard({ index, project }: { index: number; project: Project }) {
             )}
             data-project-card
             style={{ '--mx': '50%', '--my': '50%' } as CSSProperties}>
-            <div
-                className='relative z-1 shrink-0 p-px'
-                style={{ background: project.accentGradient }}>
+            <div className='relative z-1 shrink-0 p-px' style={{ background: project.accentGradient }}>
                 <div className='rounded-t-[15px] bg-portfolio-bg2 p-4 sm:p-5'>
                     <div
                         className={cn(
@@ -58,7 +55,9 @@ function ProjectCard({ index, project }: { index: number; project: Project }) {
                         target='_blank'
                         title={primary.href}>
                         <span className='wrap-break-word'>{heading}</span>
-                        <span aria-hidden className='shrink-0 font-normal text-portfolio-orange transition-transform duration-200 group-hover/title:translate-x-0.5'>
+                        <span
+                            aria-hidden
+                            className='shrink-0 font-normal text-portfolio-orange transition-transform duration-200 group-hover/title:translate-x-0.5'>
                             →
                         </span>
                     </a>
@@ -99,15 +98,12 @@ export function ProjectsSection() {
                 <span className={cn('mb-3.5 block text-[11px] text-portfolio-orange/85 uppercase tracking-[1.8px]', revealCls)} data-reveal>
                     Selected Work
                 </span>
-                <h2 className={cn('mb-12 font-extrabold text-[clamp(30px,4.5vw,52px)] text-white tracking-tight sm:mb-14', revealCls)} data-reveal>
+                <h2
+                    className={cn('mb-12 font-extrabold text-[clamp(30px,4.5vw,52px)] text-white tracking-tight sm:mb-14', revealCls)}
+                    data-reveal>
                     Things I&apos;ve built.
                 </h2>
-                <div
-                    className={cn(
-                        'grid grid-cols-1 gap-4 sm:gap-5 lg:auto-rows-auto lg:grid-cols-12',
-                        revealCls
-                    )}
-                    data-reveal>
+                <div className={cn('grid grid-cols-1 gap-4 sm:gap-5 lg:auto-rows-auto lg:grid-cols-12', revealCls)} data-reveal>
                     {PROJECTS.map((project, index) => (
                         <ProjectCard index={index} key={project.title} project={project} />
                     ))}

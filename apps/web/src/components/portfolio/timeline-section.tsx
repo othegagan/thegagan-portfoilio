@@ -190,8 +190,7 @@ export function TimelineSection() {
                     Impact you can trace.
                 </h2>
                 <p className={cn('mb-14 max-w-[720px] text-[17px] text-portfolio-muted leading-relaxed', revealCls)} data-reveal>
-                    Work experience, internships, and education—Attack AI platform work, framework upgrades, and how I learned the stack.
-                    Skim the bullets; they&apos;re the signal.
+                    Work experience, platform initiatives, and engineering milestones that shaped how I build products and solve problems.
                 </p>
 
                 <div className='relative' ref={containerRef}>

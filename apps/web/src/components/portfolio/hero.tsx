@@ -48,10 +48,9 @@ export function Hero() {
                 </p>
 
                 <p className='mx-auto mb-10 max-w-[540px] animate-[fadeInUp_0.6s_ease_forwards_0.92s] fill-mode-[forwards] text-[17px] text-portfolio-muted leading-[1.75] opacity-0'>
-                    Gagan Kumar —{' '}
-                    <strong className='font-medium text-[#bbb]'>Frontend architecture for AI-powered security workflows.</strong> Building
-                    Attack AI execution flows, agent orchestration, and production platform capabilities in React and Next.js—making complex
-                    agent-driven systems usable for the teams running them.
+                   Hello there, I'm <strong className='font-medium text-[#bbb]'>Gagan Kumar</strong>, a Software Engineer specializing in <strong className='font-medium text-[#bbb]'>frontend architecture</strong>, <strong className='font-medium text-[#bbb]'>AI-powered products</strong>, and <strong className='font-medium text-[#bbb]'>platform development</strong>. I enjoy solving
+                    complex technical problems and transforming them into reliable, user-friendly experiences.
+
                 </p>
                 <div className='mb-14 flex animate-[fadeInUp_0.6s_ease_forwards_1.06s] flex-wrap items-center justify-center gap-3 fill-mode-[forwards] opacity-0'>
                     <Link

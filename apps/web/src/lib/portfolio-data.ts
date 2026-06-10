@@ -125,7 +125,7 @@ export interface TimelineItem {
     badge?: string;
     badgeVariant?: 'hot';
     date: string;
-    description: string;
+    description?: string;
     featured?: boolean;
     /** Impact bullets for recruiters—concrete outcomes, not filler. */
     highlights?: string[];
@@ -142,16 +142,15 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
         title: 'Software Developer',
         org: 'Astra Security',
         orgHref: 'https://getastra.com/',
-        description:
-            'Frontend architecture and core execution workflows for Attack AI—scalable AI-powered workflows, agent-driven experiences, and production platform capabilities.',
+        description: undefined,
         featured: true,
         highlights: [
-            'Designed and built the frontend architecture and core execution workflows for Attack AI, enabling scalable AI-powered workflows and end-to-end agent-driven experiences.',
-            'Architected AI platform capabilities including AI Validator integration, workflow orchestration, and production-ready interfaces that improved automation and operational efficiency.',
-            'Owned strategic initiatives including Company Level Management, Dashboard/Home Page modernization, and Custom Login Script integration—improving usability, onboarding, and enterprise customization.',
-            'Led frontend modernization across repositories—React 19, Next.js 15, TanStack Query v5, and Tailwind v4—reducing technical debt and preparing the platform for future scale.',
-            'Resolved 140+ triaged issues, addressed high-priority defects, and proactively stabilized critical workflows across multiple product areas.',
-            'Contributed through code reviews, architecture discussions, and documentation of critical workflows and APIs—strengthening code quality and development standards across the team.'
+            'Designed and built the frontend architecture and core execution workflows for Attack AI, enabling scalable AI powered security operations and agent driven experiences.',
+            'Architected and implemented key AI platform capabilities, including AI Validator integration, workflow orchestration, and production-ready interfaces that improved automation and operational efficiency.',
+            'Owned the development of strategic platform initiatives, including Company Level Management, Dashboard and Home Page modernization, and Custom Login Script integration, enhancing usability, onboarding, and enterprise customization capabilities.',
+            'Led frontend modernization efforts across repositories by upgrading core libraries including React 19, Next.js 15, TanStack Query v5, and Tailwind v4, reducing technical debt and preparing the platform for future scalability and maintainability.',
+            'Improved platform reliability and release quality by resolving 140+ triaged issues, addressing high-priority defects, and proactively stabilizing critical workflows across multiple product areas.',
+            'Contributed to engineering excellence through code reviews, architecture discussions, and documentation of critical workflows and APIs, identifying defects missed during QA, improving code quality, and reinforcing engineering standards across the team.'
         ],
         tags: ['Attack AI', 'React 19', 'Next.js 15', 'Agent workflows'],
         badge: 'Full-time',
@@ -162,15 +161,14 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
         title: 'Software Developer',
         org: 'Dimension64 (Sarvantar AI)',
         orgHref: 'https://dimension64.com/',
-        description:
-            'Led migration of a legacy Angular administration platform to React and Next.js—responsive across desktop and mobile with scalable frontend architecture.',
+        description: undefined,
         highlights: [
-            'Led migration of a legacy Angular-based administration platform to React and Next.js, delivering a responsive experience across desktop and mobile devices.',
-            'Planned and executed the migration strategy end-to-end—auditing existing functionality, prioritizing rewrites, and rolling out incrementally without disrupting active users.',
-            'Developed core platform capabilities including Mapbox-powered vehicle tracking, reusable UI components, and scalable frontend architecture aligned with product requirements.',
+            'Led migration of a legacy Angular based administration platform to React and Next.js, delivering a responsive experience across desktop and mobile devices.',
+            'Planned and executed the migration strategy from end to end, auditing existing functionality, prioritizing rewrites, and rolling out changes incrementally without disrupting active users.',
+            'Developed core platform capabilities, including Mapbox-powered vehicle tracking, reusable UI components, and scalable frontend architecture aligned with product requirements.',
             'Partnered closely with product and business stakeholders to translate evolving operational requirements into reliable user experiences.'
         ],
-        tags: ['React', 'Next.js', 'Angular migration', 'Mapbox'],
+        tags: ['Angular migration', 'Mapbox', 'Stripe', 'Tesla APIs Integration'],
         badge: 'Full-time',
         badgeVariant: 'hot'
     },
@@ -180,9 +178,9 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
         org: 'EXL Service',
         orgHref: 'https://www.exlservice.com/',
         description:
-            'Internal hiring platform with .NET Core backend and Tailwind UI—recruiter workflows and dashboards for structured candidate pipelines.',
+            'Internal hiring platform with .NET Core backend and Tailwind UI, recruiter workflows and dashboards for structured candidate pipelines.',
         highlights: [
-            'Built an internal hiring platform with a .NET Core backend and Tailwind UI frontend, used for managing candidate pipelines.',
+            'Built an internal hiring platform using a .NET Core backend and Tailwind-powered frontend for managing candidate pipelines.',
             'Designed recruiter workflows and dashboards to replace manual tracking with structured stages and visibility into bottlenecks.',
             'Collaborated with senior engineers to establish patterns that could be extended after handoff.'
         ],
@@ -216,7 +214,7 @@ export const ADDITIONAL_EXPERIENCE: AdditionalExperienceItem[] = [
     {
         title: 'Freelance Designer (College Years)',
         description:
-            'Delivered branding and marketing assets for local businesses—developed client communication and requirement-gathering skills while managing projects independently.'
+            'Delivered branding and marketing assets for local businesses, developing client communication and requirement gathering skills while managing projects independently.'
     },
     {
         title: 'Volunteer Work',
@@ -252,10 +250,10 @@ export const PROJECTS: Project[] = [
     {
         featured: true,
         placeholder: 'TRIBOON',
-        title: 'Triboon — Project Management',
+        title: 'Triboon: Project Management',
         description:
-            'Final-year Masters project built solo—full-featured project management with tasks, role-based analytics dashboards, and real-time group chat per project. Firebase Realtime Database for live messaging, Firestore for task state, and Storage for attachments; role-aware dashboards for admins vs members.',
-        tags: ['React', 'Firebase', 'Firestore', 'Tailwind CSS'],
+            "A full-featured project management platform built as a solo Master's project, featuring task management, role-based analytics, real-time collaboration, and project communication.",
+        tags: ['React', 'Firebase', 'Firestore', 'Realtime Database', 'Firebase Storage'],
         links: [{ label: 'Live ↗', href: 'https://triboon.web.app/' }],
         imageSrc: '/projects/triboon.png',
         bentoClass: 'col-span-12 lg:col-span-6',
@@ -266,8 +264,8 @@ export const PROJECTS: Project[] = [
         placeholder: 'RAPIDLOGR',
         title: 'RapidLogr',
         description:
-            'General-purpose log exploration with server-side filtering—search, severity, and date range queries run on the server for consistent performance at scale. Every filter and pagination state syncs to the URL for shareable, bookmarkable views. Fully responsive for incident response on mobile or wide desktop.',
-        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB'],
+            'A log exploration platform designed for fast incident investigation, with server-side filtering, URL-synced state, and responsive workflows.',
+        tags: ['Next.js', 'TypeScript', 'MongoDB', 'Server-side filtering', 'URL-synced state'],
         links: [
             { label: 'Live ↗', href: 'https://rapidlogr.vercel.app/' },
             { label: 'GitHub ↗', href: 'https://github.com/othegagan/rapidlogr' }
@@ -279,13 +277,13 @@ export const PROJECTS: Project[] = [
     },
     {
         placeholder: 'HIRELINK',
-        title: 'Hirelink — Hiring Tracking Portal',
+        title: 'Hirelink: Hiring Tracking Portal',
         description:
-            'Internal hiring portal built at EXL Service—candidates tracked across a structured five-stage pipeline (application → screening → interview → offer → onboarding). Recruiter dashboard surfaces per-stage counts, status history, and bottleneck visibility to replace spreadsheet tracking.',
+            'Developed to replace spreadsheet-based workflows with structured hiring pipelines, recruiter dashboards, and candidate tracking across application, screening, interview, offer, and onboarding stages. My first full-stack project, combining .NET Core backend workflows with responsive frontend interfaces.',
         tags: ['.NET Core', 'MVC', 'Tailwind CSS', 'SQL Server'],
         links: [{ label: 'GitHub ↗', href: 'https://github.com/othegagan/hirelink' }],
         imageSrc: '/projects/hirelink.png',
-        bentoClass: 'col-span-12 lg:col-span-4',
+        bentoClass: 'col-span-12 lg:col-span-6',
         imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
         accentGradient: 'linear-gradient(145deg, rgb(192 132 252 / 0.45) 0%, rgb(236 72 153 / 0.3) 50%, rgb(15 15 15) 100%)'
     }

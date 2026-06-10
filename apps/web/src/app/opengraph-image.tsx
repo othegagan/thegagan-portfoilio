@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 
 import { SITE_NAME, SITE_TAGLINE } from '@/lib/site';
 
-export const alt = `${SITE_NAME} — ${SITE_TAGLINE}`;
+export const alt = `${SITE_NAME} | Portfolio`;
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -52,7 +52,7 @@ export default function OpenGraphImage() {
                         lineHeight: 1.4,
                         maxWidth: 880
                     }}>
-                    {`${SITE_TAGLINE} — Attack AI · agent orchestration · production platform. Next.js · TypeScript.`}
+                    {`${SITE_TAGLINE} | Attack AI · agent orchestration · production platform. Next.js · TypeScript.`}
                 </div>
             </div>
             <div
