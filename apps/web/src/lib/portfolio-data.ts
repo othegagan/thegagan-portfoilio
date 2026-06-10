@@ -103,7 +103,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
             { label: 'REST APIs', icons: ['openapi'] },
             { label: 'MongoDB', icons: ['mongodb'] },
             { label: 'WebSockets', icons: ['nodejs'] },
-            { label: 'System design basics', icons: ['docker'] }
         ]
     },
     {
