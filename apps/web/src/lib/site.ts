@@ -14,16 +14,17 @@ export function getSiteUrl(): string {
 
 export const SITE_NAME = 'Gagan Kumar';
 
-export const SITE_TAGLINE = 'Frontend Engineer · AI Tooling';
+export const SITE_TAGLINE = 'Software Developer · AI Platform';
 
 export const SITE_DESCRIPTION =
-    'Frontend engineer in Bengaluru — AI-powered interfaces, agentic workflows, and pentesting automation. Next.js, React, TypeScript.';
+    'Software developer in Bengaluru — Attack AI frontend architecture, agent orchestration, and production platform capabilities. React, Next.js, TypeScript.';
 
 export const SITE_KEYWORDS = [
     'Gagan Kumar',
-    'frontend engineer',
-    'AI tooling',
-    'pentesting automation',
+    'software developer',
+    'AI platform',
+    'Attack AI',
+    'agent orchestration',
     'AI agents',
     'Bengaluru',
     'Next.js',

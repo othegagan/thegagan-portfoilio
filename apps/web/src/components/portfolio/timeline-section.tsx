@@ -190,7 +190,7 @@ export function TimelineSection() {
                     Impact you can trace.
                 </h2>
                 <p className={cn('mb-14 max-w-[720px] text-[17px] text-portfolio-muted leading-relaxed', revealCls)} data-reveal>
-                    Roles, internships, and education in one place—AI agents in production, framework upgrades, and how I learned the stack.
+                    Work experience, internships, and education—Attack AI platform work, framework upgrades, and how I learned the stack.
                     Skim the bullets; they&apos;re the signal.
                 </p>
 

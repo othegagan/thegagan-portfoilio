@@ -6,6 +6,7 @@ import { TrendingUpIcon } from '@thegagan-portfoilio/ui/components/trending-up';
 import { cn } from '@thegagan-portfoilio/ui/lib/utils';
 import { useRef } from 'react';
 
+import { ADDITIONAL_EXPERIENCE, INTERESTS } from '@/lib/portfolio-data';
 import { revealCls } from '@/lib/portfolio-styles';
 
 interface StatCardProps {
@@ -37,9 +38,9 @@ function StatCard({ n, l, Icon }: StatCardProps) {
 }
 
 const STATS = [
-    { n: '3', l: 'Years of building on the web', Icon: TrendingUpIcon as StatCardProps['Icon'] },
-    { n: '5+', l: 'Products shipped', Icon: RocketIcon as StatCardProps['Icon'] },
-    { n: '16+', l: 'Tools & Technologies in active use', Icon: LayersIcon as StatCardProps['Icon'] }
+    { n: '3+', l: 'Years building production UIs', Icon: TrendingUpIcon as StatCardProps['Icon'] },
+    { n: '140+', l: 'Triaged issues resolved at Astra', Icon: RocketIcon as StatCardProps['Icon'] },
+    { n: '16+', l: 'Tools & technologies in active use', Icon: LayersIcon as StatCardProps['Icon'] }
 ];
 
 export function AboutSection() {
@@ -50,25 +51,27 @@ export function AboutSection() {
                     <div>
                         <span className='mb-3.5 block text-[11px] text-portfolio-orange/85 uppercase tracking-[1.8px]'>About me</span>
                         <h2 className='mb-6 font-extrabold text-[clamp(30px,4.5vw,52px)] text-white'>
-                            Frontend engineer by craft,
+                            Software developer by craft,
                             <br />
-                            Agentic AI by obsession.
+                            agentic AI by obsession.
                         </h2>
                         <div className='text-[17px] text-portfolio-muted leading-[1.75] [&_p]:mb-5'>
                             <p>
                                 I&apos;m Gagan Kumar. My strongest work is on the{' '}
-                                <strong className='font-medium text-[#bbb]'>frontend and product surface</strong>—AI-assisted interfaces,
-                                motion, and the layer where a complex stack still has to feel obvious to the person using it.
+                                <strong className='font-medium text-[#bbb]'>frontend and product surface</strong>—AI-powered workflows,
+                                workflow orchestration, and the layer where a complex stack still has to feel obvious to the person using
+                                it.
                             </p>
                             <p>
-                                Lately that obsession shows up as <strong className='font-medium text-[#bbb]'>pentesting automation</strong>{' '}
-                                and autonomous agents—attack-surface reasoning, real vulnerabilities, minimal hand-holding. The domain is
-                                unforgiving; the abstractions have to earn their keep.
+                                At Astra Security I design and build the frontend architecture for{' '}
+                                <strong className='font-medium text-[#bbb]'>Attack AI</strong>—scalable agent-driven experiences, AI
+                                Validator integration, and platform capabilities that improve automation and operational efficiency across
+                                the product.
                             </p>
                             <p>
-                                I still split time between <strong className='font-medium text-[#bbb]'>AI frontends</strong>, orchestration,
-                                and whatever comes next for agentic workflows. From pixel-level UI to systems that think and act on their
-                                own—the surface and the machinery have to agree.
+                                I also led frontend modernization—React 19, Next.js 15, TanStack Query v5, Tailwind v4—and own strategic
+                                initiatives from dashboard modernization to enterprise customization. The surface and the machinery have to
+                                agree.
                             </p>
                         </div>
                     </div>
@@ -76,6 +79,36 @@ export function AboutSection() {
                         {STATS.map((s) => (
                             <StatCard key={s.l} {...s} />
                         ))}
+                    </div>
+                </div>
+
+                <div className={cn('mt-16 grid grid-cols-1 gap-10 lg:grid-cols-2', revealCls)} data-reveal>
+                    <div>
+                        <span className='mb-3 block text-[11px] text-portfolio-orange/85 uppercase tracking-[1.8px]'>
+                            Additional experience
+                        </span>
+                        <div className='flex flex-col gap-4'>
+                            {ADDITIONAL_EXPERIENCE.map((item) => (
+                                <div className='rounded-xl border border-portfolio-border bg-portfolio-bg2 p-5' key={item.title}>
+                                    <h3 className='mb-2 font-semibold text-[15px] text-white'>{item.title}</h3>
+                                    <p className='text-[14px] text-portfolio-muted leading-relaxed'>{item.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div>
+                        <span className='mb-3 block text-[11px] text-portfolio-orange/85 uppercase tracking-[1.8px]'>
+                            Hobbies & interests
+                        </span>
+                        <ul className='flex flex-wrap gap-2'>
+                            {INTERESTS.map((interest) => (
+                                <li
+                                    className='rounded-lg border border-portfolio-border bg-portfolio-bg2 px-3 py-2 text-[13px] text-portfolio-muted'
+                                    key={interest}>
+                                    {interest}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>

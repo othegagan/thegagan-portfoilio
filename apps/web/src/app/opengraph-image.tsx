@@ -52,7 +52,7 @@ export default function OpenGraphImage() {
                         lineHeight: 1.4,
                         maxWidth: 880
                     }}>
-                    {`${SITE_TAGLINE} — AI-powered frontends  ·  production UIs. Next.js · TypeScript.`}
+                    {`${SITE_TAGLINE} — Attack AI · agent orchestration · production platform. Next.js · TypeScript.`}
                 </div>
             </div>
             <div

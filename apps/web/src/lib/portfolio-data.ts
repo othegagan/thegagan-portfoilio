@@ -3,6 +3,7 @@ export const MARQUEE_ITEMS = [
     'Next.js',
     'TypeScript',
     'Vercel AI SDK',
+    'Mastra AI',
     'TanStack Query',
     'Tailwind CSS',
     'shadcn',
@@ -69,12 +70,12 @@ export const SKILL_GROUPS: SkillGroup[] = [
         title: 'Core expertise',
         subtitle: 'Production UI, forms, and client architecture',
         items: [
-            { label: 'React 19', icons: ['react'] },
-            { label: 'Next.js 16', icons: ['nextjs'] },
+            { label: 'React', icons: ['react'] },
+            { label: 'Next.js', icons: ['nextjs'] },
             { label: 'JavaScript · TypeScript', icons: ['javascript', 'typescript'] },
             { label: 'Motion', icons: ['react'] },
             { label: 'TanStack Query · Table', icons: ['reactquery'] },
-            { label: 'Zustand · shadcn · Radix', icons: ['react', 'tailwind'] },
+            { label: 'Zustand · shadcn · Radix UI', icons: ['react', 'tailwind'] },
             { label: 'React Hook Form', icons: ['react'] },
             { label: 'Zod', icons: ['zod'] },
             { label: 'Bun · pnpm', icons: ['bun', 'pnpm'] }
@@ -82,12 +83,14 @@ export const SKILL_GROUPS: SkillGroup[] = [
     },
     {
         title: 'AI & agentic',
-        subtitle: 'Streaming interfaces and multi-step agents',
+        subtitle: 'Multi-agent workflows and orchestration',
         items: [
             { label: 'Mastra AI', icons: ['nodejs'] },
             { label: 'Vercel AI SDK', icons: ['vercel'] },
-            { label: 'Agentic workflows · streaming UI', icons: ['vercel', 'react'] },
-            { label: 'LLM tool use · multi-step agents', icons: ['anthropic'] }
+            { label: 'Multi-agent workflows', icons: ['vercel', 'react'] },
+            { label: 'Agent orchestration', icons: ['anthropic'] },
+            { label: 'AI workflow systems', icons: ['vercel'] },
+            { label: 'Tool calling', icons: ['anthropic'] }
         ]
     },
     {
@@ -112,16 +115,8 @@ export const SKILL_GROUPS: SkillGroup[] = [
             { label: 'Vercel', icons: ['vercel'] },
             { label: 'Sentry', icons: ['sentry'] },
             { label: 'Linear · Jira', icons: ['linear'] },
-            { label: 'Apidog', icons: ['openapi'] }
-        ]
-    },
-    {
-        title: 'Design & product',
-        subtitle: 'Systems, UX, and responsive craft',
-        items: [
-            { label: 'Figma', icons: ['figma'] },
-            { label: 'UX thinking · responsive design', icons: ['figma'] },
-            { label: 'UI design systems', icons: ['tailwind'] }
+            { label: 'Apidog · Postman', icons: ['openapi'] },
+            { label: 'Figma', icons: ['figma'] }
         ]
     }
 ];
@@ -143,21 +138,22 @@ export interface TimelineItem {
 
 export const EXPERIENCE_ITEMS: TimelineItem[] = [
     {
-        date: 'APR 2025 — PRESENT',
+        date: 'APR 2024 — PRESENT',
         title: 'Software Developer',
         org: 'Astra Security',
         orgHref: 'https://getastra.com/',
         description:
-            'Frontend for agent-based security workflows—streaming UIs, AI SDK integration, and shipping through high-frequency release cycles.',
+            'Frontend architecture and core execution workflows for Attack AI—scalable AI-powered workflows, agent-driven experiences, and production platform capabilities.',
         featured: true,
         highlights: [
-            'Built real-time streaming UI for agent-based workflows with Next.js and the Vercel AI SDK so users see step-by-step execution instead of blocking responses.',
-            'Developed frontend infrastructure for AI-driven systems, wiring agent execution into responsive, production-ready interfaces.',
-            'Led migration from Next.js 14 to 15—roughly halved bundle size and improved performance and load times.',
-            'Improved developer experience by moving from Yarn to Bun, cutting local build and iteration time.',
-            'Owned production stability—cleared 30+ P0 issues in the first month and kept releases steady under heavy cadence.'
+            'Designed and built the frontend architecture and core execution workflows for Attack AI, enabling scalable AI-powered workflows and end-to-end agent-driven experiences.',
+            'Architected AI platform capabilities including AI Validator integration, workflow orchestration, and production-ready interfaces that improved automation and operational efficiency.',
+            'Owned strategic initiatives including Company Level Management, Dashboard/Home Page modernization, and Custom Login Script integration—improving usability, onboarding, and enterprise customization.',
+            'Led frontend modernization across repositories—React 19, Next.js 15, TanStack Query v5, and Tailwind v4—reducing technical debt and preparing the platform for future scale.',
+            'Resolved 140+ triaged issues, addressed high-priority defects, and proactively stabilized critical workflows across multiple product areas.',
+            'Contributed through code reviews, architecture discussions, and documentation of critical workflows and APIs—strengthening code quality and development standards across the team.'
         ],
-        tags: ['Next.js', 'Vercel AI SDK', 'Streaming UI', 'Agents'],
+        tags: ['Attack AI', 'React 19', 'Next.js 15', 'Agent workflows'],
         badge: 'Full-time',
         badgeVariant: 'hot'
     },
@@ -167,12 +163,12 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
         org: 'Dimension64 (Sarvantar AI)',
         orgHref: 'https://dimension64.com/',
         description:
-            'Rebuilt a legacy Angular admin as a responsive React and Next.js product—mobile-capable workflows and a maintainable component layer.',
+            'Led migration of a legacy Angular administration platform to React and Next.js—responsive across desktop and mobile with scalable frontend architecture.',
         highlights: [
-            'Replaced a legacy Angular admin with React and Next.js so workflows that were desktop-only worked reliably on mobile.',
-            'Ran the migration end to end—audit, scoped rewrite, incremental rollout—without disrupting active users.',
-            'Shipped core features including Mapbox-based vehicle search and a reusable component system aligned with product needs.',
-            'Worked with stakeholders to turn shifting operational requirements into stable UI flows.'
+            'Led migration of a legacy Angular-based administration platform to React and Next.js, delivering a responsive experience across desktop and mobile devices.',
+            'Planned and executed the migration strategy end-to-end—auditing existing functionality, prioritizing rewrites, and rolling out incrementally without disrupting active users.',
+            'Developed core platform capabilities including Mapbox-powered vehicle tracking, reusable UI components, and scalable frontend architecture aligned with product requirements.',
+            'Partnered closely with product and business stakeholders to translate evolving operational requirements into reliable user experiences.'
         ],
         tags: ['React', 'Next.js', 'Angular migration', 'Mapbox'],
         badge: 'Full-time',
@@ -184,11 +180,11 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
         org: 'EXL Service',
         orgHref: 'https://www.exlservice.com/',
         description:
-            'Internal hiring platform—.NET Core backend, Tailwind frontend, and recruiter-facing workflows for candidate pipelines.',
+            'Internal hiring platform with .NET Core backend and Tailwind UI—recruiter workflows and dashboards for structured candidate pipelines.',
         highlights: [
-            'Built an internal hiring platform with a .NET Core backend and Tailwind UI to manage candidate pipelines.',
-            'Designed recruiter workflows and dashboards that replaced manual tracking with clear stages and bottleneck visibility.',
-            'Collaborated with senior engineers on patterns the team could extend after handoff.'
+            'Built an internal hiring platform with a .NET Core backend and Tailwind UI frontend, used for managing candidate pipelines.',
+            'Designed recruiter workflows and dashboards to replace manual tracking with structured stages and visibility into bottlenecks.',
+            'Collaborated with senior engineers to establish patterns that could be extended after handoff.'
         ],
         tags: ['.NET Core', 'Tailwind', 'MVC', 'Internal tools'],
         badge: 'Internship'
@@ -197,20 +193,44 @@ export const EXPERIENCE_ITEMS: TimelineItem[] = [
 
 export const EDUCATION_ITEMS: TimelineItem[] = [
     {
-        date: 'FEB 2022 — MAY 2023',
+        date: 'GRADUATED 2023',
         title: 'Master of Computer Applications',
         org: 'PES University',
         orgHref: 'https://pes.edu/',
-        description:
-            'Specialization in Web Technologies. Deepened expertise in modern web architectures, algorithms, and software engineering practices. Aggregate CGPA: 8.2'
+        description: 'Specialization in Web Technologies. PES University, Bengaluru.'
     },
     {
-        date: 'JUN 2018 — MAY 2021',
+        date: 'GRADUATED 2021',
         title: 'Bachelor of Computer Applications',
         org: 'Vivekananda Institute of Management',
-        description: 'Graduated in 2021. Foundation in computer science, programming fundamentals, and software development.'
+        description: 'Foundation in computer science, programming fundamentals, and software development. Bengaluru.'
     }
 ];
+
+export interface AdditionalExperienceItem {
+    description: string;
+    title: string;
+}
+
+export const ADDITIONAL_EXPERIENCE: AdditionalExperienceItem[] = [
+    {
+        title: 'Freelance Designer (College Years)',
+        description:
+            'Delivered branding and marketing assets for local businesses—developed client communication and requirement-gathering skills while managing projects independently.'
+    },
+    {
+        title: 'Volunteer Work',
+        description:
+            'Assembled and configured donated computers for a local government school, helping provide access to computer education for underprivileged students.'
+    }
+];
+
+export const INTERESTS = [
+    'Exploring AI & emerging technologies',
+    'Automotive engineering & vehicle modification',
+    'Sci-fi literature & films',
+    'Restoration of vintage weapons and cars'
+] as const;
 
 export interface Project {
     /** CSS `background` for the colored mockup frame (gradient). */
@@ -219,9 +239,9 @@ export interface Project {
     bentoClass: string;
     description: string;
     featured?: boolean;
-    imageSrc: string;
     /** Tailwind classes for the screenshot area aspect / min-height. */
     imageFrameClass: string;
+    imageSrc: string;
     links: { label: string; href: string }[];
     placeholder: string;
     tags: string[];
@@ -234,7 +254,7 @@ export const PROJECTS: Project[] = [
         placeholder: 'TRIBOON',
         title: 'Triboon — Project Management',
         description:
-            'Full-featured project management: tasks, role-based dashboards, and real-time collaboration. Firestore and the Realtime Database keep state in sync across clients; role-aware UI reflects permissions.',
+            'Final-year Masters project built solo—full-featured project management with tasks, role-based analytics dashboards, and real-time group chat per project. Firebase Realtime Database for live messaging, Firestore for task state, and Storage for attachments; role-aware dashboards for admins vs members.',
         tags: ['React', 'Firebase', 'Firestore', 'Tailwind CSS'],
         links: [{ label: 'Live ↗', href: 'https://triboon.web.app/' }],
         imageSrc: '/projects/triboon.png',
@@ -246,9 +266,12 @@ export const PROJECTS: Project[] = [
         placeholder: 'RAPIDLOGR',
         title: 'RapidLogr',
         description:
-            'Log exploration with server-side filtering by search, severity, and time range so performance stays predictable on larger datasets. Filters and pagination sync to the URL for shareable, reproducible views.',
+            'General-purpose log exploration with server-side filtering—search, severity, and date range queries run on the server for consistent performance at scale. Every filter and pagination state syncs to the URL for shareable, bookmarkable views. Fully responsive for incident response on mobile or wide desktop.',
         tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB'],
-        links: [{ label: 'Live ↗', href: 'https://rapidlogr.vercel.app/' }],
+        links: [
+            { label: 'Live ↗', href: 'https://rapidlogr.vercel.app/' },
+            { label: 'GitHub ↗', href: 'https://github.com/othegagan/rapidlogr' }
+        ],
         imageSrc: '/projects/rapidlogr.png',
         bentoClass: 'col-span-12 lg:col-span-6',
         imageFrameClass: 'aspect-[16/10] min-h-[180px] sm:min-h-[200px]',
@@ -256,16 +279,16 @@ export const PROJECTS: Project[] = [
     },
     {
         placeholder: 'HIRELINK',
-        title: 'Hirelink',
+        title: 'Hirelink — Hiring Tracking Portal',
         description:
-            'Internal hiring portal built at EXL: candidates move through a structured five-stage pipeline (application → screening → interview → offer → onboarding). Recruiter dashboard shows per-stage counts, status history, and bottlenecks—built to replace spreadsheet tracking.',
+            'Internal hiring portal built at EXL Service—candidates tracked across a structured five-stage pipeline (application → screening → interview → offer → onboarding). Recruiter dashboard surfaces per-stage counts, status history, and bottleneck visibility to replace spreadsheet tracking.',
         tags: ['.NET Core', 'MVC', 'Tailwind CSS', 'SQL Server'],
         links: [{ label: 'GitHub ↗', href: 'https://github.com/othegagan/hirelink' }],
         imageSrc: '/projects/hirelink.png',
         bentoClass: 'col-span-12 lg:col-span-4',
         imageFrameClass: 'aspect-video min-h-[160px] sm:min-h-[170px]',
         accentGradient: 'linear-gradient(145deg, rgb(192 132 252 / 0.45) 0%, rgb(236 72 153 / 0.3) 50%, rgb(15 15 15) 100%)'
-    },
+    }
 ];
 
 export const RESUME_URL = 'https://thegagan-portfolio.vercel.app/Gagan_Kumar_Resume.pdf' as const;
