@@ -138,7 +138,7 @@ export interface TimelineItem {
 export const EXPERIENCE_ITEMS: TimelineItem[] = [
     {
         date: 'APR 2024 — PRESENT',
-        title: 'Software Developer',
+        title: 'Software Development Engineer I',
         org: 'Astra Security',
         orgHref: 'https://getastra.com/',
         description: undefined,
