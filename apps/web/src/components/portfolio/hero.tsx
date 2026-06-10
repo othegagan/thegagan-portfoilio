@@ -70,7 +70,7 @@ export function Hero() {
                 </div>
                 <div className='inline-flex animate-[fadeInUp_0.6s_ease_forwards_1.1s] items-center gap-2.5 rounded-[10px] border border-portfolio-border bg-white/3.5 fill-mode-[forwards] px-5 py-2.5 font-mono text-[13px] text-portfolio-muted opacity-0 transition-[border-color,background] duration-200 hover:border-portfolio-border-high hover:bg-white/5.5'>
                     <span className='text-portfolio-muted'>$</span>
-                    <span className='text-white/85'>bunz run ship --purpose --intent --ai</span>
+                    <span className='text-white/85'>bunx ship --purpose --intent --ai</span>
                     <span
                         className='inline-block h-[13px] w-2 animate-[portfolio-blink_1.1s_step-end_infinite] rounded-sm bg-white/65 align-middle'
                         style={{ marginLeft: '2px' }}
