@@ -67,22 +67,7 @@ export interface SkillGroup {
 /** Grouped like the resume “skills trident”; pills use SVGL marks where available. */
 export const SKILL_GROUPS: SkillGroup[] = [
     {
-        title: 'Core expertise',
-        subtitle: 'Production UI, forms, and client architecture',
-        items: [
-            { label: 'React', icons: ['react'] },
-            { label: 'Next.js', icons: ['nextjs'] },
-            { label: 'JavaScript · TypeScript', icons: ['javascript', 'typescript'] },
-            { label: 'Motion', icons: ['react'] },
-            { label: 'TanStack Query · Table', icons: ['reactquery'] },
-            { label: 'Zustand · shadcn · Radix UI', icons: ['react', 'tailwind'] },
-            { label: 'React Hook Form', icons: ['react'] },
-            { label: 'Zod', icons: ['zod'] },
-            { label: 'Bun · pnpm', icons: ['bun', 'pnpm'] }
-        ]
-    },
-    {
-        title: 'AI & agentic',
+        title: 'AI & Agent Systems',
         subtitle: 'Multi-agent workflows and orchestration',
         items: [
             { label: 'Mastra AI', icons: ['nodejs'] },
@@ -94,7 +79,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
         ]
     },
     {
-        title: 'Backend & data',
+        title: 'Backend & Platform',
         subtitle: 'Services, persistence, and real-time patterns',
         items: [
             { label: 'Node.js', icons: ['nodejs'] },
@@ -103,6 +88,21 @@ export const SKILL_GROUPS: SkillGroup[] = [
             { label: 'REST APIs', icons: ['openapi'] },
             { label: 'MongoDB', icons: ['mongodb'] },
             { label: 'WebSockets', icons: ['nodejs'] },
+        ]
+    },
+    {
+        title: 'Frontend Engineering',
+        subtitle: 'Production UI, forms, and client architecture',
+        items: [
+            { label: 'React', icons: ['react'] },
+            { label: 'Next.js', icons: ['nextjs'] },
+            { label: 'JavaScript · TypeScript', icons: ['javascript', 'typescript'] },
+            { label: 'Motion', icons: ['react'] },
+            { label: 'TanStack Query · Table', icons: ['reactquery'] },
+            { label: 'Zustand · shadcn · Radix UI', icons: ['react', 'tailwind'] },
+            { label: 'React Hook Form', icons: ['react'] },
+            { label: 'Zod', icons: ['zod'] },
+            { label: 'Bun · pnpm', icons: ['bun', 'pnpm'] }
         ]
     },
     {
