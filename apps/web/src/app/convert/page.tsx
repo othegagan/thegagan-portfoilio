@@ -1,11 +1,10 @@
 'use client';
 
-import { Button } from '@thegagan-portfoilio/ui/components/button';
 import { cn } from '@thegagan-portfoilio/ui/lib/utils';
-import { CheckIcon, CopyIcon, PlusIcon, Trash2Icon } from 'lucide-react';
+import { PlusIcon, Trash2Icon } from 'lucide-react';
 import type React from 'react';
 import type { CSSProperties } from 'react';
-import { useCallback, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { ModeToggle } from '@/components/mode-toggle';
 
 const TAX_IGST = 'igst' as const;
@@ -338,14 +337,6 @@ const SCOPE_VARS_CSS = `
     background: var(--gst-green-light);
     color: var(--gst-green);
 }
-.gst-scope .gst-copy-btn {
-    background: var(--gst-surface);
-    color: var(--gst-muted);
-    box-shadow: var(--gst-shadow-sm);
-    transition: color .15s;
-}
-.gst-scope .gst-copy-btn:hover { color: var(--gst-accent); }
-.gst-scope .gst-copy-btn[data-copied='true'] { color: var(--gst-green); }
 .gst-scope .gst-card { animation: gstFade .3s ease both; }
 .gst-scope .gst-card:nth-child(2) { animation-delay: .08s; }
 @keyframes gstFade {
@@ -367,6 +358,34 @@ const numInputCls = `${cellInputCls} font-mono text-right tabular-nums`;
 const pctInputCls =
     'gst-input w-8 min-w-8 shrink-0 rounded-md px-1 py-1.5 text-right font-mono text-sm tabular-nums outline-none focus:outline-none';
 const cellNum = 'font-mono text-sm tabular-nums text-right';
+
+function copyText(text: string) {
+    navigator.clipboard.writeText(text).catch(() => {
+        /* ponytail: silent fail if clipboard denied */
+    });
+}
+
+function CopyText({
+    text,
+    className,
+    style,
+    children
+}: {
+    text: string;
+    className?: string;
+    style?: CSSProperties;
+    children: React.ReactNode;
+}) {
+    return (
+        <button
+            className={cn('cursor-copy border-0 bg-transparent p-0 font-inherit text-inherit', className)}
+            onClick={() => copyText(text)}
+            style={style}
+            type='button'>
+            {children}
+        </button>
+    );
+}
 
 interface PctInputProps {
     'aria-label': string;
@@ -407,7 +426,9 @@ function TaxLinePair({
         <td className={cn(tdCls, 'pr-2')} colSpan={2}>
             <div className='flex w-full min-w-0 items-center justify-end gap-2 sm:gap-3'>
                 <PctInput aria-label={ariaLabel} onChange={onChangePct} value={pct} />
-                <span className={cn(cellNum, 'shrink-0', isZero && 'gst-muted-text')}>{isZero ? '0' : formatInr(amount)}</span>
+                <CopyText className={cn(cellNum, 'shrink-0', isZero && 'gst-muted-text')} text={isZero ? '0' : formatInr(amount)}>
+                    {isZero ? '0' : formatInr(amount)}
+                </CopyText>
             </div>
         </td>
     );
@@ -428,7 +449,12 @@ function TaxExtraPairEmpty() {
 
 function NumCell({ amount, muted }: { amount: number; muted?: boolean }) {
     const isZero = amount === 0;
-    return <td className={cn(tdCls, cellNum, (muted || isZero) && 'gst-muted-text', 'pr-2')}>{isZero ? '0' : formatInr(amount)}</td>;
+    const display = isZero ? '0' : formatInr(amount);
+    return (
+        <td className={cn(tdCls, cellNum, (muted || isZero) && 'gst-muted-text', 'pr-2')}>
+            <CopyText text={display}>{display}</CopyText>
+        </td>
+    );
 }
 
 function DashCell() {
@@ -440,7 +466,7 @@ function DeleteCell({ ariaLabel, onRemove }: { ariaLabel: string; onRemove: () =
         <td className={tdCls}>
             <button
                 aria-label={ariaLabel}
-                className='gst-del-btn ml-auto flex size-[30px] cursor-pointer items-center justify-center rounded-md bg-transparent'
+                className='gst-del-btn ml-auto flex size-7.5 cursor-pointer items-center justify-center rounded-md bg-transparent'
                 onClick={onRemove}
                 type='button'>
                 <Trash2Icon aria-hidden='true' className='size-3.5' />
@@ -501,7 +527,9 @@ function ExtraRowView({ row, index, taxMode, onChange, onRemove }: ExtraRowViewP
                     <TaxExtraPairEmpty />
                 </>
             )}
-            <td className={cn(tdCls, cellNum, 'pr-2')}>₹{formatInr(extraAmt)}</td>
+            <td className={cn(tdCls, cellNum, 'pr-2')}>
+                <CopyText text={`₹${formatInr(extraAmt)}`}>₹{formatInr(extraAmt)}</CopyText>
+            </td>
             <DeleteCell ariaLabel={`Remove extra line ${no}`} onRemove={onRemove} />
         </tr>
     );
@@ -582,7 +610,11 @@ function LineRowView({ row, index, taxMode, onChange, onRemove }: LineRowViewPro
                     />
                 </>
             )}
-            <td className={cn(tdCls, cellNum, 'pr-2 font-semibold')}>₹{formatInr(c.lineTotal)}</td>
+            <td className={cn(tdCls, cellNum, 'pr-2 font-semibold')}>
+                <CopyText className='font-semibold' text={`₹${formatInr(c.lineTotal)}`}>
+                    ₹{formatInr(c.lineTotal)}
+                </CopyText>
+            </td>
             <DeleteCell ariaLabel={`Remove line ${no}`} onRemove={onRemove} />
         </tr>
     );
@@ -605,12 +637,6 @@ function InvoiceCard({ rows, taxMode, onTaxMode, onLineChange, onExtraChange, on
     const taxTotal = taxMode === TAX_IGST ? igst : cgst + sgst;
     const taxLabel = taxMode === TAX_IGST ? 'IGST Total' : 'CGST + SGST';
     const inWords = numberToWords(grandInt);
-    const [inWordsCopied, setInWordsCopied] = useState(false);
-    const copyInWords = useCallback(async () => {
-        await navigator.clipboard.writeText(inWords);
-        setInWordsCopied(true);
-        setTimeout(() => setInWordsCopied(false), 1500);
-    }, [inWords]);
 
     return (
         <section className='gst-card overflow-hidden rounded-[14px]'>
@@ -631,7 +657,7 @@ function InvoiceCard({ rows, taxMode, onTaxMode, onLineChange, onExtraChange, on
 
                 <fieldset className='m-0 flex flex-col items-start gap-1.5 border-0 p-0 sm:items-end'>
                     <legend className='gst-muted-text font-semibold text-[10px] uppercase tracking-[1px]'>Tax Type</legend>
-                    <div className='gst-pill flex gap-0.5 rounded-full p-[3px]'>
+                    <div className='gst-pill flex gap-0.5 rounded-full p-0.75'>
                         <button
                             className='gst-pill-btn cursor-pointer rounded-full px-4 py-1.5 font-medium text-[13px]'
                             data-active={taxMode === TAX_IGST}
@@ -673,40 +699,40 @@ function InvoiceCard({ rows, taxMode, onTaxMode, onLineChange, onExtraChange, on
             </div>
 
             <div className='overflow-x-auto px-5 pt-3 sm:px-7'>
-                <table className='w-full min-w-[600px] border-collapse'>
+                <table className='w-full min-w-150 border-collapse'>
                     <caption className='sr-only'>GST line items with quantities, rates, and tax</caption>
                     <thead>
                         <tr>
                             <th className={cn(thCls, 'w-8')} scope='col'>
                                 #
                             </th>
-                            <th className={cn(thCls, 'min-w-[160px]')} scope='col'>
+                            <th className={cn(thCls, 'min-w-40')} scope='col'>
                                 Item / Description
                             </th>
-                            <th className={cn(thRight, 'w-[72px]')} scope='col'>
+                            <th className={cn(thRight, 'w-18')} scope='col'>
                                 Qty
                             </th>
-                            <th className={cn(thRight, 'w-[108px]')} scope='col'>
+                            <th className={cn(thRight, 'w-27')} scope='col'>
                                 Rate (₹)
                             </th>
-                            <th className={cn(thRight, 'w-[92px]')} scope='col'>
+                            <th className={cn(thRight, 'w-23')} scope='col'>
                                 Basic
                             </th>
                             {taxMode === TAX_IGST ? (
-                                <th className={cn(thCenter, 'w-[104px]')} colSpan={2} scope='colgroup'>
+                                <th className={cn(thCenter, 'w-26')} colSpan={2} scope='colgroup'>
                                     IGST
                                 </th>
                             ) : (
                                 <>
-                                    <th className={cn(thCenter, 'w-[104px]')} colSpan={2} scope='colgroup'>
+                                    <th className={cn(thCenter, 'w-26')} colSpan={2} scope='colgroup'>
                                         CGST
                                     </th>
-                                    <th className={cn(thCenter, 'w-[104px]')} colSpan={2} scope='colgroup'>
+                                    <th className={cn(thCenter, 'w-26')} colSpan={2} scope='colgroup'>
                                         SGST
                                     </th>
                                 </>
                             )}
-                            <th className={cn(thRight, 'w-[92px]')} scope='col'>
+                            <th className={cn(thRight, 'w-23')} scope='col'>
                                 Total
                             </th>
                             <th className={cn(thCls, 'w-9')} scope='col'>
@@ -754,49 +780,38 @@ function InvoiceCard({ rows, taxMode, onTaxMode, onLineChange, onExtraChange, on
                 <div className='gst-summary grid grid-cols-1 gap-px overflow-hidden rounded-[14px] sm:grid-cols-3'>
                     <div className='gst-summary-cell flex flex-col gap-1 px-5 py-4'>
                         <span className='gst-muted-text font-semibold text-[11px] uppercase tracking-[0.7px]'>Basic Total</span>
-                        <span className='gst-summary-value font-medium font-mono text-[18px] tabular-nums'>₹{formatInr(basic)}</span>
+                        <CopyText
+                            className='gst-summary-value font-medium font-mono text-[18px] tabular-nums'
+                            text={`₹${formatInr(basic)}`}>
+                            ₹{formatInr(basic)}
+                        </CopyText>
                     </div>
                     <div className='gst-summary-cell flex flex-col gap-1 px-5 py-4'>
                         <span className='gst-muted-text font-semibold text-[11px] uppercase tracking-[0.7px]'>{taxLabel}</span>
-                        <span className='gst-summary-value font-medium font-mono text-[18px] tabular-nums'>₹{formatInr(taxTotal)}</span>
+                        <CopyText
+                            className='gst-summary-value font-medium font-mono text-[18px] tabular-nums'
+                            text={`₹${formatInr(taxTotal)}`}>
+                            ₹{formatInr(taxTotal)}
+                        </CopyText>
                     </div>
                     <div className='gst-summary-cell gst-summary-cell--accent flex flex-col gap-1 px-5 py-4'>
                         <span className='font-semibold text-[11px] uppercase tracking-[0.7px]'>Grand Total</span>
-                        <span className='gst-summary-value font-mono font-semibold text-[18px] tabular-nums'>₹{formatInr(grand)}</span>
+                        <CopyText
+                            className='gst-summary-value font-mono font-semibold text-[18px] tabular-nums'
+                            text={`₹${formatInr(grand)}`}>
+                            ₹{formatInr(grand)}
+                        </CopyText>
                     </div>
                 </div>
             </div>
 
-            <footer className='flex flex-wrap items-center justify-end gap-3 px-5 pt-5 pb-6 sm:px-7'>
+            <footer className='flex flex-wrap items-center justify-end px-5 pt-5 pb-6 sm:px-7'>
                 <p className='gst-secondary-text min-w-0 text-[14px]'>
                     <span className='gst-muted-text select-none'>In words — </span>
-                    <span className='font-medium' style={{ color: 'var(--gst-text)' }}>
+                    <CopyText className='font-medium' style={{ color: 'var(--gst-text)' }} text={inWords}>
                         {inWords}
-                    </span>
+                    </CopyText>
                 </p>
-                <Button
-                    aria-label={inWordsCopied ? 'Copied' : 'Copy amount in words'}
-                    className='gst-copy-btn relative size-7 shrink-0 cursor-pointer rounded-md border-0'
-                    data-copied={inWordsCopied}
-                    onClick={copyInWords}
-                    size='icon-xs'
-                    type='button'
-                    variant='ghost'>
-                    <span
-                        className={cn(
-                            'inline-flex transition-opacity duration-150 motion-reduce:transition-none',
-                            inWordsCopied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
-                        )}>
-                        <CheckIcon aria-hidden='true' size={13} />
-                    </span>
-                    <span
-                        className={cn(
-                            'absolute inline-flex transition-opacity duration-150 motion-reduce:transition-none',
-                            inWordsCopied ? 'scale-0 opacity-0' : 'scale-100 opacity-100'
-                        )}>
-                        <CopyIcon aria-hidden='true' size={13} />
-                    </span>
-                </Button>
             </footer>
         </section>
     );
@@ -820,23 +835,12 @@ export default function ConvertPage() {
 
     const [number, setNumber] = useState('');
     const [words, setWords] = useState('');
-    const [copied, setCopied] = useState(false);
 
     const handleAmountWordsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setNumber(value);
         const parsed = parseIndianAmountInput(value);
         setWords(parsed === null ? '' : numberToWords(parsed));
-        setCopied(false);
-    };
-
-    const handleCopy = async () => {
-        if (!words) {
-            return;
-        }
-        await navigator.clipboard.writeText(words);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
     };
 
     const pageStyle: CSSProperties = { background: 'var(--gst-bg)', color: 'var(--gst-text)' };
@@ -892,41 +896,17 @@ export default function ConvertPage() {
                         />
 
                         <div
-                            className='relative min-h-[52px] rounded-lg px-3.5 py-3.5 pr-12 font-medium text-[15px] leading-normal'
+                            className='min-h-13 rounded-lg px-3.5 py-3.5 font-medium text-[15px] leading-normal'
                             style={{
                                 background: 'var(--gst-surface2)',
                                 border: '1px solid var(--gst-border)',
                                 color: 'var(--gst-text)'
                             }}>
                             {words ? (
-                                words
+                                <CopyText text={words}>{words}</CopyText>
                             ) : (
                                 <span className='gst-muted-text font-normal text-[13px] italic'>Output will appear here…</span>
                             )}
-                            <Button
-                                aria-label={copied ? 'Copied' : 'Copy to clipboard'}
-                                className='gst-copy-btn absolute right-2.5 bottom-2.5 size-7 cursor-pointer rounded-md border-0'
-                                data-copied={copied}
-                                disabled={!words}
-                                onClick={handleCopy}
-                                size='icon-xs'
-                                type='button'
-                                variant='ghost'>
-                                <span
-                                    className={cn(
-                                        'inline-flex transition-opacity duration-150 motion-reduce:transition-none',
-                                        copied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
-                                    )}>
-                                    <CheckIcon aria-hidden='true' size={13} />
-                                </span>
-                                <span
-                                    className={cn(
-                                        'absolute inline-flex transition-opacity duration-150 motion-reduce:transition-none',
-                                        copied ? 'scale-0 opacity-0' : 'scale-100 opacity-100'
-                                    )}>
-                                    <CopyIcon aria-hidden='true' size={13} />
-                                </span>
-                            </Button>
                         </div>
                     </div>
                 </section>

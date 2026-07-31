@@ -70,9 +70,12 @@ export function AboutSection() {
                             </p>
                             <p>
                                 I have led frontend modernization efforts across{' '}
-                                <strong className='font-medium text-[#bbb]'> React 19, Next.js 15, TanStack Query v5, and Tailwind v4,</strong> while owning strategic
-                                initiatives ranging from dashboard modernization to enterprise customization. I believe great products are
-                                built when the user experience and the underlying architecture evolve together.
+                                <strong className='font-medium text-[#bbb]'>
+                                    {' '}
+                                    React 19, Next.js 15, TanStack Query v5, and Tailwind v4,
+                                </strong>{' '}
+                                while owning strategic initiatives ranging from dashboard modernization to enterprise customization. I
+                                believe great products are built when the user experience and the underlying architecture evolve together.
                             </p>
                         </div>
                     </div>

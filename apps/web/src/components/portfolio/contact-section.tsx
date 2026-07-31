@@ -40,8 +40,7 @@ const CONTACT_LINKS: ContactLinkData[] = [
         label: 'LinkedIn',
         value: 'Gagan Kumar',
         renderIcon: (ref) => <LinkedinIcon ref={ref as React.Ref<LinkedinIconHandle>} size={18} />
-    },
-
+    }
 ];
 
 function ContactLinkCard({ link }: { link: ContactLinkData }) {

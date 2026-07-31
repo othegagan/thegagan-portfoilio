@@ -4,14 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import '../index.css';
 import Providers from '@/components/providers';
 import { StructuredData } from '@/components/structured-data';
-import {
-    getSiteUrl,
-    SITE_DESCRIPTION,
-    SITE_KEYWORDS,
-    SITE_LOCALE,
-    SITE_NAME,
-    SITE_TAGLINE
-} from '@/lib/site';
+import { getSiteUrl, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_LOCALE, SITE_NAME, SITE_TAGLINE } from '@/lib/site';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
